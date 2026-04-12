@@ -1,0 +1,13 @@
+{
+  "sprint_id": "sprint_2",
+  "model": "claude-opus-4-6",
+  "elapsed_seconds": 248.66,
+  "usage": {
+    "input_tokens": 34626,
+    "output_tokens": 16384,
+    "model": "claude-opus-4-6"
+  },
+  "timestamp": "2026-04-12T17:38:22.829030+00:00",
+  "prompt_chars": 129321,
+  "response_chars": 28327
+}
