@@ -380,4 +380,15 @@ def check_assembly_readiness(
     ------
     AssemblyNotReadyError
         If any section is not in an assembly-ready state, with a
-        descriptive message identifying the
+        descriptive message identifying the blocking sections.
+    """
+    non_ready = [
+        (sid, ss.state)
+        for sid, ss in section_states.items()
+        if ss.state not in _ASSEMBLY_READY_STATES
+    ]
+
+    if non_ready:
+        raise AssemblyNotReadyError(non_ready)
+
+    return True

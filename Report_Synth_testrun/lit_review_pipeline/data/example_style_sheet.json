@@ -1,0 +1,39 @@
+{
+  "citation_pattern": "\\([A-Z][a-z]+(?:\\set\\sal\\.)?,\\s\\d{4}\\)",
+  "tone_register": "formal_academic",
+  "per_level_constraints": {
+    "0": {
+      "min_words": 200,
+      "max_words": 800,
+      "heading_format": "##"
+    },
+    "1": {
+      "min_words": 150,
+      "max_words": 600,
+      "heading_format": "###"
+    }
+  },
+  "per_type_overrides": {
+    "evidence_table": {
+      "min_words": 100,
+      "max_words": 500
+    },
+    "methodology_description": {
+      "min_words": 250,
+      "max_words": 1000
+    }
+  },
+  "forbidden_phrases": [
+    "it is important to note",
+    "in conclusion",
+    "as we can see",
+    "it goes without saying",
+    "needless to say",
+    "obviously",
+    "basically"
+  ],
+  "equation_delimiters": {
+    "inline": "$",
+    "display": "$$"
+  }
+}

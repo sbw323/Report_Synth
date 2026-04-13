@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "claim_001",
+      "claim_text": "Wastewater treatment plants face increasing pressure to achieve stringent nitrogen removal standards while maintaining cost-effective operations.",
+      "source_chunk_ids": [
+        "chunk_intro_1"
+      ],
+      "confidence_tag": "directly_stated"
+    },
+    {
+      "claim_id": "claim_002",
+      "claim_text": "The discharge of nutrients into receiving waters represents one of the most serious environmental problems, prompting authorities to impose stricter standards for wastewater treatment plant operations.",
+      "source_chunk_ids": [
+        "chunk_intro_1"
+      ],
+      "confidence_tag": "directly_stated"
+    },
+    {
+      "claim_id": "claim_003",
+      "claim_text": "The activated sludge process remains the dominant technology for biological nutrient removal in municipal wastewater treatment.",
+      "source_chunk_ids": [
+        "chunk_intro_2"
+      ],
+      "confidence_tag": "directly_stated"
+    },
+    {
+      "claim_id": "claim_004",
+      "claim_text": "Different control algorithms have been developed ranging from simple constant aeration strategies to sophisticated model predictive control approaches, varying considerably in their information requirements and complexity.",
+      "source_chunk_ids": [
+        "chunk_intro_2"
+      ],
+      "confidence_tag": "directly_stated"
+    },
+    {
+      "claim_id": "claim_005",
+      "claim_text": "Plant operating costs encompass multiple components including aeration energy, sludge disposal expenses, external carbon dosage requirements, and potential effluent fines for regulatory non-compliance.",
+      "source_chunk_ids": [
+        "chunk_intro_3"
+      ],
+      "confidence_tag": "directly_stated"
+    },
+    {
+      "claim_id": "claim_006",
+      "claim_text": "The Benchmark Simulation Model No. 1 framework provides a standardized platform for evaluating different control strategies under consistent conditions.",
+      "source_chunk_ids": [
+        "chunk_intro_4",
+        "chunk_intro_5"
+      ],
+      "confidence_tag": "directly_stated"
+    },
+    {
+      "claim_id": "claim_007",
+      "claim_text": "The Benchmark Simulation Model represents a pre-denitrification plant configuration incorporating both anoxic and aerobic reactor compartments, utilizing the IWA Activated Sludge Model No. 1 to describe biological processes.",
+      "source_chunk_ids": [
+        "chunk_intro_5"
+      ],
+      "confidence_tag": "directly_stated"
+    }
+  ]
+}

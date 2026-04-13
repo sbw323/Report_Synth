@@ -303,17 +303,7 @@ def build_generation_dag(plan: ReportPlan) -> GenerationDAG:
 def build_finalization_dag(
     plan: ReportPlan,
 ) -> Tuple[Dict[str, List[str]], List[str]]:
-    """Build the finalization DAG (FR-07) — content + reference edges.
-
-    The finalization DAG includes both CONTENT and REFERENCE edges.
-    A section cannot finalize until all of its content *and* reference
-    predecessors have finalized.
-
-    Returns
-    -------
-    (adjacency, topological_order)
-        Same structure as GenerationDAG, but covering more edge kinds.
-    """
+    """Build the finalization DAG (FR-07) — content + reference edges."""
     declared_ids = _get_section_id_set(plan)
     all_edges = collect_all_edges(plan)
     fin_edges = [
@@ -327,4 +317,21 @@ def build_finalization_dag(
 
     for edge in fin_edges:
         adjacency[edge.target_section_id].append(edge.source_section_id)
-        in
+        in_degree[edge.source_section_id] = (
+            in_degree.get(edge.source_section_id, 0) + 1
+        )
+
+    queue: deque[str] = deque(
+        sorted(sid for sid, deg in in_degree.items() if deg == 0)
+    )
+    topo_order: List[str] = []
+
+    while queue:
+        node = queue.popleft()
+        topo_order.append(node)
+        for successor in sorted(adjacency.get(node, [])):
+            in_degree[successor] -= 1
+            if in_degree[successor] == 0:
+                queue.append(successor)
+
+    return (dict(adjacency), topo_order)

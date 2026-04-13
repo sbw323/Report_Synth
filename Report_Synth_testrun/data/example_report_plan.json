@@ -1,0 +1,118 @@
+{
+  "plan_id": "nitrogen_removal_review_v1",
+  "title": "Control Strategies for Nitrogen Removal in Activated Sludge Processes",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "section_id": "introduction",
+      "title": "Introduction and Scope",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Introduce the problem of nitrogen removal in activated sludge wastewater treatment. Explain why process control strategy selection matters for both effluent quality and operating cost. Define the scope of this review: comparison of control approaches from constant-setpoint baselines through PI feedback to model predictive control, evaluated primarily on cost-effectiveness under the Benchmark Simulation Model No. 1 framework.",
+      "source_queries": [
+        "nitrogen removal activated sludge process control",
+        "wastewater treatment operating cost optimization"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "control_strategies",
+      "title": "Control Strategy Overview",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Synthesize the control strategies examined in the literature, from simple constant manipulated-variable approaches through single-loop PI controllers to multi-variable model predictive control. For each strategy, describe the sensors required, the manipulated variables, and the control objective. Establish a hierarchy of control complexity that later sections can reference.",
+      "source_queries": [
+        "PI control dissolved oxygen nitrogen removal",
+        "model predictive control wastewater activated sludge",
+        "feedforward control ammonia nitrate setpoint"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "control_strategies",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "methodology_comparison",
+      "title": "Methodology and Simulation Framework Comparison",
+      "parent_id": "control_strategies",
+      "section_type": "evidence_table",
+      "description": "Construct a structured comparison table of the simulation methodologies and control configurations reported in the literature. Columns should include control strategy name, manipulated variables, sensor requirements, simulation model used, performance metric, and reported cost or efficiency outcome. Each row represents one experimentally evaluated configuration.",
+      "source_queries": [
+        "benchmark simulation model activated sludge control comparison",
+        "simulation wastewater control strategy cost evaluation"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "methodology_comparison",
+          "target_section_id": "control_strategies",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "methodology_comparison",
+          "target_section_id": "introduction",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "economic_analysis",
+      "title": "Economic Analysis and Cost Modeling",
+      "parent_id": null,
+      "section_type": "methodology_description",
+      "description": "Describe the mathematical cost models used to evaluate control strategy performance. Cover the cost function components: aeration energy, external carbon dosing, sludge disposal, and effluent quality penalties. Explain how operational maps are constructed to determine optimal setpoints for each strategy. Include relevant equations using proper notation.",
+      "source_queries": [
+        "operating cost function aeration carbon sludge wastewater",
+        "operational cost map optimal setpoint nitrogen removal",
+        "economic evaluation wastewater treatment control"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "economic_analysis",
+          "target_section_id": "control_strategies",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "cross_cutting_findings",
+      "title": "Cross-Cutting Findings and Research Gaps",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "Compare and connect the findings from the control strategy overview, the methodology comparison table, and the economic analysis. Identify points of consensus, contradiction, and gaps across the reviewed literature. Highlight the key finding that simple PI control achieves performance within one percent of model predictive control under normal loading, and discuss when advanced control becomes justified.",
+      "source_queries": [
+        "research gaps nitrogen removal control wastewater",
+        "simple versus advanced control strategy performance comparison"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "cross_cutting_findings",
+          "target_section_id": "economic_analysis",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "cross_cutting_findings",
+          "target_section_id": "methodology_comparison",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "cross_cutting_findings",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "environmental_engineering",
+    "target_audience": "researchers and plant engineers",
+    "primary_source": "Stare et al. (2007)"
+  }
+}
