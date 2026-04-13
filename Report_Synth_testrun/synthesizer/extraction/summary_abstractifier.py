@@ -82,4 +82,5 @@ def _count_words(text: str) -> int:
 def _count_sentences(text: str) -> int:
     """Approximate sentence count."""
     import re
-    sentences = re.split(r'[.!?
+    sentences = re.split(r'[.!?]+\s+', text.strip())
+    return len([s for s in sentences if s])
