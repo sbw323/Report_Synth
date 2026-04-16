@@ -1,0 +1,51 @@
+[
+  {
+    "layer": "structural",
+    "passed": false,
+    "attempt": 1,
+    "violations": [
+      {
+        "rule": "json_parse",
+        "description": "Output is not valid JSON: Unterminated string starting at: line 3 column 23 (char 66)",
+        "severity": "error",
+        "location": "character 66"
+      }
+    ],
+    "suggested_fix": null
+  },
+  {
+    "layer": "structural",
+    "passed": false,
+    "attempt": 2,
+    "violations": [
+      {
+        "rule": "json_parse",
+        "description": "Output is not valid JSON: Unterminated string starting at: line 7 column 14 (char 13794)",
+        "severity": "error",
+        "location": "character 13794"
+      }
+    ],
+    "suggested_fix": null
+  },
+  {
+    "layer": "structural",
+    "passed": true,
+    "attempt": 3,
+    "violations": [],
+    "suggested_fix": null
+  },
+  {
+    "layer": "rule_based",
+    "passed": true,
+    "attempt": 3,
+    "violations": [
+      {
+        "rule": "word_count_mismatch",
+        "description": "Stated word_count (1720) does not match actual word count (1387) of content_markdown.",
+        "severity": "warning",
+        "location": "word_count"
+      }
+    ],
+    "suggested_fix": null
+  }
+]

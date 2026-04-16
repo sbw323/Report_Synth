@@ -1,0 +1,16 @@
+[
+  {
+    "layer": "structural",
+    "passed": true,
+    "attempt": 1,
+    "violations": [],
+    "suggested_fix": null
+  },
+  {
+    "layer": "rule_based",
+    "passed": true,
+    "attempt": 1,
+    "violations": [],
+    "suggested_fix": null
+  }
+]

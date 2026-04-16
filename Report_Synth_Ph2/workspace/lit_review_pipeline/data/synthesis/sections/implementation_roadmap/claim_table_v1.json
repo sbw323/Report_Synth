@@ -1,0 +1,550 @@
+{
+  "section_id": "implementation_roadmap",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "The `to_dict(obj)` utility function recursively converts `JSON.Object` instances returned by `JSON.parsefile` into native Julia `Dict{String,Any}` structures, addressing the documented requirement that REopt internals expect native dictionary types rather than `JSON.Object` wrappers.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 502,
+        "end": 848
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "The `make_serializable(d::Dict)` function traverses a results dictionary and converts every `JuMP.Containers.DenseAxisArray` to a standard `Array`, enabling downstream `JSON.print` serialization.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 848,
+        "end": 1072
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "The scenario builder must read the baseline `reopt_wwtp_scenario.json` produced by the upstream MATLAB stage (`compute_voll_for_reopt.m`), apply programmatic overrides to selected fields, and validate the resulting dictionary against REopt.jl field expectations.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1374,
+        "end": 1643
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "The override mechanism must support at minimum the following keys: `Financial.value_of_lost_load_per_kwh` (scalar or 8760-element vector), `ElectricUtility.outage_durations`, `ElectricUtility.outage_start_time_steps`, and `ElectricUtility.outage_probabilities`.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5",
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1643,
+        "end": 1945
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "VoLL (`Financial.value_of_lost_load_per_kwh`) may be a scalar or an 8760-element vector.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1738,
+        "end": 1826
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "Validation should confirm field types, min/max bounds, and time-series length alignment with `Settings.time_steps_per_hour`, mirroring the `InputValidator.clean_fields()` and `cross_clean()` logic documented in the Django v3 API architecture.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1946,
+        "end": 2239
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "In the Django v3 API, `InputValidator.clean_fields()` validates field types, min/max values, and sets defaults, while `cross_clean()` performs cross-model validation such as ensuring timeseries input lengths align with `Settings.time_steps_per_hour`.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1946,
+        "end": 2239
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "ISO DR revenue is not native to the REopt objective but is computed in post-processing from the solved `ElectricStorage.size_kw` and `Generator.size_kw` values.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62",
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2783,
+        "end": 3045
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "DR capacity revenue is computed as R_DR = r_DR \u00d7 (P_batt + P_gen) \u00d7 12, where P_batt is `ElectricStorage.size_kw` and P_gen is `Generator.size_kw` from the results dictionary.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62",
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3167,
+        "end": 3397
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "The adjusted NPV adds DR revenue to the baseline NPV = LCC_BAU - LCC_Optimal.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3624,
+        "end": 3773
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "There is an open decision point on whether the ISO capacity commitment should enforce a floor constraint on `ElectricStorage.size_kw` (e.g., `min_kw >= committed_capacity`) as a JuMP constraint added before calling `run_reopt`.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_2_36"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3775,
+        "end": 4304
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "The primary driver script `run_wwdr.jl` instantiates two `JuMP.Model` instances for the BAU comparison pattern documented in the v3 architecture, where BAU and optimal scenarios run in parallel within the Julia process.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_In v3 of the API we use the REopt Julia package in a similar fashion (see_0_58",
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4413,
+        "end": 4679
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "The driver script invokes the two-model `run_reopt(m1, m2, scenario_dict)` signature.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4679,
+        "end": 4774
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "In v3 of the REopt API, BAU and optimal scenarios are run in parallel by the REopt Julia package, and running the BAU scenario is optional via `Settings.run_bau` input.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_In v3 of the API we use the REopt Julia package in a similar fashion (see_0_58"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4413,
+        "end": 4679
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "The solver models should be configured with `set_attribute(m, \"time_limit\", 600.0)`.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5060,
+        "end": 5143
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "The REopt.jl package can be used with just a few lines of Julia code without accessing the REopt API, using `run_reopt(m, \"path/to/scenario.json\")`.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4679,
+        "end": 4774
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "The VoLL sensitivity sweep executes a parametric sweep over VoLL scalar multipliers ranging from 0.1\u00d7 to 10\u00d7 the marginal VoLL baseline, following a deepcopy-override-solve-collect pattern.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5574,
+        "end": 5944
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "VoLL may be a scalar or an 8760-element vector; the multiplier scales whichever form is present.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5944,
+        "end": 6042
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "The `value_of_lost_load_per_kwh` field in the Financial input can be either a scalar Real or an Array of Real values.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5826,
+        "end": 6042
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "The outage duration and probability sweep varies the duration vector (e.g., [4, 8, 16, 24, 48, 72, 168] hours) and the associated probability weights, using the stochastic outage formulation that evaluates resilience across a combinatorial grid of start times and durations.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62",
+        "Methods \u00b7 REopt.jl Documentation_Returns a dict_0_0"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 6637,
+        "end": 7024
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "The outage sweep outputs include `expected_outage_cost`, `resilience_hours_min`, `resilience_hours_avg`, and `probs_of_surviving`.",
+      "source_chunk_ids": [
+        "Methods \u00b7 REopt.jl Documentation_Returns a dict_0_0",
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7085,
+        "end": 7295
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "REopt's `outage_probabilities` input accepts a vector aligned with `outage_durations`.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7401,
+        "end": 7539
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "The `simulate_outages` function returns `resilience_hours_min`, `resilience_hours_max`, `resilience_hours_avg`, `probs_of_surviving`, and `probs_of_surviving_by_month`.",
+      "source_chunk_ids": [
+        "Methods \u00b7 REopt.jl Documentation_Returns a dict_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8523,
+        "end": 8756
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "The NPV decomposition must include component terms: capital expenditure (net of ITC and MACRS), O&M lifecycle costs, grid energy and demand charges, fuel costs, export revenues, production incentives, battery replacement or augmentation costs, battery residual value, expected outage costs, and DR capacity revenue.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20",
+        "reopt-user-manual_References for Table 29:_2_42",
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 8127,
+        "end": 8517
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The NPV decomposition must satisfy the identity: NPV_adjusted = LCC_BAU - LCC_Optimal + R_DR,lifecycle.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 8517,
+        "end": 8636
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "The DER sizing summary table should include `PV.size_kw`, `ElectricStorage.size_kw`, `ElectricStorage.size_kwh`, `Generator.size_kw`, and any CHP or thermal storage capacities.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62",
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 8638,
+        "end": 8801
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "The `Outages` results section is only added to results when outages are modeled via the `ElectricUtility.outage_start_time_steps` and `ElectricUtility.outage_durations` inputs.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1830,
+        "end": 1945
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "The `expected_outage_cost` is a key output in the REopt Outages results.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8453,
+        "end": 8517
+      }
+    },
+    {
+      "claim_id": "claim_28",
+      "claim_text": "In v3 of the REopt API, there is only one celery task per optimization job, accomplished by running the BAU and optimal scenarios in parallel in the Julia code.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4413,
+        "end": 4679
+      }
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "Battery residual value captures the dollar value of remaining battery life at end of analysis period and is added to the objective function.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8382,
+        "end": 8453
+      }
+    },
+    {
+      "claim_id": "claim_30",
+      "claim_text": "The battery replacement strategy cost is added to the objective function to be minimized with all other costs.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8339,
+        "end": 8453
+      }
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "The NPV for financial analysis is calculated as the difference between the Business-As-Usual Case life cycle energy cost and the optimal case life cycle energy cost.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8517,
+        "end": 8636
+      }
+    },
+    {
+      "claim_id": "claim_32",
+      "claim_text": "The `utils_to_dict.jl` file is consumed by all other files via `include(\"utils_to_dict.jl\")`.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1179,
+        "end": 1274
+      }
+    },
+    {
+      "claim_id": "claim_33",
+      "claim_text": "The run_wwdr.jl driver script requires packages `REopt`, `JuMP`, `HiGHS`, and `JSON`.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5441,
+        "end": 5570
+      }
+    },
+    {
+      "claim_id": "claim_34",
+      "claim_text": "The `simulate_outages` function performs time series simulation of outages starting at every time step of the year, used to calculate how many time steps the critical load can be met in every outage, which determines probabilities of meeting the critical load.",
+      "source_chunk_ids": [
+        "Methods \u00b7 REopt.jl Documentation_Returns a dict_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8523,
+        "end": 8756
+      }
+    },
+    {
+      "claim_id": "claim_35",
+      "claim_text": "Outage timeseries results are 3-dimensional arrays with dimensions corresponding to the outage durations, the outage start time, and the time step in the outage.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6637,
+        "end": 7024
+      }
+    },
+    {
+      "claim_id": "claim_36",
+      "claim_text": "The inter-file dependency graph shows `utils_to_dict.jl` as the root dependency consumed by `scenario_builder.jl` and the driver scripts, with `postprocess.jl` as the terminal node with no downstream consumers.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Migration of Python code to Julia_0_59"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 8919,
+        "end": 9226
+      }
+    },
+    {
+      "claim_id": "claim_37",
+      "claim_text": "The hourly VoLL profile's time-varying magnitude creates an asymmetry with the coarser `outage_durations` scenario granularity, and when a VoLL vector is scaled by a uniform multiplier, the interaction with discrete outage duration bins may produce non-monotonic expected-outage-cost responses.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5",
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 6362,
+        "end": 6636
+      }
+    },
+    {
+      "claim_id": "claim_38",
+      "claim_text": "In v1/v2 of the REopt API, each optimization job consists of four celery tasks (`setup_scenario`, one optimal and one bau `run_jump_model`, and `process_results`), while in v3 there is only one celery task per optimization job.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4413,
+        "end": 4679
+      }
+    },
+    {
+      "claim_id": "claim_39",
+      "claim_text": "The `build_scenario` function signature is `function build_scenario(json_path::String; overrides::Dict=Dict()) -> Dict{String,Any}`.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2477,
+        "end": 2592
+      }
+    },
+    {
+      "claim_id": "claim_40",
+      "claim_text": "The VoLL sweep grid consists of multipliers [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 5.0, 7.5, 10.0].",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6044,
+        "end": 6133
+      }
+    },
+    {
+      "claim_id": "claim_41",
+      "claim_text": "Each VoLL sweep iteration follows the deepcopy-override-solve-collect pattern: deep-copy the base scenario, override `Financial.value_of_lost_load_per_kwh`, instantiate a fresh solver model per iteration, execute using the two-model signature, and serialize results.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5",
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5730,
+        "end": 6042
+      }
+    },
+    {
+      "claim_id": "claim_42",
+      "claim_text": "Three open decision points are identified: (1) whether ISO capacity commitment should enforce a `min_kw` floor on `ElectricStorage.size_kw` as a JuMP constraint, (2) how to reconcile hourly VoLL vector granularity with coarser `outage_durations` bins, and (3) whether seasonal outage probability weighting should replace uniform weighting.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_2_36",
+        "Inputs \u00b7 REopt.jl Documentation_RetailStore_0_5",
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 9228,
+        "end": 9909
+      }
+    },
+    {
+      "claim_id": "claim_43",
+      "claim_text": "Much of the inputs setup code and post-processing has shifted from the API to the Julia package in v3, meaning the JuMP model and all supporting functions are in a separate repository and can be used with just a few lines of Julia code.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Migration of Python code to Julia_0_59",
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4413,
+        "end": 4900
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

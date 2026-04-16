@@ -1,0 +1,23 @@
+[
+  {
+    "layer": "structural",
+    "passed": true,
+    "attempt": 1,
+    "violations": [],
+    "suggested_fix": null
+  },
+  {
+    "layer": "rule_based",
+    "passed": true,
+    "attempt": 1,
+    "violations": [
+      {
+        "rule": "word_count_mismatch",
+        "description": "Stated word_count (1420) does not match actual word count (1267) of content_markdown.",
+        "severity": "warning",
+        "location": "word_count"
+      }
+    ],
+    "suggested_fix": null
+  }
+]

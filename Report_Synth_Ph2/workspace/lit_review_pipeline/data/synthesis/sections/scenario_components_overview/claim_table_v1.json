@@ -1,0 +1,442 @@
+{
+  "section_id": "scenario_components_overview",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "The REopt.jl optimization engine consumes a structured JSON scenario file comprising distinct input blocks, each mapping to a set of parameters that populate the underlying mixed-integer linear program (MILP).",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 63,
+        "end": 316
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "The Site block's latitude and longitude fields drive downstream resource lookups including solar irradiance via PVWatts, wind via the Wind Toolkit, and emissions factors from Cambium/AVERT.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 639,
+        "end": 906
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "The field min_resil_time_steps is the hard resilience constraint: it specifies the minimum number of contiguous time steps for which the optimized DER portfolio must sustain the critical load without grid supply.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 908,
+        "end": 1133
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "To ensure that REopt recommends a system that can meet critical loads during a defined outage period, specify this duration using Site | min_resil_time_steps.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1135,
+        "end": 1380
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "When the stochastic multi-outage model is active, the optimizer may otherwise choose to shed load if doing so is cost-optimal; min_resil_time_steps overrides this trade-off by imposing an infeasibility on any solution that cannot island for the specified duration.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1382,
+        "end": 1655
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "The Financial block's key fields include analysis_years (default 25), offtaker_discount_rate_fraction, and microgrid_upgrade_cost_fraction, which scales the capital cost of switchgear and controls required to island DER assets.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1716,
+        "end": 1991
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "The field value_of_lost_load_per_kwh (VoLL) is the primary channel through which the hourly willingness-to-pay for reliability enters the MILP.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1993,
+        "end": 2147
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "In the stochastic outage formulation, expected outage cost is computed as the product of unserved energy, the per-kWh VoLL, and the probability weight of each outage scenario; this term appears directly in the objective function alongside lifecycle energy costs.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2148,
+        "end": 2426
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "The documentation confirms that expected outage cost will be included in the net present value and lifecycle cost calculations (for both the BAU and optimized case) and that setting VoLL to zero will remove incentive for the model to meet critical loads during outages.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2427,
+        "end": 2740
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "The ElectricLoad block accepts either an annual_kwh scalar paired with a doe_reference_name (selecting from DOE Commercial Reference Building profiles) or a custom 8760 (or sub-hourly) loads_kw time series.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2978,
+        "end": 3214
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "The critical_load_fraction parameter sets the fraction of the total electric load that constitutes the non-negotiable demand floor during grid outages.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3293,
+        "end": 3435
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "During islanded operation, the optimizer must dispatch DER to meet at least critical_load_fraction \u00d7 loads_kw[t] in every outage time step t; any deficit up to this floor is penalized at the VoLL rate (or rendered infeasible if min_resil_time_steps binds).",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3436,
+        "end": 3714
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "The Resilience case is optimized to sustain a critical load in the event of a grid outage while minimizing the present value of all future energy costs over the analysis period.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3715,
+        "end": 3948
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "The ElectricTariff block has two primary specification modes: a simplified representation via blended_annual_energy_rate ($/kWh) and blended_annual_demand_rate ($/kW/month), or a detailed tariff referenced by urdb_label from the Utility Rate Database.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4025,
+        "end": 4326
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "For deterministic single-outage analyses, outage_start_time_step and outage_end_time_step define a fixed islanding window.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Single Outage Modeling Inputs (Outage Modeling Option 1):_0_7"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4620,
+        "end": 4792
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "For the stochastic multi-outage formulation, three parallel arrays drive the ExpectedOutageCost term in the objective: outage_start_time_steps, outage_durations, and outage_probabilities.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4793,
+        "end": 5129
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "Cannot supply singular outage_start(or end)_time_step and multiple outage_start_time_steps. Must use one or the other.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5736,
+        "end": 5981
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "When stochastic outages are modeled, emissions and renewable energy percentage constraints do not factor in outage periods.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5983,
+        "end": 6106
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "The ElectricStorage block optimizer selects both power capacity (kW) and energy capacity (kWh) within user-specified bounds: min_kw, max_kw (default 1 \u00d7 10^4), min_kwh, and max_kwh (default 1 \u00d7 10^6).",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6143,
+        "end": 6413
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "ElectricStorage additional parameters govern round-trip efficiency (inverter_efficiency_fraction, rectifier_efficiency_fraction, internal_efficiency_fraction), minimum state-of-charge (soc_min_fraction, default 0.2), and whether grid charging is permitted (can_grid_charge).",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6414,
+        "end": 6700
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "ElectricStorage installed costs follow a two-part structure: installed_cost_per_kw ($968 default for power electronics) and installed_cost_per_kwh ($253 default for cell modules), plus a fixed constant.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6701,
+        "end": 6927
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "The soc_min_applies_during_outages boolean controls whether the SOC floor relaxes during islanded operation; the Energy Resilience Performance tool post-processor assumes full depth-of-discharge during outages regardless of this setting.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6928,
+        "end": 7199
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "If no production_factor_series is provided for PV, REopt calls NREL's PVWatts via the site coordinates to generate hourly capacity factors.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7352,
+        "end": 7501
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "PV cost defaults follow a size-class methodology tied to average load magnitude, with installed_cost_per_kw ranging from $1,239/kW (utility scale) to $2,783/kW (residential) based on 2024 ATB data.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_0_34"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7502,
+        "end": 7723
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The PV degradation_fraction (default 0.5%/year) is applied to produce a lifetime-averaged production profile.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17",
+        "reopt-user-manual_Metric type explanations:_0_34"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7724,
+        "end": 7832
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "During outages, PV output is available to serve critical loads only if the microgrid upgrade is purchased (controlled by the microgrid_upgrade_cost_fraction in the Financial block).",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7833,
+        "end": 8046
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "The Generator block's boolean only_runs_during_grid_outage (default true) restricts generator dispatch to islanded periods for emergency-only configurations.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8233,
+        "end": 8440
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "Generator fuel consumption follows a linear curve parameterized by the full-load and half-load efficiencies, consistent with the CHP fuel burn formulation described in the REopt documentation.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_2_36"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 8441,
+        "end": 8644
+      }
+    },
+    {
+      "claim_id": "claim_28",
+      "claim_text": "The Generator min_turn_down_fraction defaults to 0.0 for grid-connected resilience scenarios but can be adjusted to reflect operational constraints on partial loading.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 8645,
+        "end": 8818
+      }
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "Financial.value_of_lost_load_per_kwh consumes the hourly VoLL array and scales unserved energy into monetary cost within the objective function, serving as the mechanism through which heterogeneous, time-varying reliability valuations propagate into DER sizing decisions.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 8900,
+        "end": 9254
+      }
+    },
+    {
+      "claim_id": "claim_30",
+      "claim_text": "ElectricUtility.outage_start_time_steps / outage_durations / outage_probabilities together define the stochastic outage scenarios that generate the ExpectedOutageCost term, with the probability-weighted summation across scenarios ensuring the optimizer hedges against the full distribution of outage events rather than a single deterministic window.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 9256,
+        "end": 9686
+      }
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "ElectricLoad.critical_load_fraction establishes the hard floor for load that must be served during any outage; combined with Site.min_resil_time_steps, this parameter determines whether the resilience requirement manifests as a soft cost penalty (via VoLL) or a hard feasibility constraint.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17",
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 9688,
+        "end": 10060
+      }
+    },
+    {
+      "claim_id": "claim_32",
+      "claim_text": "The expected outage cost for the stochastic formulation is computed as ExpectedOutageCost = sum over scenarios s of p_s times the sum over time steps t of VoLL_t times UnservedLoad_{s,t}.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5404,
+        "end": 5734
+      }
+    },
+    {
+      "claim_id": "claim_33",
+      "claim_text": "The default analysis period in the Financial block is 25 years.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1773,
+        "end": 1821
+      }
+    },
+    {
+      "claim_id": "claim_34",
+      "claim_text": "For emergency-only configurations, the default assumption is that the generator only operates during grid outages.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_2_36"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8233,
+        "end": 8440
+      }
+    },
+    {
+      "claim_id": "claim_35",
+      "claim_text": "VoLL sets the marginal price of reliability, the outage specification vectors define the threat landscape, and the critical load fraction determines the quantity of demand that must be defended.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 10062,
+        "end": 10529
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

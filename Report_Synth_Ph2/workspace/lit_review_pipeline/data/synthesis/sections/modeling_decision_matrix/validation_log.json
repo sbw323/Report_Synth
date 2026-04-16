@@ -1,0 +1,58 @@
+[
+  {
+    "layer": "structural",
+    "passed": false,
+    "attempt": 1,
+    "violations": [
+      {
+        "rule": "json_parse",
+        "description": "Output is not valid JSON: Unterminated string starting at: line 38 column 40 (char 14091)",
+        "severity": "error",
+        "location": "character 14091"
+      }
+    ],
+    "suggested_fix": null
+  },
+  {
+    "layer": "structural",
+    "passed": false,
+    "attempt": 2,
+    "violations": [
+      {
+        "rule": "json_parse",
+        "description": "Output is not valid JSON: Unterminated string starting at: line 82 column 40 (char 14915)",
+        "severity": "error",
+        "location": "character 14915"
+      }
+    ],
+    "suggested_fix": null
+  },
+  {
+    "layer": "structural",
+    "passed": false,
+    "attempt": 3,
+    "violations": [
+      {
+        "rule": "json_parse",
+        "description": "Output is not valid JSON: Unterminated string starting at: line 66 column 40 (char 14905)",
+        "severity": "error",
+        "location": "character 14905"
+      }
+    ],
+    "suggested_fix": null
+  },
+  {
+    "layer": "structural",
+    "passed": false,
+    "attempt": 4,
+    "violations": [
+      {
+        "rule": "json_parse",
+        "description": "Output is not valid JSON: Unterminated string starting at: line 65 column 29 (char 14831)",
+        "severity": "error",
+        "location": "character 14831"
+      }
+    ],
+    "suggested_fix": null
+  }
+]

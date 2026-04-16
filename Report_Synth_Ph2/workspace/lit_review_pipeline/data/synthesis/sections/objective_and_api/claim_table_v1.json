@@ -1,0 +1,446 @@
+{
+  "section_id": "objective_and_api",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "REopt.jl formulates distributed energy resource (DER) sizing and dispatch as a single-objective mixed-integer linear program (MILP) whose scalar objective minimizes the life-cycle cost (LCC) of energy over a user-specified analysis horizon.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48",
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 72,
+        "end": 320
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "The net present value (NPV) is defined as the difference between the business-as-usual (BAU) LCC and the optimized-case LCC, so minimizing LCC and maximizing NPV are algebraically equivalent; no Pareto multi-objective frontier is constructed.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 321,
+        "end": 560
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "The objective function assembles additive cost terms, each discounted to present value using the off-taker's nominal discount rate over `analysis_years` (default 25 years).",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44",
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 773,
+        "end": 960
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "For each technology t in subdivision k, segment s, the capital cost is represented by a piecewise-linear function with slope c^{cm}_{ts} [$/kW] and intercept c^{cb}_{ts} [$].",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1002,
+        "end": 1182
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Storage systems contribute two independent capital cost terms: c^{kW}_b [$/kW] for power capacity and c^{kWh}_b [$/kWh] for energy capacity.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48",
+        "reopt-user-manual_Metric type explanations:_1_35"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1183,
+        "end": 1343
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "Battery replacement or augmentation costs C_{repl} or C_{aug} are added to the objective when `model_degradation` is enabled.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20",
+        "Inputs \u00b7 REopt.jl Documentation_where:_0_19"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1344,
+        "end": 1486
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "Both fixed O&M per unit of power rating (c^{om\u03c3}_t [$/kW], which includes standby charges for CHP) and variable O&M per unit of production (c^{omp}_t [$/kWh]) are discounted over the analysis period using the present worth factor f_{om}.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1533,
+        "end": 1805
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "Electricity purchases are valued at time-of-use energy prices c^{g}_{uh} [$/kWh] across tiered demand structures. Demand charges enter via monthly peak demand tiers (c^{rm}_{mn} [$/kW]) and time-of-use demand periods (c^{r}_{de} [$/kW]), with ratchet provisions over look-back months.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1848,
+        "end": 2163
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "Fuel costs for on-site generation enter at c^{u}_f [$/MMBTU] discounted by technology-specific present worth factors f^{pf}_t.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2164,
+        "end": 2302
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "When enabled, marginal costs of pollutant p from on-site fuel burn (c^{f}_p [$/ton]) and from grid-purchased electricity (c\u0304^{g}_p [$/ton]) are included, each with their own present worth factors f^{fc}_p and f^{gc}_p.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2334,
+        "end": 2582
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "The expected outage cost term is weighted by `value_of_lost_load_per_kwh` (VoLL) and `outage_probabilities`, penalizing unserved energy during stochastic outage scenarios.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2620,
+        "end": 2820
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "Energy export revenues at rates c^{e}_{uh} [$/kWh] across net-metering and wholesale tiers are subtracted from cost in the objective.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2910,
+        "end": 3019
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "Production incentives X^{pi}_t [$] are bounded by technology-specific caps \u012b_t and power limits \u012b^{\u03c3}_t.",
+      "source_chunk_ids": [
+        "reopt-user-manual_REopt[TM]_0_48"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3022,
+        "end": 3170
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "The ITC reduces CAPEX directly (e.g., 30% for PV and storage meeting prevailing wage requirements), while MACRS bonus depreciation (up to 100% first-year under current law) reduces the depreciation basis by half the ITC value.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44",
+        "reopt-user-manual_Metric type explanations:_1_35"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3172,
+        "end": 3551
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "Battery residual value C_{residual}, computed as the present worth of remaining useful life at the end of the analysis period, is subtracted from total cost.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3554,
+        "end": 3746
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "ISO demand response (DR) capacity revenue is not native to the objective but is computed in post-processing, derived from the solved `ElectricStorage.size_kw` and `Generator.size_kw` capacities after the optimization terminates, and is reported as an ancillary economic metric rather than influencing DER sizing directly.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3749,
+        "end": 4105
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "NPV is calculated as NPV = LCC_{BAU} - LCC_{Optimal}.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4151,
+        "end": 4244
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "The BAU case includes only utility demand and energy costs, existing boiler fuel costs, and O&M for any existing PV or generator.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4246,
+        "end": 4378
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "The optimized case adds CAPEX, tax benefits, incentives, and O&M for all recommended DER.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4379,
+        "end": 4462
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "Fixed utility fees cancel in the NPV calculation because they cannot be offset by DER.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4463,
+        "end": 4563
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "For financial analyses, NPV is guaranteed non-negative unless the user forces a minimum technology size; for resilience analyses, NPV may be negative, indicating that the resilience premium exceeds the economic benefit.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4564,
+        "end": 4800
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "Avoided outage costs are not included in the NPV calculation by default, though adding them may increase NPV.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4801,
+        "end": 4912
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "The stochastic outage formulation evaluates resilience across a combinatorial grid of `outage_start_time_steps` and `outage_durations`, each weighted by `outage_probabilities`.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4963,
+        "end": 5167
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "The expected outage cost takes the form: ExpectedOutageCost = \u03a3_{s\u2208S} p_s \u03a3_{t\u2208T_s} VoLL_t \u00b7 UnservedLoad_{s,t}, where p_s is the probability of outage scenario s and the inner summation runs over the time steps t within that scenario's duration.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5247,
+        "end": 5557
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The critical structural feature is a minimax arrangement: the maximum is taken over `outage_start_time_steps` (the optimizer must hedge against the worst-case start time), while the expectation is taken over `outage_durations` weighted by `outage_probabilities`.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5558,
+        "end": 5873
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "Outage time-series results are stored as three-dimensional arrays indexed by [duration_scenario, start_time_step, timestep_within_outage].",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5973,
+        "end": 6119
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "The scenario JSON is loaded via `JSON.parsefile(\"path/to/scenario.json\")`, which returns a nested `JSON.Object`. A documented bug requires recursive conversion of these objects to native Julia `Dict` types before passing them to REopt internals.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6301,
+        "end": 6612
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "The JuMP model is constructed with `m = Model(HiGHS.Optimizer)` and solver-level attributes are configured via `set_attribute(m, \"time_limit\", seconds)`.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6802,
+        "end": 7072
+      }
+    },
+    {
+      "claim_id": "claim_28",
+      "claim_text": "The REopt User Manual specifies default optimality tolerances of 0.1% for general cases, 1% for CHP scenarios, and 5% for off-grid analyses.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7073,
+        "end": 7228
+      }
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "`run_reopt` supports two calling signatures: a single-model signature `results = run_reopt(m, scenario_dict)` that solves the optimized case only, and a two-model signature `results = run_reopt(m1, m2, scenario_dict)` that solves both the BAU and optimized cases in the same invocation, enabling automatic NPV calculation.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57",
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_The steps behind an optimization are:_0_56"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 7269,
+        "end": 7723
+      }
+    },
+    {
+      "claim_id": "claim_30",
+      "claim_text": "The v3 architecture runs BAU and optimal scenarios in parallel within the Julia process, consolidating what were previously four separate Celery tasks into one.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7724,
+        "end": 7875
+      }
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "REopt returns results containing `JuMP.Containers.DenseAxisArray` objects, which are not directly JSON-serializable. A recursive `make_serializable` function must traverse the results dictionary, converting every `DenseAxisArray` to a standard Julia `Array` before calling `JSON.print(io, results)`.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7917,
+        "end": 8261
+      }
+    },
+    {
+      "claim_id": "claim_32",
+      "claim_text": "Parametric studies such as sweeping `Financial.value_of_lost_load_per_kwh` follow a standardized pattern: deep copy the base scenario, override the target parameter, instantiate a fresh solver model per iteration, execute using the two-model signature, and collect and serialize results.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 8303,
+        "end": 9285
+      }
+    },
+    {
+      "claim_id": "claim_33",
+      "claim_text": "The VoLL value may be a scalar or an 8,760-element (or sub-hourly) vector reflecting time-varying willingness-to-pay.",
+      "source_chunk_ids": [
+        "Outputs \u00b7 REopt.jl Documentation_tax_0_62"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 8730,
+        "end": 8876
+      }
+    },
+    {
+      "claim_id": "claim_34",
+      "claim_text": "The `deepcopy`-override-solve-collect loop ensures each iteration operates on an independent scenario state, preventing cross-contamination of mutable dictionary references across parameter grid points.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 9286,
+        "end": 9523
+      }
+    },
+    {
+      "claim_id": "claim_35",
+      "claim_text": "In v1/v2, each optimization job consists of four celery tasks (setup_scenario, one optimal and one bau run_jump_model, and process_results). In v3, there is only one celery task per optimization job.",
+      "source_chunk_ids": [
+        "1. Structure of the REopt API \u00b7 NatLabRockies:REopt_API Wiki_Django Models and Input Validation_0_57"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7724,
+        "end": 7875
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

@@ -1,0 +1,447 @@
+{
+  "section_id": "introduction",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "Wastewater treatment plants (WWTPs) represent a distinctive class of behind-the-meter industrial loads where electrical demand is dominated by aeration blowers that maintain dissolved oxygen levels for biological nutrient removal.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 100,
+        "end": 344
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "Enrollment in an ISO demand response (DR) program creates a revenue opportunity through capacity payments tied to guaranteed load-shed commitments, yet curtailing aeration power introduces a process-level risk: if ammonia or total nitrogen concentrations exceed state-formula effluent limits, the facility incurs regulatory fines whose magnitude scales with the duration and severity of the exceedance.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 345,
+        "end": 736
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "The engineering-economic optimization task addressed in this work is to size a behind-the-meter microgrid\u2014comprising battery energy storage (BESS), solar PV, and a backup diesel generator\u2014such that the facility maximizes net present value (NPV) across the full set of additive cash-flow components that arise from this dual participation.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 737,
+        "end": 1080
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "The REopt optimization engine minimizes life cycle cost (equivalently maximizing NPV) by selecting optimal DER sizes and hourly dispatch subject to load-balance, technology, and financial constraints.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1366,
+        "end": 1568
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "The Financial case reported by REopt 'minimizes the present value of all future energy costs over the analysis period' and 'may include a combination of utility, PV, wind, CHP, GHP\u2026 and/or battery'.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1599,
+        "end": 1833
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "NPV is computed as the difference between the Business-as-Usual life cycle cost and the optimized-case life cycle cost, where the life cycle cost encompasses 'utility demand and energy costs as well as the capital expenditure, tax benefits and incentives, and O&M costs associated with the project'.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1834,
+        "end": 2156
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "REopt's hourly dispatch co-optimizes PV production, battery charge/discharge, and generator operation against the site's tariff structure, including both volumetric energy charges and demand charges.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2247,
+        "end": 2469
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "Battery sizing is driven in part by demand-charge reduction: 'for batteries, high demand charges are important for economic viability'.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2470,
+        "end": 2613
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "The BESS is parameterized with independent power (kW) and energy (kWh) capacities, installed cost decomposed into $/kW, $/kWh, and a constant term, round-trip AC-AC efficiency defaulting to 89.9%, and a minimum state-of-charge floor of 20% during grid-connected operation.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17",
+        "reopt-user-manual_Metric type explanations:_1_35"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2614,
+        "end": 2933
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "PV is modeled via PVWatts production factors with default system losses of 14% and a DC/AC ratio of 1.2.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_1_35",
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2934,
+        "end": 3058
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "The backup generator defaults to an installed cost of $500/kW for grid-connected resilience applications with a full-load electric efficiency of 32.2% and diesel fuel cost of $2.25/gal.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3059,
+        "end": 3270
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "DR payments are not natively optimized within the REopt.jl v0.57 objective function. Instead, they are incorporated through post-processing.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3305,
+        "end": 3462
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "REopt natively supports a financial input `value_of_lost_load_per_kwh` that, when used with multiple-outage modeling, causes 'the expected outage cost [to] be included in the net present value and lifecycle cost calculations'.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4060,
+        "end": 4351
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "VoLL is supplied as an 8760-element hourly array produced by the external MATLAB routine `compute_voll_for_reopt.m`, which couples a biokinetic process simulator (ASM-family) with the state penalty formula to yield a time-varying $/kWh series that reflects seasonal influent loading, temperature-dependent nitrification kinetics, and the nonlinear relationship between aeration curtailment duration and effluent NH4/TN breakthrough.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 4352,
+        "end": 4793
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "The REopt documentation confirms that the model 'minimize[s] the maximum expected outage cost' when outage start time steps and durations are provided, and that setting `value_of_lost_load_per_kwh` to zero removes the incentive for the model to meet critical loads during outages.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17",
+        "Inputs \u00b7 REopt.jl Documentation_minimax the expected outage cost, with max taken over outage start time, ex_0_9"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4794,
+        "end": 5106
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "A non-trivial VoLL array directly steers DER sizing toward configurations that hedge against aeration-curtailment-induced fines.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5107,
+        "end": 5225
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "All technology capital expenditures enter the life cycle cost as present-value sums inclusive of federal Investment Tax Credit (default 30%), MACRS accelerated depreciation (5-year schedule with 100% bonus), and state/utility rebates where applicable.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44",
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5262,
+        "end": 5531
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "Annual O&M costs escalate at the inflation rate (default 2.5%) and are discounted over the analysis period (default 25 years) at the nominal discount rate (default 6.24%).",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5532,
+        "end": 5711
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "Battery replacement cost is modeled at a user-specified replacement year (default year 10), with the replacement cost present-valued and added to the objective.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17",
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5712,
+        "end": 5905
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "The replacement strategy cost follows C_repl = B_kWh \u00b7 N_repl \u00b7 f(d_80) \u00b7 C_install, where f(d_80) is the present worth factor at the month the state-of-health falls below 80%.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5906,
+        "end": 6128
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "Islanding capability requires additional switchgear, controls, and protection equipment. REopt parameterizes this through `microgrid_upgrade_cost_fraction`, a fractional adder applied to recommended DER capital costs.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6173,
+        "end": 6398
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "PV array capacity (kW_DC) is bounded by available roof and ground area converted via default power densities of 0.01 kW/ft\u00b2 (rooftop) and 6 \u00d7 10\u207b\u00b3 acres/kW (ground mount).",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6619,
+        "end": 6855
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "BESS power capacity (kW_AC) and energy capacity (kWh) are independently optimized without a predefined power-to-energy ratio.",
+      "source_chunk_ids": [
+        "reopt-user-manual_Metric type explanations:_1_35"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6858,
+        "end": 7001
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "Backup generator capacity (kW) has constraints on minimum turndown fraction (default 0% for grid-connected resilience, 15% for off-grid) and finite fuel availability.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_The replacement strategy cost is:_0_20",
+        "reopt-user-manual_References for Table 29:_4_44"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7004,
+        "end": 7193
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The model treats technology sizes as continuous variables; commercially available discrete sizes are addressed in post-processing.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7338,
+        "end": 7474
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "Energy arbitrage optimization beyond what emerges endogenously from time-of-use rate structures in the tariff is explicitly excluded from the formulation.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7667,
+        "end": 7789
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "Voltage support and power quality services are explicitly excluded, as they would require distribution-network power-flow models outside REopt's load-balance formulation.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7792,
+        "end": 7948
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "Ancillary service co-optimization (e.g., frequency regulation, spinning reserve markets) is excluded, as it would demand sub-hourly dispatch resolution and market-clearing co-simulation.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 7951,
+        "end": 8138
+      }
+    },
+    {
+      "claim_id": "claim_28",
+      "claim_text": "Pareto-style multi-objective formulations that would trade off NPV against resilience hours, emissions, or process reliability as independent objectives are excluded; instead the current approach monetizes process risk through the VoLL array and collapses all objectives into a single NPV scalar.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 8141,
+        "end": 8447
+      }
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "The resilience modeling capability of REopt\u2014where the system is 'optimized to sustain a critical load in the event of a grid outage while minimizing the present value of all future energy costs'\u2014provides the mathematical infrastructure for enforcing minimum load-service constraints during DR commitment windows.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8449,
+        "end": 8810
+      }
+    },
+    {
+      "claim_id": "claim_30",
+      "claim_text": "The Energy Resilience Performance (ERP) post-processing tool uses a Markovian reliability model incorporating Mean Time to Failure, operational availability, and failure-to-start probabilities for each DER type (Marqusee et al., 2021) and can further quantify the probability that the sized microgrid sustains aeration loads across all possible DR event start times.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_3_43",
+        "Methods \u00b7 REopt.jl Documentation_Return dic!onary of backup reliability results._0_3"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 8811,
+        "end": 9137
+      }
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "The NPV formulation aggregates five principal terms: PV of avoided energy, PV of DR capacity, PV of fine penalty, PV of DER CapEx+O&M, and PV of microgrid upgrade.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1127,
+        "end": 1365
+      }
+    },
+    {
+      "claim_id": "claim_32",
+      "claim_text": "The microgrid's ability to shed grid load in any hour t equals the instantaneous surplus of on-site generation plus available battery discharge over the critical process load floor.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3583,
+        "end": 3784
+      }
+    },
+    {
+      "claim_id": "claim_33",
+      "claim_text": "When the microgrid cannot fully displace grid-drawn aeration power during a DR event, biological treatment performance degrades and the probability of an effluent exceedance rises.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3882,
+        "end": 4059
+      }
+    },
+    {
+      "claim_id": "claim_34",
+      "claim_text": "The microgrid upgrade cost is incurred only when the system must operate islanded during DR events or grid outages, and it enters the life cycle cost alongside technology-specific CapEx.",
+      "source_chunk_ids": [
+        "Inputs \u00b7 REopt.jl Documentation_Used with Health Options 1 or 2: Annual percent decrease in health emission_0_17"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6399,
+        "end": 6577
+      }
+    },
+    {
+      "claim_id": "claim_35",
+      "claim_text": "The optimization simultaneously determines PV array capacity, BESS power and energy capacity, backup generator capacity, and hourly dispatch of all assets across 8760 time steps.",
+      "source_chunk_ids": [
+        "reopt-user-manual_References for Table 29:_2_42"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6568,
+        "end": 7336
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 2
+}

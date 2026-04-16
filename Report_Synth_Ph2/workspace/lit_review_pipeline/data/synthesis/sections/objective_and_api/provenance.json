@@ -1,0 +1,17 @@
+{
+  "section_id": "objective_and_api",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "REopt run_reopt JuMP Model HiGHS Optimizer objective",
+    "REopt lifecycle cost LCC NPV lifecycle_outage_cost",
+    "REopt results Financial npv lcc initial_capital_costs"
+  ],
+  "chunk_count": 16,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 36,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}

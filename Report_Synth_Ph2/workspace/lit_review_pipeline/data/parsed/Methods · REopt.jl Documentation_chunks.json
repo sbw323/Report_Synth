@@ -1,0 +1,73 @@
+[
+  {
+    "text": "## Returns a dict \n\n`\"resilience_by_time_step\": vector of time steps that critical load is met for`  `\"resilience_hours_min\": minimum of \"resilience_by_time_step\",` \n\n- `\"resilience_hours_max\": maximum of \"resilience_by_time_step\",` \n\n- `\"resilience_hours_avg\": average of \"resilience_by_time_step\",` \n\n- `\"outage_durations\": vector of integers for outage durations with non zero pro \"probs_of_surviving\": vector of probabilities corresponding to the \"outage_du \"probs_of_surviving_by_month\": vector of probabilities calculated on a monthl \"probs_of_surviving_by_hour_of_the_day\":vector of probabilities calculated on` \n\nhttps://natlabrockies.github.io/REopt.jl/dev/reopt/methods/ \n\nPage 3 of 6 \n\nMethods · REopt.jl Documentation \n\n4/16/26, 10:32 AM \n\n```\n}\n```\n\n`simulate_outages(d::Dict, p::REoptInputs; microgrid_only::Bool=false)`  \n\nTime series simula!on of outages star!ng at every !me step of the year. Used to calculate how many !me steps the cri!cal load can be met in every outage, which in turn is used to determine probabili!es of mee!ng the cri!cal load. \n\n## **Arguments** \n\n`d` ::Dict from `reopt_results` \n\n- `p` ::REoptInputs the inputs that generated the Dict from `reopt_results` \n\n- `microgrid_only` ::Bool whether or not to simulate only the op!mal microgrid capaci!es or the total capaci!es. This input is only relevant when modeling mul!ple outages.",
+    "metadata": {
+      "paper_id": "Methods · REopt.jl Documentation",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Returns a dict",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        3
+      ]
+    }
+  },
+  {
+    "text": "## Returns a dict \n\n```\n{\n```\n\n \n\n```\n\"resilience_by_time_step\": vector of time steps that critical load is met for\n\"resilience_hours_min\": minimum of \"resilience_by_time_step\",\n\"resilience_hours_max\": maximum of \"resilience_by_time_step\",\n```\n\n```\n\"resilience_hours_avg\": average of \"resilience_by_time_step\",\n```\n\n```\n\"outage_durations\": vector of integers for outage durations with non zero pro\n\"probs_of_surviving\": vector of probabilities corresponding to the \"outage_du\n\"probs_of_surviving_by_month\": vector of probabilities calculated on a monthl\n\"probs_of_surviving_by_hour_of_the_day\":vector of probabilities calculated on\n}\n```\n\n## **backup_reliability** \n\n- `REopt.backup_reliability` — Func!on \n\n```\nbackup_reliability(d::Dict, p::REoptInputs, r::Dict)\n```\n\n",
+    "metadata": {
+      "paper_id": "Methods · REopt.jl Documentation",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Returns a dict",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": []
+    }
+  },
+  {
+    "text": "## Return dic!onary of backup reliability results. \n\nhttps://natlabrockies.github.io/REopt.jl/dev/reopt/methods/ \n\nPage 4 of 6 \n\nMethods · REopt.jl Documentation \n\n4/16/26, 10:32 AM \n\n## **Arguments** \n\n- `d::Dict` : REopt results dic!onary. Subhourly !me steps are not yet supported. \n\n- `p::REoptInputs` : REopt Inputs Struct. \n\n- `r::Dict` : Dic!onary of inputs for reliability calcula!ons. If r not included then uses all defaults. \n\nPossible keys in r: -generator _opera!onal_ availability::Real = 0.995 Frac!on of year generators not down for maintenance -generator _failure_ to _start::Real = 0.0094 Chance of generator star!ng given outage -generator_ mean _!me_ to _failure::Real = 1100 Average number of !me steps between a generator's failures. 1/(failure to run probability). -num_ generators::Int = 1 Number of generators. - \n\ngenerator _size_ kw::Real = 0.0 Backup generator capacity. -num _ba\"ery_ bins::Int = depends on ba#ery sizing Number of bins for discretely modeling ba#ery state of charge - \n\nba#ery _opera!onal_ availability::Real = 0.97 Likelihood ba#ery will be available at start of outage - pv _opera!onal_ availability::Real = 0.98 Likelihood PV will be available at start of outage - wind _opera!onal_ availability::Real = 0.97 Likelihood Wind will be available at start of outage - max _outage_ dura!on::Int = 96 Maximum outage dura!on modeled -microgrid_only::Bool = false Determines how generator, PV, and ba#ery act during islanded mode \n\n```\nbackup_reliability(r::Dict)\n```\n\n",
+    "metadata": {
+      "paper_id": "Methods · REopt.jl Documentation",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Return dic!onary of backup reliability results.",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        4
+      ]
+    }
+  },
+  {
+    "text": "## Return dic!onary of backup reliability results. \n\n## **Arguments** \n\n- `r::Dict` : Dic!onary of inputs for reliability calcula!ons. If r not included then uses all defaults. \n\nPossible keys in r: -cri!cal _loads_ kw::Array Cri!cal loads per !me step. Must be hourly and have length of 8760. (Required input) -microgrid _only::Bool Boolean to check if only microgrid runs during grid outage (defaults to false) -chp_ size _kw::Real CHP capacity. -pv_ size _kw::Real Size of PV System - pv_ produc!on _factor_ series::Array PV produc!on factor per !me step. Must be hourly and have length of 8760. (Required if pv _size_ kw in dic!onary) -pv _migrogrid_ upgraded::Bool If true then PV runs during outage if microgrid _only = TRUE (defaults to false) -ba\"ery_ size _kw::Real Ba\"ery capacity. If no ba\"ery installed then PV disconnects from system during outage -ba\"ery_ size _kwh::Real Ba\"ery energy storage capacity -ba\"ery_ charge _efficiency::Real Ba\"ery charge efficiency -_ \n\nhttps://natlabrockies.github.io/REopt.jl/dev/reopt/methods/ \n\nPage 5 of 6 \n\nMethods · REopt.jl Documentation \n\n4/16/26, 10:32 AM \n\n_ba\"ery_ discharge star!ng _soc_ series _frac!on::Array Ba\"ery percent state of charge !me series during normal grid-connected usage. Must be hourly and have length of 8760. -generator_ failure _to_ start::Real = 0.0094 Chance of generator star!ng given outage -generator _mean_ !me _to_ failure::Real = 1100 Average number of !me steps between a generator's failures. 1/(failure to run probability). -num _generators::Int = 1 Number of generators. - generator_ size _kw::Real = 0.0 Backup generator capacity. -num_ ba#ery _bins::Int =_ \n\n_num_ ba#ery _bins_ default(r[:ba#ery _size_ kw],r[:ba#ery _size_ kwh]) Number of bins for discretely modeling ba#ery state of charge -max _outage_ dura!on::Int = 96 Maximum outage dura!on modeled \n\n« Outputs \n\nExamples » \n\nPowered by Documenter.jl and the Julia Programming Language. \n\nhttps://natlabrockies.github.io/REopt.jl/dev/reopt/methods/ \n\nPage 6 of 6",
+    "metadata": {
+      "paper_id": "Methods · REopt.jl Documentation",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Return dic!onary of backup reliability results.",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        5,
+        6
+      ]
+    }
+  }
+]

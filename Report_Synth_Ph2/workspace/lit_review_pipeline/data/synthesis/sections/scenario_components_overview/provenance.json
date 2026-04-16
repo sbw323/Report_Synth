@@ -1,0 +1,17 @@
+{
+  "section_id": "scenario_components_overview",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "REopt Scenario struct input fields",
+    "REopt ElectricUtility outage_start_time_steps outage_durations",
+    "REopt Financial microgrid_upgrade_cost_fraction analysis_years"
+  ],
+  "chunk_count": 22,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 36,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}

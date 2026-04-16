@@ -1,0 +1,234 @@
+[
+  {
+    "text": "## Relating **`Model`** s to each other \n\nEach `Model` except `APIMeta` has a `meta` attribute, which is used to link instances of that class to an instance of `APIMeta` . This is necessary for linking all the data of a REopt run stored in the database. The meta field can be of different types depending on the relationship between models. \n\nThis class is used when there is only ever one instance of the class associated with each `APIMeta` , which goes for most classes. For example, this is how the `WindInputs` meta field is defined as follows: \n\n```\nmeta = models.OneToOneField(\n    APIMeta,\n    on_delete=models.CASCADE,\n    related_name=\"WindInputs\",\n    primary_key=True\n)\n```\n\nThis class is used when there can be multiple instances of the class associated with each `APIMeta` , such as `PVInputs` , `PVOutputs` , and `Message` . For example, the `PVOutputs` meta field is defined as follows \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 3 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n```\nmeta = models.ForeignKey(\n```\n\n```\n    to=APIMeta,\n```\n\n```\n    on_delete=models.CASCADE,\n```\n\n```\n    related_name=\"PVOutputs\",\n```\n\n```\n    unique=False\n)\n```\n\nWhen defining data fields inside a `Model` subclass, we take advantage of Django's built-in functionality to: \n\n- validate field types \n\n- validate field min/max values \n\n- limit fields to certain values \n\n- set defaults \n\n- set whether fields are required \n\n- provide `help_text` for each field \n\nFor example, the `timeout_seconds` field is constrained between 1 and 420 seconds with a default of 420: \n\n```\ntimeout_seconds = models.IntegerField(\n```\n\n```\n    default=420,\n```\n\n- `validators=[` \n\n```\n    ],\n```\n\n```\n    help_text=\"The number of seconds allowed before the optimizat\n```\n\n```\n)\n```",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Relating **`Model`** s to each other",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        3
+      ]
+    }
+  },
+  {
+    "text": "## The following is an example of limiting a field value to a set of choices: \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 4 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n```\ntime_steps_per_hour = models.IntegerField(\n    default=TIME_STEP_CHOICES.ONE,\n    choices=TIME_STEP_CHOICES.choices,\n```\n\n```\n    help_text=\"The number of time steps per hour in the REopt mod\n)\n```\n\nwhere `TIME_STEP_CHOICES` is defined as: \n\n```\nclass TIME_STEP_CHOICES(models.IntegerChoices):\n    ONE = 1\n    TWO = 2\n    FOUR = 4\n```\n\nWhen fields are not required to be provided by the user, we set the `blank` parameter to `True` . When the field also has no `default` , to allow it to be stored in the database as NULL, we set the `null` parameter to `True` (except for `CharField` and `TextField` which should be saved as /'/' when empty).",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "The following is an example of limiting a field value to a set of choices:",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        4
+      ]
+    }
+  },
+  {
+    "text": "## Defining **`Model`** 's **`clean`** method \n\nThe Django `Model` class has a `clean` method that by default is empty. We can override this method to perform custom validation or set defaults with dependencies. \n\nWe enforce input `Model` validation using the `InputValidator` class in _reoptjl/validators.py_ . First, the `InputValidator` class has a `clean_fields()` method that calls `Model.clean_fields()` on all of the input data models. This checks data types, min/max values, choices, and sets basic defaults. `InputValidator.clean()` calls the optionally overridden `Model.clean()` on each input model. Then we have an additional method \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 5 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n`InputValidator.cross_clean()` , which performs custom validation with intermodel dependencies. Finally, `InputValidator.save()` calls `save()` on all of the models to save the validated inputs in the database.",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Defining **`Model`** 's **`clean`** method",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        5
+      ]
+    }
+  },
+  {
+    "text": "## Accessing and modifying data in database \n\nTo access data from the database, use the `get()` method. For example, to get the `APIMeta` object associated with the run uuid run_uuid, do: \n\n```\nmeta = APIMeta.objects.get(run_uuid=run_uuid)\n```\n\nWe often need to access the data of multiple `Model` subclasses. Rather than doing a `get()` call for each, it is more efficient to do this in one database call using the `select_related()` method as shown in the example below. Any `Model` with a `OneToOneField` linking it to `APIMeta` can be specified as an argument here using the `related_name` provided when defining the `OneToOneField` . \n\n```\nmeta = APIMeta.objects.select_related(\n    'Settings',\n    'FinancialInputs',\n```\n\n```\n    'SiteInputs',\n```\n\n```\n    'ElectricLoadInputs',\n```\n\n```\n).get(run_uuid=run_uuid)\n```\n\nThe class `Job` in _reoptjl/api.py_ is an example of a `Resource` . It takes inputs and initiates a (v3) REopt optimization. In _reopt_api/urls.py_ , we create API versions and register `Resource` s to them by doing: \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 6 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n```\nfrom tastypie.api import Api\nfrom reoptjl.api import Job as Job3\nfrom django.urls import include, re_path, path\nv3_api = Api(api_name='v3')\nv3_api.register(Job3())\nurlpatterns = [..., re_path(r'', include(v3_api.urls)), ...]\n```\n\n`Job.Meta.resource_name = 'job'` determines the url of the `Job Resource` . Sending a request to /v3/job will create a `Job` instance. The equivalent will be true of any other `Resource` registered to `v3_api` . \n\nAnother way of making a particular url (or url pattern) do something is using views, which are the functions in _reoptjl/views.py_ . In the REopt API we generally use views for endpoints that get data. In order to connect the url /v3/job/<run_uuid>/results to the `results` view function, we do the following in _reoptjl/urls.py_ : \n\n```\nfrom . import views\n```\n\n```\nurlpatterns = [..., re_path(r'^job/(?P<run_uuid>[0-9a-f-]+)/resul\n```\n\nAnd this in _reopt_api/urls.py_ , which adds all the urlpatterns in _reoptjl/urls.py_ : \n\n```\nurlpatterns = [..., path('v3/', include('reoptjl.urls')), ...]\n```\n\nThe `Job Resource` takes a POST request and runs REopt using these inputs. After handling of various metadata, an `InputValidator` is instantiated and used to validate the inputs using its methods described in the `InputValidator` section above. If inputs are valid, we create `run_jump_model` , which is a Celery `Task` defined in _reoptjl/src/run_jump_model.py_ . The \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 7 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n`run_jump_model Task` uses the provided run_uuid to get inputs from the database, POSTs this data to the Julia server to solve the optimization problem (see next section), handles erros, then processes and saves outputs to the database with a call to `process_results` . This `Task` is run asynchronously so that the API can continue to handle other requests without waiting for it to complete. Similarly, when an `ERPJob Resource` (defined in _resilience_stats/api.py_ ) is created, this asynchronously runs a Celery `Task` called `run_erp_task` .",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Accessing and modifying data in database",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "text": "## Accessing the REopt Julia package from Python \n\n`Task` s like `run_jump_model` and `run_erp_task` , as well as some views in _reoptjl/views.py_ , use the REopt Julia package to fulfill requests. The _julia_src_ directory contains all the API's Julia code. A Julia HTTP server is defined in _julia_src/http.jl_ and requests to its endpoints can be written in Python. For example, in `run_jump_model` : \n\n```\njulia_host = os.environ.get('JULIA_HOST', \"julia\")\nresponse = requests.post(\"http://\" + julia_host + \":8081/reopt/\",\n```\n\nAnd in the `chp_defaults` view: \n\n```\njulia_host = os.environ.get('JULIA_HOST', \"julia\")\nhttp_jl_response = requests.get(\"http://\" + julia_host + \":8081/c\n```\n\nIn _julia_src/http.jl_ , these HTTP endpoints are each linked to a function in that file. For example, the /reopt endpoint is made to execute the function `reopt` via: \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 8 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n```\nHTTP.@register(ROUTER, \"POST\", \"/reopt\", reopt)\n```\n\nThe functions in _julia_src/http.jl_ can use functions from the REopt package (imported as reoptjl) and return data as an `HTTP.Response` .",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Accessing the REopt Julia package from Python",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        8
+      ]
+    }
+  },
+  {
+    "text": "## Defaults set in the REopt Julia package \n\nSome inputs have defaults that are determined in the REopt Julia package rather than in the API before saving to the database (e.g. CHP defaults and emissions defaults that come from AVERT or EASIUR). This is done to avoid redundant code. In the `reopt` function in _julia_src/http.jl_ , these defaults are collected and included in the returned data so that the database can be updated appropriately.",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Defaults set in the REopt Julia package",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": []
+    }
+  },
+  {
+    "text": "## Changing the REopt package version \n\nWhen developing the REopt API, one often needs the API to use a version of the REopt Julia package other than the latest version in the Julia Registry. To do this, navigate in a command terminal to _julia_src_ , start Julia using the local environment ( `julia --project=.` ), go to package manager ( `]` ), and do one of the following: \n\n- Registered REopt version: `add REopt@x.x.x` \n\n- Branch of REopt.jl on GitHub: `add REopt#branch-name` \n\n- Cloned REopt.jl in your local Julia _dev_ folder: `dev REopt` (also see Docker instructions specific to deving REopt) \n\nThe REopt API has multiple endpoints. The endpoint for optimizing an energy system is described here. \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 9 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Changing the REopt package version",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        9
+      ]
+    }
+  },
+  {
+    "text": "## The steps behind an optimization are: \n\n1. A POST is made at `<host-url>/v2/job` (for a description of all input parameters GET `<host-url>/v2/help` ) \n\n2. `reo/api.py` validates the POST, sets up the four celery tasks, and returns a `run_uuid` \n\n3. `reo/scenario.py` sets up all the inputs for the two optimization tasks \n\n4. Two `reo/src/run_jump_model.py` tasks are run in parallel, one for the business-as-usual costs, and one for the minimum life cycle cost system \n\n5. `reo/process_results.py` processes the outputs from the two REopt tasks and saves them to database. \n\nFrom the user's perspective, the primary changes are: \n\n- Partial \"flattening\" of the inputs/outputs nested dictionaries (outer \"Scenario\" key has been removed and other models are no longer nested under the \"Site\" key). \n\n- Input/output reorganization and name changes for improved clarity (see the REopt analysis wiki for a full mapping between old and new inputs and outputs). \n\nFor developers of the API, more significant changes have been made to improve the development experience.",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "The steps behind an optimization are:",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": []
+    }
+  },
+  {
+    "text": "## Django Models and Input Validation \n\nIn v1/v2, a single Django Model (and thus database table) contains both the inputs and outputs for each conceptual model (e.g. `PV` or `ElectricTariff` ). In v3 the inputs and outputs are split into two separate Models (eg. `ElectricTariffInputs` and `ElectricTariffOutputs` ). This division greatly \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 10 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\nsimplifies creating the API response as well as saving and updating the data models. \n\nIn v1/v2, for each REopt optimization job, all Django Models are created and saved in the database. In v3, only the tables of Models relevant to the job a have rows inserted. For example, if a scenario is not modeling `Wind` then no `WindInputs` nor `WindOutputs` are instantiated and no \"Wind\" key would be present in the API response data. \n\n## **`InputValidator.clean_fields()`** \n\nIn v1/v2, the `nested_inputs_definitions` is used as a source of data types, limits, defaults, and descriptions, which is used in `ValidateNestedInput` to validate user's POSTs. In v3, we take advantage of Django's built-in data validation to accomplish most of what `ValidateNestedInput` does. When defining fields of Django Models, we can use optional parameters to: \n\n- validate field types \n\n- validate field min/max values \n\n- limit fields to certain values \n\n- set defaults \n\n- set whether fields are required \n\n- provide `help_text` for each field In v3, after instantiating a Django model with a user's input values we call the `Model.clean_fields()` method on all of the input data models. This method checks data types, min/max values, choices, and sets defaults. Calling the `Model.clean_fields` \n\n- method is done in the new `InputValidator` (in _reoptjl/validators.py_ ) for every input model. \n\nThe Django `Model` also has a `clean` method that by default is empty. In v3, we over-ride this method to perform custom validation as needed. Using the \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 11 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n`InputValidator` class, we call the `Model.clean()` method on all of the input models (after calling the `Model.clean_fields()` method). \n\n## **`InputValidator.cross_clean()`** \n\nFinally, there are some cases for input validation that require comparing fields from two different Django `Models` . For example, the length of any timeseries input value, such as `ElectricLoadInputs.loads_kw` , needs to align with the `Settings.time_steps_per_hour` . This type of cross-model validation is done after the `clean_fields` and `clean` methods, and is called `cross_clean` . The `cross_clean` method is part of the `InputValidator` and is called in _reoptjl/api.py_ as the final step for validating the job inputs. \n\nIn v1/v2, each optimization job consists of four celery tasks ( `setup_scenario` , one optimal and one bau `run_jump_model` , and `process_results` ). In v3, there is only one celery task per optimization job. This has been accomplished by running the BAU and optimal scenarios in parallel in the Julia code and combining the scenario set up and post process steps into a single celery task. \n\nIn v1/v2, the _julia_src/_ directory includes the code to build and optimize the JuMP model. In v3, this is housed in a publicly registered Julia pacakge. This means that the JuMP model (and all of the supporting functions) are now in a separate repository and can be used with just a few lines of Julia code without accessing the REopt API. For example: \n\n```\nusing REopt, Cbc, JuMP\nmodel = JuMP.Model(Cbc.Optimizer)\nresults = REopt.run_reopt(m, \"path/to/scenario.json\")\n```",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Django Models and Input Validation",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "text": "## In v3 of the API we use the REopt Julia package in a similar fashion (see \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 12 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n_julia_src/http.jl_ ). Note that in v3 the Business as Usual and Optimal scenarios are run in parallel by the REopt package, and running the BAU scenario is optional (via `Settings.run_bau` input).",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "In v3 of the API we use the REopt Julia package in a similar fashion (see",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        12
+      ]
+    }
+  },
+  {
+    "text": "## Migration of Python code to Julia \n\nIn creating the Julia Module (or \"package\") for REoptLite much of the inputs set up code and post-processing has shifted from the API to the Julia package. By porting the setup and post-processing code to the Julia package anyone can now use REoptLite in Julia _alone_ , which makes it much easier to add inputs/outputs, create new constraints, and in general modify REoptLite as one sees fit. \n\nFor past and recent developers of the REopt Lite API, here is a pseudo-map of where some of API code responsibilities has been moved to in the Julia package: \n\n- _reo/src/techs.py_ -> broken out into individual files for each tech in the _src/core/_ directory, e.g. _pv.jl_ , _wind.jl_ , _generator.jl_ \n\n- _reo/scenario.py_ -> _src/core/scenario.jl_ \n\n- _reo/src/pvwatts.py_ + _wind_resource.py_ + _wind.py_ + _sscapi.py_ -> _src/core/prodfactor.jl_ \n\n- _reo/src/data_manager.py_ + _julia_src/utils.jl_ -> _src/core/reopt_inputs.jl reo/process_results.py_ -> _src/results/_ contains a main _results.jl_ as well as results generating functions for each data structure (e.g. _src/results/pv.jl_ ) \n\n- _julia_src/reopt_model.jl_ -> _src/core/reopt.jl_ + _src/constraints/*_ \n\nAlso, here is a pseudo-map of where some of the reo/ code is now handled in the reoptjl/ app: \n\n## _reo/nested_inputs.py_ + _nested_outputs.py_ + _models.py_ -> \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 13 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\n## _reoptjl/models.py_ \n\n- _reo/process_results.py_ -> _reoptjl/src/process_results.py_ (only saving results to database now since results are created in Julia) \n\n- _reo/api.py_ -> _reoptjl/api.py_ \n\n_reo/views.py_ -> _reoptjl/views.py_ \n\nreo/src/run_jump_model.py -> reoptjl/src/run_jump_model.py \n\nFor more information on the Julia package please see the developer section in the Julia package documentation.",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Migration of Python code to Julia",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        13
+      ]
+    }
+  },
+  {
+    "text": "## Modifications of mathematical model \n\nThe primary change to the mathematical model in the new `reoptjl` endpoint is that all binary variables (and constraints) are added _conditionally_ . For example, when modeling `PV` , `Wind` , and/or `Storage` without a tiered `ElectricTariff` no binary variables are necessary. However, adding a `Generator` or a tiered `ElectricTariff` does require binaries. \n\nAlso related to binary variables, the approach to modeling the net metering vs. wholesale export decision has been simplified: \n\nIn v1 the approach to the NEM/WHL binaries is as follows. First, `binNMIL` is used to choose between a combined tech capacity that is either above or below `net_metering_limit_kw` . There are two copies of each tech model made for both the above or below `net_metering_limit_kw` . If the combined tech capacity is below `net_metering_limit_kw` then the techs can export into the `NEM` bin (i.e. take advantage of net metering). If the combined tech capacity is greater than `net_metering_limit_kw` then the techs can export into the `WHL` bin. In either case the techs can export into the `EXC` bin. Second, this approach also requires a tech-to-techclass map and binaries for constraining one tech from each tech class - where the tech class contains \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 14 of 15 \n\n1. Structure of the REopt API · NatLabRockies/REopt_API Wiki \n\n4/16/26, 10:33 AM \n\nthe tech that can net meter and the one that can wholesale. \n\nIn the new approach of the new `reoptjl` endpoint there there is no need for the tech-to-techclass map and associated binaries, as well as the duplicate tech models for above and below `net_metering_limit_kw` . Instead, indicator constraints are used (as needed) for `binNEM` and `binWHL` variables, whose sum is constrained to 1 (i.e. the model can choose only `NEM` or `WHL` , not both). `binNEM` is used in two pairs of indicator constraints: one for the \n\n`net_metering_limit_kw` vs. `interconnection_limit_kw` choice and another set for the `NEM` benefit vs. zero `NEM` benefit. The `binWHL` is also used in one set of indicator constraints for the `WHL` benefit vs. zero `WHL` benefit. The `EXC` bin is only available if `NEM` is chosen.",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "Modifications of mathematical model",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        14
+      ]
+    }
+  },
+  {
+    "text": "## See \n\nhttps://github.com/NREL/REoptLite/blob/d083354de1ff5d572a8165343bfea 11054e556fc/src/constraints/electric_utility_constraints.jl for details. \n\nhttps://github.com/NatLabRockies/REopt_API/wiki/1.-Structure-of-the-REopt-API \n\nPage 15 of 15",
+    "metadata": {
+      "paper_id": "1. Structure of the REopt API · NatLabRockies:REopt_API Wiki",
+      "title": "",
+      "authors": [],
+      "year": null,
+      "journal": "",
+      "doi": "",
+      "section": "See",
+      "chunk_index": 0,
+      "has_equations": false,
+      "has_figures": false,
+      "page_numbers": [
+        15
+      ]
+    }
+  }
+]

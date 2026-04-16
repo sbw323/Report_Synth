@@ -1,0 +1,19 @@
+{
+  "section_id": "implementation_roadmap",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "REopt scenario JSON Dict run_reopt two JuMP Model",
+    "REopt results DenseAxisArray serialize JSON",
+    "REopt ElectricStorage size_kw size_kwh Generator size_kw results output"
+  ],
+  "chunk_count": 19,
+  "validation_attempts": 3,
+  "retry_counters": {
+    "layer1": 2
+  },
+  "claim_count": 44,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}
