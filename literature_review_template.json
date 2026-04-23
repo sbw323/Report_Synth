@@ -1,0 +1,118 @@
+{
+  "plan_id": "REPLACE_domain_review_v1",
+  "title": "REPLACE with full report title",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "section_id": "introduction",
+      "title": "REPLACE with introduction heading",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "REPLACE — 2-5 sentences. State the problem domain. Explain why the central question matters (who cares and what is at stake). Define the scope of this review: what approaches, methods, or frameworks are compared, and what evaluation criteria are used. Name the boundaries — what is deliberately excluded.",
+      "source_queries": [
+        "REPLACE with 3-6 word query using corpus vocabulary — problem domain and central question",
+        "REPLACE with 3-6 word query using corpus vocabulary — evaluation criteria or motivation"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "topic_overview",
+      "title": "REPLACE with overview heading",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "REPLACE — 2-5 sentences. Synthesize the main approaches, methods, or categories examined in the literature. For each, describe the key characteristics, inputs, and objectives. Establish a taxonomy or hierarchy of complexity that later sections can reference.",
+      "source_queries": [
+        "REPLACE with 3-6 word query — first major approach or method using corpus terms",
+        "REPLACE with 3-6 word query — second major approach or method using corpus terms",
+        "REPLACE with 3-6 word query — third approach, variant, or contrasting method"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "topic_overview",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "methodology_comparison",
+      "title": "REPLACE with comparison table heading",
+      "parent_id": "topic_overview",
+      "section_type": "evidence_table",
+      "description": "REPLACE — 2-5 sentences. Construct a structured comparison table of the methodologies, configurations, or experimental conditions reported in the literature. Specify the column dimensions (e.g., method name, key parameters, evaluation framework, performance metric, reported outcome). Each row represents one distinct configuration or study.",
+      "source_queries": [
+        "REPLACE with 3-6 word query — comparative framework or benchmark used in corpus",
+        "REPLACE with 3-6 word query — evaluation methodology or experimental conditions"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "methodology_comparison",
+          "target_section_id": "topic_overview",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "methodology_comparison",
+          "target_section_id": "introduction",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "technical_analysis",
+      "title": "REPLACE with analysis heading",
+      "parent_id": null,
+      "section_type": "methodology_description",
+      "description": "REPLACE — 2-5 sentences. Describe the formal methods, mathematical models, or analytical frameworks used to evaluate the approaches in the literature. Identify the key variables, cost functions, performance metrics, or theoretical constructs. Explain how quantitative comparisons are constructed. Include relevant equations or formal notation where applicable.",
+      "source_queries": [
+        "REPLACE with 3-6 word query — quantitative method or model from corpus",
+        "REPLACE with 3-6 word query — evaluation metric or cost function from corpus",
+        "REPLACE with 3-6 word query — analytical framework or optimization approach"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "technical_analysis",
+          "target_section_id": "topic_overview",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "cross_cutting_findings",
+      "title": "REPLACE with synthesis heading",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "REPLACE — 2-5 sentences. Compare and connect findings from the topic overview, the methodology comparison, and the technical analysis. Identify points of consensus, contradiction, and gaps across the reviewed literature. Highlight the single most important finding and discuss its implications. Name the open questions and research gaps.",
+      "source_queries": [
+        "REPLACE with 3-6 word query — research gaps or open questions in corpus domain",
+        "REPLACE with 3-6 word query — key comparative finding or consensus result"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "cross_cutting_findings",
+          "target_section_id": "technical_analysis",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "cross_cutting_findings",
+          "target_section_id": "methodology_comparison",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "cross_cutting_findings",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "REPLACE with domain (e.g., environmental_engineering, computational_biology)",
+    "target_audience": "REPLACE with audience (e.g., researchers and practitioners)",
+    "primary_source": "REPLACE with principal source or corpus description"
+  }
+}
