@@ -1,0 +1,17 @@
+{
+  "section_id": "synthesis_findings",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "nitrogen aeration reduction effluent quality",
+    "demand response wastewater research gaps",
+    "intermittent aeration nutrient removal recovery"
+  ],
+  "chunk_count": 18,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 32,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}

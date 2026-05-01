@@ -1,0 +1,322 @@
+{
+  "section_id": "pollutant_parameter_table",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "The BSM effluent quality index aggregates pollutant concentrations into a single weighted sum expressed in pollution units per day, where each weighting factor is dimensionless and calibrated to the Flanders regional fine formula.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 594,
+        "end": 841
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "Because the BSM weights are fixed and the aggregation is linear, the marginal penalty attributed to any incremental gram of a given pollutant remains constant within a simulation period.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 842,
+        "end": 1035
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "The piecewise-linear model introduced by Stare et al. (2007) distinguishes two regimes for each pollutant: the below-limit slope applies when the effluent concentration is at or below the discharge limit, and the steeper above-limit slope applies when the effluent concentration exceeds the discharge limit, with the transition governed by a Heaviside step function.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1036,
+        "end": 1434
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "The discharge limits are informed by EU Directive 91/271/EEC thresholds for sensitive areas.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1435,
+        "end": 1543
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Machado et al. (2020) adopted the Stare et al. parameterisation for ammonium (S.NH) and total nitrogen (TN), while phosphate (TP) parameters were assumed equal to the ammonium parameters except for the discharge limit, which was taken from Gernaey and J\u00f8rgensen (2004).",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1544,
+        "end": 1838
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "The Flanders contribution formula underpinning the BSM weights classifies pollutants into an organic contribution category (TSS, COD, BOD\u2085) and a nutrient contribution category (TKN, S.NO).",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1840,
+        "end": 2059
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "The BSM weighting factors span roughly an order of magnitude, reflecting the differential environmental severity assigned to nutrient versus carbonaceous species.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2380,
+        "end": 2545
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "The Stare et al. slopes exhibit a ratio of above-limit to below-limit slope substantially greater than unity for the pollutants where both slopes are reported, producing the discontinuous marginal-cost jump at the regulatory threshold.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2554,
+        "end": 2806
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "EU Directive 91/271/EEC limits for COD and BOD\u2085 (125 mg/L and 25 mg/L, respectively) are well-defined for populations exceeding 10,000 p.e., whereas limits for TN and TP depend on the sensitivity classification of the receiving water body.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 2815,
+        "end": 3065
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "The absence of reported Stare et al. parameters for TSS, COD, and BOD\u2085 reflects the original model's focus on nitrogen-cycle species and phosphate, leaving carbonaceous penalty quantification to the dimensionless BSM index alone.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3074,
+        "end": 3316
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "As Stare et al. (2007) demonstrated, the optimal operating costs and percentage improvement achievable by advanced controllers depend strongly on the established effluent fines, specifically the selected values of the below-limit slope, above-limit slope, and the discharge limit.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3318,
+        "end": 3618
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "The BSM weighting factor for TSS is 2.00.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3916,
+        "end": 3977
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "The BSM weighting factor for COD is 1.00.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4030,
+        "end": 4091
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "The BSM weighting factor for BOD\u2085 is 2.00.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4145,
+        "end": 4206
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "The BSM weighting factor for TKN is 30.00.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4259,
+        "end": 4315
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "The BSM weighting factor for S.NO is 10.00.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4368,
+        "end": 4426
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "The BSM weighting factor for S.NH is 2.00.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4478,
+        "end": 4534
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "The EU Directive 91/271/EEC limit for TN is 10\u201315 mg/L.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4629,
+        "end": 4686
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "The EU Directive 91/271/EEC limit for TP is 1\u20132 mg/L.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4738,
+        "end": 4793
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "Effluent fines were calculated using the Stare et al. (2007) formula considering ammonium, total nitrogen, and phosphate as the main pollutants.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1544,
+        "end": 1838
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "When a constant effluent fine per kg of pollutant discharged over the complete effluent concentration range is used (i.e., the above-limit slope equals the below-limit slope), smaller improvements can be obtained with advanced control algorithms compared to when the cost of discharge increases at the limit.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3318,
+        "end": 3618
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "Operating costs for the BSM framework were based on previous works including Gernaey et al. (2014), Machado et al. (2009), Stare et al. (2007), Steffens and Lant (1999), and Vanrolleghem and Gillot (2002).",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 594,
+        "end": 1035
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "The BSM discharge limit for TSS is 30 mg/L, while the EU Directive 91/271/EEC limit for TSS is 35 mg/L.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3916,
+        "end": 4028
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "The BSM discharge limit for COD is 100 mg/L, while the EU Directive 91/271/EEC limit for COD is 125 mg/L.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4030,
+        "end": 4143
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The BSM discharge limit for BOD\u2085 is 10 mg/L, while the EU Directive 91/271/EEC limit for BOD\u2085 is 25 mg/L.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_85"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4145,
+        "end": 4257
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "The BSM discharge limit for S.NH is 4 mg/L.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4478,
+        "end": 4627
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

@@ -1,0 +1,352 @@
+{
+  "section_id": "penalization_overview",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "The Benchmark Simulation Models BSM1 and BSM2 employ a dimensionless effluent quality index that aggregates multiple pollutant concentrations into a single weighted sum expressed in pollution units per day.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 512,
+        "end": 710
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "The weighting factors are calibrated to the Flanders regional fine formula, which assigns relative monetary weights to total suspended solids, chemical oxygen demand, biological oxygen demand, total Kjeldahl nitrogen, and nitrate-nitrogen.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 711,
+        "end": 955
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "Because the weights are fixed and the aggregation is linear, the marginal cost attributed to any incremental gram of a given pollutant is constant within a simulation period.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 956,
+        "end": 1131
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "The BSM framework is computationally convenient for benchmarking control strategies but insensitive to the nonlinear cost escalation that real regulatory regimes impose once discharge limits are breached.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1132,
+        "end": 1366
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Stare et al. (2007) introduced a piecewise-linear effluent fine model that explicitly distinguishes between sub-limit and supra-limit discharge concentrations.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1432,
+        "end": 1594
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "For each pollutant j, the daily fine is computed using a formula with a slope below the discharge limit, a steeper slope above that limit, and a Heaviside step function.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1595,
+        "end": 1946
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "The dual-slope Heaviside structure produces a discontinuous jump in marginal cost at the regulatory threshold, creating a strong economic incentive for the plant to remain compliant while still penalizing residual pollution below the limit.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1947,
+        "end": 2194
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "The Stare et al. model has been deployed extensively in water resource recovery facility optimization studies, including retrofitting comparisons where effluent fines for ammonium, total nitrogen, and phosphate are summed alongside energy and sludge costs.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_84"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2195,
+        "end": 2452
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "Garibay-Rodriguez et al. (2017) formulated two contrasting penalty alternatives within a mixed-integer nonlinear programming (MINLP) model for macroscopic watershed management.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2503,
+        "end": 2685
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "Under Alternative 1, a proportional fine is charged per gram of pollutant discharged above the environmental constraint.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2686,
+        "end": 2837
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "The fine magnitude is derived from the unit treatment cost required to achieve compliance, scaled by an enforcement multiplier \u03c6 such that F^d = \u03c6 \u00b7 CPG^d, where CPG^d is the cost per gram of pollution reduction through technology alone.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52",
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Distributed treatment system design_0_51"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2838,
+        "end": 3096
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "The proportional structure yields a marginal penalty that is constant per unit of excess mass but tuneable through \u03c6.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3097,
+        "end": 3213
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "Sensitivity analysis demonstrates that the system's economic\u2013environmental trade-off is highly responsive to \u03c6, with values near 0.1 representing an inflection point beyond which additional penalty increases raise costs without further reducing discharge concentrations.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Sensitivity analysis with respect to parameter /_0_64"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3214,
+        "end": 3505
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "Alternative 2 replaces the proportional charge with a fixed fine CFF^d activated by a binary variable w^p_{r,d,l,t} whenever the discharge limit is violated, irrespective of the magnitude of transgression.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3507,
+        "end": 3720
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "The fixed fine is derived from the total treatment cost divided by the maximum permitted violation M^p and scaled by \u03c6^fixed.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3721,
+        "end": 3843
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "The fixed-fine alternative adds combinatorial complexity through additional binary variables but offers stronger environmental protection in the studied cases, since it discourages any violation rather than merely pricing marginal exceedances.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52",
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Comparison of solutions at unrestricted FWC_0_62"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3844,
+        "end": 4097
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "Jin et al. (2014) studied a two-stage dynamic game between a regulator and heterogeneous risk-neutral firms under costly enforcement in the context of tradable discharge permits.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4688,
+        "end": 4876
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "The Jin et al. model specifies a penalty function F(v_i) = F_0 + f(v_i) with both fixed (F_0) and variable components.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4877,
+        "end": 4987
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "The socially optimal regulatory strategy is to induce full compliance by setting the marginal penalty equal to the permit price divided by the monitoring probability, i.e., f'(0) = p/\u03c0.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4988,
+        "end": 5212
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "Integrating the permit market price directly into the penalty shape \u2014 so that f'(0) = Tp with T > 1 \u2014 endogenizes the penalty and renders the enforcement strategy robust to permit-price volatility.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_1_1"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5213,
+        "end": 5441
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "Roberts and Spence proposed a three-part policy combining an initial permit allocation, a per-unit subsidy for emissions below the permit level, and a per-unit charge for emissions above it.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5443,
+        "end": 5635
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "This hybrid instrument bounds the effective marginal cost between the subsidy rate and the charge rate, hedging against the regulator's uncertainty about abatement costs.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5636,
+        "end": 5806
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "Xenarios and Bithas (2012) corroborate that hybrid instruments combining standards with taxes or permits frequently outperform any single tool.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5",
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_ABSTRACT_0_3"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5807,
+        "end": 6046
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "The frameworks can be ordered along a continuum of increasing endogeneity and nonlinearity, from fixed weighted sums through piecewise functions to endogenous equilibrium prices.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81",
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52",
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 6073,
+        "end": 6314
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The BSM weighted sum assigns fixed, exogenous weights that yield constant marginal penalties.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6315,
+        "end": 6408
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "The Stare et al. piecewise model introduces a threshold nonlinearity through the Heaviside function, producing two distinct marginal-cost regimes.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6409,
+        "end": 6555
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "The Garibay-Rodriguez proportional and fixed alternatives embed the penalty within an optimization model, making the realized penalty a decision variable modulated by \u03c6 or by binary activation.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_52",
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Economic penalizations_0_45"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 6556,
+        "end": 6752
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "The permit-market frameworks of Jin et al. (2014) and the Roberts\u2013Spence hybrid render the marginal cost fully endogenous, determined by market clearing and regulatory design simultaneously.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0",
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_1_1"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 6826,
+        "end": 7026
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

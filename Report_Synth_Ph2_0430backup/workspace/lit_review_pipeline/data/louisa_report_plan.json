@@ -1,0 +1,256 @@
+{
+  "plan_id": "louisa_wa_board_louisa_supply_review_v1",
+  "title": "Louisa Water Authority Board Decisions Affecting Long-Term Water and Sewer Supply to the Town of Louisa, 2022\u20132026",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "section_id": "review_scope",
+      "title": "Review Scope and Corpus",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "State the scope of this review in neutral reporter voice. The reviewing body of record is the Louisa Water Authority (LWA) Board of Directors; the corpus covers regular and special meetings from January 2022 through the most recent meeting available in 2026, approximately 4.25 years of minutes, board packets, and referenced engineering reports. Scope this review narrowly to LWA Board decisions that affect long-term water supply to, and long-term sewer capacity serving, Town of Louisa customers. Name the in-scope LWA-owned assets explicitly: the Northeast Creek Water Treatment Plant and its raw water infrastructure (including the raw water line running from the Northeast Creek WTP toward the Thomas Jefferson Elementary pump station site), the distribution mains and storage serving the Town of Louisa service area, and the sewer collection and treatment assets that carry Town of Louisa wastewater. State that the following are out of scope: Zion Crossroads water and wastewater system decisions, Lake Anna and Northeast Creek Campus service including Amazon Data Center supply, the James River Water Project as an infrastructure initiative separate from Louisa supply, administrative items unrelated to long-term supply (personnel, closed sessions, 2x2 committee appointments, legislative monitoring not affecting Louisa-serving assets). Identify meeting types in the corpus (regular monthly meetings, special meetings, work sessions, public hearings) and note any periods with missing or incomplete minutes if apparent on the record. Do not characterize the motives of Board members or staff, do not adjudicate jurisdictional ownership between LWA and the Town of Louisa, and do not summarize findings from later sections here.",
+      "source_queries": [
+        "Louisa Water Authority Board regular meeting",
+        "Northeast Creek Water Treatment Plant",
+        "Town of Louisa water sewer service"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "louisa_tracked_systems",
+      "title": "Louisa-Serving Systems and Capital-Planning Topics Tracked",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Establish the canonical list of Louisa-serving systems and the capital-planning topics this review tracks across the LWA Board record, organized into four groupings: (A) long-term water supply to the Town of Louisa \u2014 Northeast Creek Water Treatment Plant source-water supply, treatment capacity, and the raw water conveyance feeding it; (B) long-term sewer capacity serving the Town of Louisa \u2014 collection mains, pump stations, and treatment capacity for Louisa wastewater; (C) capital improvement planning affecting those two systems \u2014 the CIP line items, cost estimates, timelines, and engineering studies the Board has considered for Louisa-serving assets; (D) rate, budget, and connection-fee actions whose incidence falls on Town of Louisa ratepayers or on revenue tied to Louisa-serving assets. For each grouping, list the specific terminology that appears in the corpus \u2014 plant names, pump station names, project names, consultant names, study titles \u2014 exactly as the minutes label them, so downstream sections can anchor to consistent labels. Keep framing neutral: describe what the review is tracking, not what was decided. Do not report votes, positions, or outcomes here, and do not speculate about labels not confirmed in the retrieved record.",
+      "source_queries": [
+        "Northeast Creek Water Treatment Plant capacity expansion",
+        "raw water line Thomas Jefferson Elementary pump station",
+        "Town of Louisa sewer collection treatment",
+        "capital improvement plan Louisa water sewer",
+        "rate study connection fee Louisa",
+        "engineering study consultant Louisa system"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "louisa_tracked_systems",
+          "target_section_id": "review_scope",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "decisions_2022",
+      "title": "Board Decisions 2022 \u2014 Louisa-Serving Systems",
+      "parent_id": "louisa_tracked_systems",
+      "section_type": "evidence_table",
+      "description": "Construct a structured chronological table of LWA Board outcomes during calendar year 2022 that affect Louisa-serving long-term water or sewer supply as defined in louisa_tracked_systems. Columns: (1) Meeting date; (2) Meeting type (regular/special/work session/public hearing); (3) Louisa-serving system affected \u2014 using the grouping labels from louisa_tracked_systems (water supply / sewer capacity / CIP / rate-budget-fee); (4) Outcome type (motion / resolution / contract award / budget amendment / CIP adoption / engineering-study acceptance / policy / action item); (5) Substance as stated in the minutes, including dollar amounts, MGD or GPD figures, consultant and contractor names, and any explicit reference to Northeast Creek WTP or other Louisa-serving assets \u2014 exactly as written in the record; (6) Vote tally or attribution (e.g., '5-0', '4-1 with Director X opposed', 'consensus') and roll-call names where recorded; (7) Responsible party for follow-up; (8) Deadline or next milestone if stated. One row per discrete outcome; if a single motion touches multiple tracked groupings, create one row per grouping affected. Record only what was explicitly decided or assigned on the record. Exclude decisions that pertain solely to out-of-scope assets (Zion Crossroads, Lake Anna, Amazon Data Center, James River Water Project) unless those decisions also materially affect a Louisa-serving system. Do not infer CIP adoption from budget line items alone, do not collapse multiple votes into one row, and do not summarize discussion here.",
+      "source_queries": [
+        "Louisa Water Authority Board meeting 2022 motion resolution",
+        "Northeast Creek Water Treatment Plant 2022",
+        "Town of Louisa sewer capital 2022",
+        "contract award engineering consultant Louisa 2022",
+        "budget amendment CIP Louisa water sewer 2022"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "decisions_2022",
+          "target_section_id": "louisa_tracked_systems",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "decisions_2022",
+          "target_section_id": "review_scope",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "decisions_2023",
+      "title": "Board Decisions 2023 \u2014 Louisa-Serving Systems",
+      "parent_id": "louisa_tracked_systems",
+      "section_type": "evidence_table",
+      "description": "Construct a structured chronological table of LWA Board outcomes during calendar year 2023 that affect Louisa-serving long-term water or sewer supply as defined in louisa_tracked_systems. Use identical columns, row-granularity rules, and scope-exclusion rules as decisions_2022: one row per discrete outcome; columns (1) date, (2) meeting type, (3) affected grouping, (4) outcome type, (5) substance verbatim from the record with dollar amounts and named parties preserved, (6) vote tally, (7) responsible party, (8) deadline. Exclude outcomes pertaining solely to out-of-scope assets. Record only what was explicitly decided on the record; do not infer, do not summarize discussion, and do not carry context between rows.",
+      "source_queries": [
+        "Louisa Water Authority Board meeting 2023 motion resolution",
+        "Northeast Creek Water Treatment Plant 2023",
+        "Town of Louisa sewer capital 2023",
+        "contract award engineering consultant Louisa 2023",
+        "budget amendment CIP Louisa water sewer 2023"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "decisions_2023",
+          "target_section_id": "louisa_tracked_systems",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "decisions_2023",
+          "target_section_id": "review_scope",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "decisions_2024",
+      "title": "Board Decisions 2024 \u2014 Louisa-Serving Systems",
+      "parent_id": "louisa_tracked_systems",
+      "section_type": "evidence_table",
+      "description": "Construct a structured chronological table of LWA Board outcomes during calendar year 2024 that affect Louisa-serving long-term water or sewer supply as defined in louisa_tracked_systems. Use identical columns, row-granularity rules, and scope-exclusion rules as decisions_2022: one row per discrete outcome; columns (1) date, (2) meeting type, (3) affected grouping, (4) outcome type, (5) substance verbatim with dollar amounts and named parties preserved, (6) vote tally, (7) responsible party, (8) deadline. Exclude outcomes pertaining solely to out-of-scope assets. Record only what was explicitly decided on the record; do not infer, do not summarize discussion, and do not carry context between rows.",
+      "source_queries": [
+        "Louisa Water Authority Board meeting 2024 motion resolution",
+        "Northeast Creek Water Treatment Plant 2024",
+        "Town of Louisa sewer capital 2024",
+        "contract award engineering consultant Louisa 2024",
+        "budget amendment CIP Louisa water sewer 2024"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "decisions_2024",
+          "target_section_id": "louisa_tracked_systems",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "decisions_2024",
+          "target_section_id": "review_scope",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "decisions_2025_2026",
+      "title": "Board Decisions 2025\u20132026 \u2014 Louisa-Serving Systems",
+      "parent_id": "louisa_tracked_systems",
+      "section_type": "evidence_table",
+      "description": "Construct a structured chronological table of LWA Board outcomes from January 2025 through the most recent available meeting in 2026 that affect Louisa-serving long-term water or sewer supply as defined in louisa_tracked_systems. Use identical columns, row-granularity rules, and scope-exclusion rules as decisions_2022: one row per discrete outcome; columns (1) date, (2) meeting type, (3) affected grouping, (4) outcome type, (5) substance verbatim with dollar amounts and named parties preserved, (6) vote tally, (7) responsible party, (8) deadline. Exclude outcomes pertaining solely to out-of-scope assets. Record only what was explicitly decided on the record; do not infer, do not summarize discussion, and do not carry context between rows.",
+      "source_queries": [
+        "Louisa Water Authority Board meeting 2025 motion resolution",
+        "Louisa Water Authority Board meeting 2026 motion resolution",
+        "Northeast Creek Water Treatment Plant expansion 2025 2026",
+        "Town of Louisa sewer capital 2025 2026",
+        "contract award engineering consultant Louisa 2025 2026",
+        "budget amendment CIP Louisa water sewer 2025 2026"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "decisions_2025_2026",
+          "target_section_id": "louisa_tracked_systems",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "decisions_2025_2026",
+          "target_section_id": "review_scope",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "water_supply_discussion",
+      "title": "Substantive Discussion \u2014 Long-Term Water Supply to Louisa",
+      "parent_id": "louisa_tracked_systems",
+      "section_type": "narrative_synthesis",
+      "description": "Report the substantive discussion and reported technical content across the 4.25-year record that bears on long-term water supply to the Town of Louisa \u2014 primarily the Northeast Creek Water Treatment Plant, its source-water supply, its treatment capacity, the raw water line serving it, and any related storage or distribution affecting Louisa. Report: (a) engineering studies, master plans, rate studies, and consultant reports presented to the Board on these assets, identified by study name, consultant firm, date of presentation, and topline figures stated on the record (e.g., projected demand in MGD, identified deficiency in MG of storage, estimated project cost); (b) staff and consultant statements about findings, recommendations, and alternatives, attributed directly to named individuals with roles ('General Manager Pam Baughman stated...', 'Consultant [Name] of [Firm] presented...'); (c) Board member questions and positions expressed during deliberation, attributed by name; (d) public comments on the record that bear on these assets. Use neutral verbs ('said', 'stated', 'presented', 'asked', 'recommended'). Preserve every dollar figure, MGD or GPD figure, date, percentage, project name, consultant name, and study title exactly as stated in the minutes. If a topic within this grouping was not substantively discussed in the record, state that explicitly. Do not report discussion of out-of-scope assets, do not rank recommendations, do not imply consensus where none was recorded, and do not carry findings across groupings \u2014 this section reports only on Louisa-serving water supply.",
+      "source_queries": [
+        "Northeast Creek Water Treatment Plant engineering report master plan",
+        "water demand projection Louisa",
+        "water treatment capacity deficiency Louisa",
+        "raw water line Northeast Creek",
+        "consultant presentation water Louisa capacity",
+        "storage distribution Louisa water"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "water_supply_discussion",
+          "target_section_id": "louisa_tracked_systems",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "sewer_capacity_discussion",
+      "title": "Substantive Discussion \u2014 Long-Term Sewer Capacity Serving Louisa",
+      "parent_id": "louisa_tracked_systems",
+      "section_type": "narrative_synthesis",
+      "description": "Report the substantive discussion and reported technical content across the 4.25-year record that bears on long-term sewer capacity serving the Town of Louisa \u2014 the collection mains, pump stations, and treatment capacity handling Louisa wastewater. Report: (a) engineering studies, master plans, sewer flow studies, and consultant reports on these assets, identified by study name, consultant firm, date of presentation, and topline figures (e.g., projected flow in MGD, identified capacity deficiency, estimated project cost); (b) staff and consultant statements about findings, recommendations, and alternatives, attributed directly to named individuals with roles; (c) Board member questions and positions expressed during deliberation, attributed by name; (d) public comments on the record that bear on these assets. Use neutral verbs. Preserve every dollar figure, MGD or GPD figure, date, percentage, project name, consultant name, and study title exactly as stated in the minutes. If a topic within this grouping was not substantively discussed in the record, state that explicitly. Do not report discussion of out-of-scope assets (notably Zion Crossroads Wastewater Treatment Plant items unless they explicitly affect Louisa-serving capacity), do not rank recommendations, do not imply consensus where none was recorded, and do not carry findings across groupings \u2014 this section reports only on Louisa-serving sewer capacity.",
+      "source_queries": [
+        "sewer flow projection Louisa wastewater",
+        "sewer collection capacity deficiency Louisa",
+        "pump station Louisa sewer",
+        "wastewater treatment capacity Louisa",
+        "consultant presentation sewer Louisa",
+        "engineering study sewer master plan Louisa"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "sewer_capacity_discussion",
+          "target_section_id": "louisa_tracked_systems",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "patterns_and_open_items",
+      "title": "Patterns Across the Record and Open Items",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "Synthesize patterns across the 4.25-year record by connecting the yearly decision tables (decisions_2022, decisions_2023, decisions_2024, decisions_2025_2026) with the two topic discussions (water_supply_discussion, sewer_capacity_discussion). For the Louisa-serving water supply grouping and the Louisa-serving sewer capacity grouping, report in neutral reporter voice: (a) the trajectory of Board action \u2014 which items saw repeated decisions versus one-time actions, whether projected figures (demand, flow, capacity) were revised during the review window and in which direction, whether CIP cost estimates or timelines for Louisa-serving projects were adjusted and when; (b) points of apparent consensus across meetings (a figure or project repeatedly cited without challenge) and points of apparent contention (a figure or project that drew repeated debate or reversal); (c) record gaps \u2014 items where the Board took no recorded action during the review window, votes taken without recorded tallies, action items with no named responsible party or deadline, or engineering studies referenced in one meeting but never formally received or accepted. Note the next scheduled milestones or studies for each grouping as stated on the record. Do not offer opinions on whether Board decisions were sound, do not predict future Board actions that were not announced on the record, and do not speculate about fiscal implications for the Town of Louisa or any other external entity beyond what the record states.",
+      "source_queries": [
+        "continued tabled deferred next meeting Louisa",
+        "revised updated projection Louisa water sewer",
+        "follow-up action item pending Louisa",
+        "next fiscal year budget Louisa water sewer"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "water_supply_discussion",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "sewer_capacity_discussion",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "decisions_2022",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "decisions_2023",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "decisions_2024",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "decisions_2025_2026",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "patterns_and_open_items",
+          "target_section_id": "review_scope",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "municipal_water_sewer_authority",
+    "target_audience": "Town of Louisa officials, LWA ratepayers served by Louisa-serving assets, and general public interested in long-term water and sewer capital planning affecting the Town of Louisa",
+    "primary_source": "Louisa Water Authority Board of Directors meeting minutes, January 2022 through the most recent available meeting in 2026 \u2014 regular monthly meetings, special meetings, work sessions, and public hearings, with associated board packets, engineering studies, and consultant reports referenced on the record",
+    "scope_boundary_notes": "This review is narrowly scoped to LWA Board decisions affecting long-term water supply to, and long-term sewer capacity serving, the Town of Louisa. Out of scope: Zion Crossroads system, Lake Anna and Northeast Creek Campus service (including Amazon Data Center supply), James River Water Project as a standalone initiative, and administrative items unrelated to Louisa-serving long-term supply."
+  }
+}

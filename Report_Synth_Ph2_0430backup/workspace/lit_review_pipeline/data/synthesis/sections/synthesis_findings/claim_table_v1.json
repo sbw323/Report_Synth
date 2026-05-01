@@ -1,0 +1,402 @@
+{
+  "section_id": "synthesis_findings",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "Nitrogen species carry marginal penalties an order of magnitude greater than organic parameters across every regulatory and benchmark costing framework examined.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_84"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 116,
+        "end": 303
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "The piecewise-linear effluent fine model formalized by Stare et al. (2007) assigns below-limit discharge costs of \u0394\u03b1_NH = 4 \u20ac/kg for ammonium and \u0394\u03b1_TN = 2.7 \u20ac/kg for total nitrogen.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 499,
+        "end": 688
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "Upon limit exceedance, nitrogen discharge costs escalate threefold to \u0394\u03b2_NH = 12 \u20ac/kg and \u0394\u03b2_TN = 8.1 \u20ac/kg.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 780,
+        "end": 907
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "The Benchmark Simulation Model's Effluent Quality Index reinforces the nitrogen penalty hierarchy through weighting factors historically calibrated to the Flanders regional tariff, which assign TKN and nitrate-nitrogen weights that are 10\u201320\u00d7 larger per unit mass than those for COD.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_84"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 929,
+        "end": 1224
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Because the EQI aggregation is linear and the weights are fixed, the marginal cost attributed to each incremental gram of nitrogen remains constant within a simulation period yet already dominates the composite penalty.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_84"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1225,
+        "end": 1476
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "Even modest nitrification deteriorations induced by short aeration reductions will dominate the total penalty function, potentially overwhelming the energy cost savings that motivate the curtailment event.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1536,
+        "end": 1740
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "Stare et al. (2007) demonstrated that effluent fines decrease consistently with each successive advance in ammonia and nitrate feedback control.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1742,
+        "end": 1936
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "The optimal operating cost for each control strategy strongly depends on established effluent fines, i.e. selected parameters of \u0394\u03b1, \u0394\u03b2 and \u03b2\u2080.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 1942,
+        "end": 2115
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "When the Heaviside step contribution \u03b2\u2080 is removed and a flat per-kilogram fine is substituted, the incremental benefit of advanced controllers shrinks from approximately 12.6% to 6.2%.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2116,
+        "end": 2334
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "The nitrogen-weighted penalty structure, rather than aeration cost alone, is the binding constraint on DR headroom.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2335,
+        "end": 2470
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "The dual-slope fine function introduces a Heaviside discontinuity at the discharge limit concentration C_limit, where the marginal penalty jumps from \u0394\u03b1_j to \u0394\u03b2_j plus a fixed surcharge \u03b2\u2080,j per unit volume.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2525,
+        "end": 2768
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "The Heaviside discontinuity creates a non-smooth objective landscape that poses well-documented difficulties for gradient-based optimization solvers.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2769,
+        "end": 2921
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "The optimal DR operating point satisfies a condition analogous to permit-market clearing\u2014marginal energy savings equal marginal fine increases\u2014but locating this point computationally requires either derivative-free methods or smooth approximations of the step function.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 2922,
+        "end": 3266
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "The Latin Hypercube Sampling (LHS) strategy adopted for the BSM1 simulation campaign sidesteps the Heaviside discontinuity difficulty by constructing empirical response surfaces over the four-dimensional aeration parameter space (start time, duration, KLa reduction intensity, and event frequency).",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3267,
+        "end": 3639
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "The Catalonia-based framework described by Machado et al. (2020) evaluates not only annual average and flow-weighted mean concentrations but also peak effluent concentrations of TN, TKN, NH\u2084\u207a, and NO\u2083\u207b against European Community directive thresholds.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_80"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3700,
+        "end": 3972
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "Computing both the average and the peak introduces an implicit penalty on pollutant variability\u2014a dimension absent from purely mean-based indices.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_80"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3973,
+        "end": 4120
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "For intermittent aeration strategies, which by definition induce cyclical dissolved oxygen transients and corresponding oscillations in nitrification rate, the peak coefficient is particularly consequential.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19",
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 4121,
+        "end": 4371
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "A DR curtailment event that preserves the time-averaged ammonia concentration but generates a transient spike above C_limit will trigger the steeper fine slope \u0394\u03b2_j during the spike interval.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 4372,
+        "end": 4566
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "The Catalonia peak criterion penalizes exactly the temporal pattern that intermittent aeration produces, making it a more conservative\u2014and arguably more realistic\u2014test of DR feasibility than the standard BSM1 EQI.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_80",
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 4567,
+        "end": 4783
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "The marginal penalty governing the optimal DR intensity is endogenous rather than exogenously fixed.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Costs_0_53"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 4847,
+        "end": 4990
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "The shadow price of effluent quality\u2014the implicit cost the facility pays for each additional unit of discharge\u2014emerges from the interaction between the facility's abatement cost function and the regulatory fine schedule.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Costs_0_53",
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5071,
+        "end": 5333
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "Garibay-Rodriguez et al. (2017) demonstrated through sensitivity analysis of the enforcement multiplier \u03c6 that deviations from equilibrium either waste resources on excessive treatment or incur disproportionate fines.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Distributed treatment system_0_57",
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Costs_0_53"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5334,
+        "end": 5539
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "A three-part policy banding structure was identified comprising a tax ceiling (\u0394\u03b2_j), a subsidy floor (baseline energy savings rate), and an interior floating shadow price, which provides operational bounds within which the endogenous penalty must lie.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Costs_0_53"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5540,
+        "end": 5860
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "Fixed penalty weights, while computationally convenient, may systematically misrepresent the true marginal cost of DR-induced quality degradation, particularly near the discharge limit where the Heaviside jump amplifies pricing errors.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_1_19",
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5861,
+        "end": 6109
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "Safe equipment shutdown durations during DR events are poorly characterized; pilot studies have tested shutdowns ranging from 15 to 120 minutes, with ammonia exceedances observed after repeated curtailments.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6250,
+        "end": 6480
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "Recovery times after DR events\u2014the intervals required for nitrification capacity to return to steady-state performance\u2014are not well quantified, yet they critically determine the feasible event frequency parameter in the four-dimensional design space.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6481,
+        "end": 6755
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "The sensitivity of effluent quality to process interruptions remains an active area of investigation; case studies have yielded contradictory results, with some facilities reporting negligible quality impacts and others observing increased turbidity after aeration curtailment.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6756,
+        "end": 7102
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "The operation and maintenance costs associated with frequent equipment cycling remain uncertain.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 7103,
+        "end": 7234
+      }
+    },
+    {
+      "claim_id": "claim_28",
+      "claim_text": "By spanning the aeration parameter space with LHS samples and evaluating both energy savings and pollutant-specific effluent penalties at each sample point, the BSM1 campaign is positioned to generate paired response surfaces needed to bound these unknowns and to identify the equilibrium operating envelope within which DR participation remains both economically rational and regulatorily compliant.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 7235,
+        "end": 7613
+      }
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "Aeration is the most electricity-consuming process in wastewater treatment facilities with secondary treatment, accounting for approximately 45 to 60% of total energy use.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 303,
+        "end": 498
+      }
+    },
+    {
+      "claim_id": "claim_30",
+      "claim_text": "The below-limit discharge costs for ammonium and total nitrogen already exceed those typically assigned to COD or BOD\u2085 in BSM-family evaluations.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 689,
+        "end": 779
+      }
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "In the pilot study by Sch\u00e4fer (2020), after the fourth shutdown the ammonia concentration exceeded a set value in one of the aeration tanks and the control mechanism interfered to increase the aeration.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 6382,
+        "end": 6480
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

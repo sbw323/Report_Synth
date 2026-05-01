@@ -1,0 +1,654 @@
+Received: 5 November 2020 Revised: 8 January 2021 Accepted: 11 January 2021 
+
+DOI: 10.1002/wat2.1510 
+
+A D V A N C E D R E V I E W 
+
+**==> picture [77 x 16] intentionally omitted <==**
+
+# Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side management in the water supply and wastewater sectors 
+
+Angineh Zohrabian | Sophia L. Plata | Dong Min Kim | Amy E. Childress | Kelly T. Sanders 
+
+Department of Civil and Environmental Engineering, University of Southern California, Los Angeles, California 
+
+## Correspondence 
+
+Kelly T. Sanders, Department of Civil and Environmental Engineering, University of Southern California, Los Angeles, CA 90089. Email: ktsanders@usc.edu 
+
+## Funding information 
+
+Electric Power Research Institute, Grant/ Award Number: 00-10007871; The National Science Foundation, Grant/ Award Number: 1845931; University of Southern California 
+
+Edited by Stuart N. Lane, Editor-in-Chief. 
+
+## Abstract 
+
+Leveraging the potential flexibility of large electrical loads has become an attractive option for maintaining grid reliability, especially in electric grids with high penetrations of variable renewable energy. The water sector is a particularly attractive option for demand-side flexibility due to its vast water storage infrastructure, large interruptible pumping loads, and energy generation opportunities. Shifting the timing of water supply and wastewater utility operations can reduce peak load and temporally align energy-consuming activities with periods of cheap electricity prices and/or high renewable energy generation. This paper presents a general overview of demand-side management strategies in water and wastewater systems, focusing primarily on demandresponse measures. We find that while there is consensus in the literature about the potential for water systems to provide flexible demand-side management services, there is a need for developing comprehensive water-energy models to examine the value of load management as a source of revenue for water utilities and as a source of flexibility for the electric grid. More experimental studies and simulation efforts are also needed to address the technical complexities and water quality concerns associated with interrupting water and wastewater utility operations. 
+
+This article is categorized under: 
+
+Engineering Water > Sustainable Engineering of Water Engineering Water > Planning Water 
+
+## K E Y W O R D S 
+
+demand response, flexibility, renewable energy, wastewater treatment, water supply 
+
+## 1 | INTRODUCTION 
+
+Among industrial end-users, water and wastewater systems are well-positioned to provide load flexibility to the electric power grid, which must balance power supply and demand at any given time of the day (Aghajanzadeh, McKane, & Wray, 2015; Alstone et al., 2017; EPRI, 2013; Gils, 2016; Kiliccote, Olsen, Sohn, & Piette, 2016; Kirchem, Lynch, Bertsch, & Casey, 2020; Oikonomou, Parvania, & Khatami, 2018; M. Schäfer, 2020). In order to maintain this balance, a 
+
+© 2021 Wiley Periodicals LLC. 1 of 23 
+
+wires.wiley.com/water 
+
+WIREs Water. 2021;8:e1510. https://doi.org/10.1002/wat2.1510 
+
+2 of 23 
+
+ZOHRABIAN ET AL. 
+
+set of primarily supply-side electricity generation resources ramp up and down in response to load fluctuations, variable-energy generation, and grid instabilities (Alizadeh, Parsa Moghaddam, Amjady, Siano, & Sheikh-ElEslami, 2016; Jordehi, 2019; Kondziella & Bruckner, 2016). Demand-side energy management strategies, which enable load flexibility, are gaining interest as important interventions for addressing some of the emerging challenges of maintaining grid reliability, in absence of cost-effective large-scale batteries (Brouwer, van den Broek, Zappa, Turkenburg, & Faaij, 2016; Denholm & Mai, 2019). As variable-energy generation such as wind and solar power has increased, so too has the need for more flexible resources including the demand-side resources to back up intermittent generators and help manage midday overgeneration issues that can be caused by high penetrations of variable renewable energy within a grid's fuel mix (Denholm & Hand, 2011; Denholm & Mai, 2019). The large load flexibility potential in the water sector is supported by large capacities of water storage (that can serve as potential energy storage), high electric energy requirements, considerable onsite energy production, and advancements in control systems and digitalization. 
+
+Water systems need energy to source, convey, treat, and distribute a potable water supply to end-use sectors (Carlson & Walburger, 2007; EPRI, 2013; Molinos-Senante & Sala-Garrido, 2017; Plappally & Lienhard V, 2012; Sanders & Webber, 2012; Wakeel, Chen, Hayat, Alsaedi, & Ahmad, 2016). Significant amounts of energy are also used to treat wastewater to an acceptable standard for release back into the environment or for reuse (Figure 1). High energy costs are the main motivation for water utilities to include energy management strategies in their daily operational decisions. Generally, energy costs are the second-highest operational cost in the water sector, after labor costs (Copeland & Carter, 2017). In total, over 3% of annual electricity consumed in the United States occurs in the water sector (Sanders & Webber, 2012); yet, this electricity might grow in the future due to population growth, the increasing utilization of alternative water supply sources (which are often more energy-intensive), and more stringent water quality regulations (Cutter, Haley, Williams, & Woo, 2014; EPRI, 2013; Porse et al., 2020). Additionally, due to water consumption behavior, peak electricity usage in water systems typically coincides with peak electricity usage periods across many power grids (typically in mornings and evenings), with higher peaks in summer months (Adamowski, 2008; DeOreo et al., 2011; House, 2006; Porse et al., 2020; Thompson, Song, Lekov, & Mckane, 2008; Tiwari & Adamowski, 2015). This paper reviews demand-side management opportunities in the water sector, particularly as they relate to demand response (DR) (i.e., activities that temporarily modify the patterns and magnitude of electricity consumption to reduce electricity usage at times of high wholesale market prices or when network reliability issues compromise grid function [FERC, 2018]). First, an overview of different DR types and programs are presented, along with a brief description of other complementary demand-side management opportunities. Next, recent research efforts and DR applications in the water and wastewater sectors are reviewed, then demand-side management resources including energy efficiency, energy production, and storage opportunities that are complementary to DR are discussed. In the end, several barriers 
+
+**==> picture [503 x 174] intentionally omitted <==**
+
+FIGURE 1 Water supply and wastewater treatment system boundaries and projected electricity consumption breakdowns. Total U.S. electricity consumption data reflect a 2013 study (EPRI, 2013) and exclude the electricity used for producing recycled water after wastewater treatment. Each pie chart indicates the main components of electricity use in each stage based on (GEI Consultants/Navigant Consulting, 2010; Greenberg, 2011). These percentages of electricity usage may change depending on many factors, including source water quality, regional topology, and desired product water quality (Sanders & Webber, 2012) 
+
+3 of 23 
+
+ZOHRABIAN ET AL. 
+
+to implementing DR in the water sector are highlighted, and based on our review, we identify future research directions to address existing knowledge gaps. 
+
+## 2 | OVERVIEW OF DR AND OTHER DEMAND-SIDE MANAGEMENT RESOURCES 
+
+Strategic demand-side management can provide end-users opportunities to improve their energy performance and reduce their energy costs while offering electricity providers co-benefits for managing the electric grid and maintaining system reliability. This section provides a general introduction to different DR types and a range of programs that utilize them and describes some of the distinctive features of DR compared to other demand-side management resources, such as energy efficiency and on-site generation resources. 
+
+The two most common types of DR are shed and shift. If reducing load is desired (typically in response to emergency or contingency events on the grid), the change in electricity use patterns is referred to as “shed.” If the desired outcome is to change electricity consumption from a time period with high electricity prices to a period with low electricity prices (and/or from a time period of high demand to a period when there is surplus of renewable supply), the change in electricity use pattern is referred to as “shift” (Figure 2) (Alstone et al., 2017). Unlike energy efficiency, DR shift represents a change in electricity consumption patterns that may not reduce electricity consumption and might only will change the timing of consumption. Thus, changes in electricity consumption patterns do not necessarily lead to energy savings, but they help increase electricity supply efficiency, reduce solar and wind energy curtailment, and promote clean and cheap energy procurement. Distributed generation resources can provide similar grid services to DR. Operating an on-site generation resource (behind-the-meter), for example, can supplement electricity purchases, reduce the peak load, and modify the diurnal load shape in response to grid needs if managed properly. 
+
+Although DR events mainly target flexible loads that can be temporarily shed, time-varying electricity prices, such as time-of-use or critical peak pricing, reward load shifting activities that often result in more permanent changes in overall load (Alstone et al., 2017). In other words, permanent load shifting due to time-varying electricity prices contribute to the grid's long-term resource efficiency goals such as increasing renewable energy integration and avoiding capacity additions rather than addressing the electric grid's day-to-day issues (such as reliable supply). More dynamic electricity rates such as real-time pricing seek to correlate electricity use with wholesale generation costs; therefore, these rate structures can be much more effective (compared to time-of-use) in addressing the electric grid's daily operational challenges and can mimic the intended goals of some DR services (e.g., shifting load to off-peak hours), so long as electricity rate structures reflect average wholesale electricity generation costs. 
+
+Besides electric rate-based programs, electric utilities and third-party aggregators (entities that work with the utility or bid into energy markets through load aggregating) have established various market-driven DR programs to incentivize DR implementation (Churchwell, 2015; Paterakis, Erdinç, & Catal~ao, 2017). These programs provide payments in proportion to the load curtailment performance of enrolled end-users, based on the electric utility's designed program rates. End-users or third-party entities can also bid in wholesale energy markets to receive payments for an amount of load-reduction capacity. For example, in the California ISO day-ahead energy market, the Demand Response Auction 
+
+**==> picture [454 x 123] intentionally omitted <==**
+
+FIGURE 2 An illustration of different types of load modifications using demand-side resources. The dashed and solid lines demonstrate the original load profile before and modified load profile after energy management, respectively. The y-axis represents instantaneous load and the x-axis represents time across a 24-hr period, such that the entire area under each curve represents total daily electricity consumption 
+
+4 of 23 
+
+ZOHRABIAN ET AL. 
+
+Mechanism Pilot programs (known as DRAM) allow for pay-as-bid auctions of monthly system “resource adequacy” associated with a DR product in the investor-owned utility's service-aggregator area (CPUC, 2019). A variety of these programs are presented in Figure 3. 
+
+DR events can be triggered by some conditions in the grid such as high temperatures, resource limitations, a generating unit outage, transmission constraints, a system emergency, an alert called by the grid operator, or market prices reaching a certain price threshold. Although DR can be done manually, automated machine-to-machine communication can better facilitate faster and more reliable responses (SCE, 2019; M. Schäfer, Hobus, & Schmitt, 2017). When a DR event is called by the administrator of a DR program (i.e., an electric utility or a third-party aggregator), a signal is sent to the energy management system of the DR participant (e.g., a water facility). Then, the energy management system activates the control mechanism based on a set of predefined load management strategies to temporarily reduce (or increase) the load (Siano, 2014). After the DR event, the operation can recover and retain its normal conditions. The amount of payments or credits granted to the end-user (e.g., water utilities) are in proportion to actual load reduction achieved during a DR event compared to the baseline (load changes are recorded by advanced metering infrastructure) (SCE, 2019). These steps are displayed in Figure 4. 
+
+**==> picture [505 x 223] intentionally omitted <==**
+
+FIGURE 3 Different types of demand response (DR) programs grouped by program type, administrator, and financial compensation method. Note that DR programs vary across different electric utilities and energy wholesale markets. For more details refer to (Paterakis et al., 2017), (Churchwell, 2015), and (Siano, 2014) 
+
+**==> picture [503 x 149] intentionally omitted <==**
+
+FIGURE 4 A simplified architecture for automated demand response (DR). Arrows show the flow of information communicated between entities and devices 
+
+5 of 23 
+
+ZOHRABIAN ET AL. 
+
+## 3 | DR RESEARCH EFFORTS AND APPLICATIONS IN THE WATER AND WASTEWATER SECTORS 
+
+For a water utility, providing the required demand for a safe potable water supply is its primary goal; thus, reducing electricity consumption or changing electricity consumption patterns to decrease energy bills is a less important priority. Water utilities often are interested in solutions to reduce energy costs by (a) reducing electricity purchases from electric utilities, (b) reducing a facility's peak electricity consumption (potentially reducing demand charges), and (c) decreasing a facility's electricity consumption during periods of electricity system-wide peak demand (typically when electricity rates are the highest). Participating in DR programs can help the water industry achieve lower energy costs while maintaining quality water services. In this section, basic concepts of flexible operations in the water sector are explained; then the most recent research efforts and DR implementation considerations for the water supply and wastewater management systems are reviewed. 
+
+## 3.1 | Flexibility strategies in water sector 
+
+1. Leveraging water storage capacity: Water systems often use reservoirs and storage tanks to buffer the spatial and temporal gaps between water demand and water supply. The ability to store water can enable modifications to the timing of pumping operations, thus, allowing DR shift services to be utilized (Zimmermann, Gardian, & Rohrig, 2018). Reservoirs typically operate between two set points, representing minimum and maximum levels (Mala-Jetmarova, Sultanova, & Savic, 2017). Having a reservoir that can be filled during off-peak hours makes it possible to store quantities of water for a period of time such that pumping can be ceased for a few hours (Lazar, 2014; Chouaïb Mkireb, Dembélé, Jouglet, & Denoeux, 2019). In other words, above-ground water storage tanks act as energy storage via the potential energy stored within water. There are, however, limited data regarding water storage tank capacities in the United States; gaining insight into the magnitude of these capacities is critical to understanding how water storage capacities can be realistically leveraged in combination with DR services to decouple electricity usage for water treatment and real-time demand. Pumping loads are broadly classified as interruptible loads (Kernan, Liu, McLoone, & Fox, 2017), as pumping is generally not executed continuously, but rather at times that abide to the constraints governing reservoir levels and system pressure (Kernan et al., 2017). Thus, the operations of pumping networks, in conjunction with their storage capacity, can offer significant flexibility and/or interruptible loads to provide scheduled DR shift or DR shed, respectively. Water systems with sufficient storage capacities are suitable for ancillary services to the grid, as short interruptions can be tolerable with no adverse effects on the service (Shoreh, Siano, Shafie-khah, Loia, & Catal~ao, 2016). For example, the Metropolitan Water Reclamation District of Greater Chicago's Tunnel and Reservoir Plan (TARP) has the potential to store water that is treated during times of high electricity demand, shifting electricity use from peak to off-peak hours. The TARP currently captures and stores stormwater and sewage that would otherwise overflow into Lake Michigan. It is comprised of four tunnel systems and three reservoirs, some of which are still being expanded and are expected to provide a total of 21.35 billion gallons of storage (MWRD, n.d.). Instead of using all available capacity for storage for stormwater and sewage, some of this developing infrastructure could possibly act as a storage tank for water that is treated during off-peak hours. Similar opportunities exist also in water and wastewater treatment facilities. Treatment plants are designed for peak flow (Guerrini, Romano, & Indipendenza, 2017; Janzen, Achari, Dore, & Langford, 2017); therefore, they often operate below their design capacity. As a result, many facilities might be able to treat at higher capacities and store their treated water in storage tanks to postpone treating large quantities of water during peak electric load hours or during DR events. 
+
+2. Interrupting or reducing operational load: Switching electricity-consuming devices and processes on and off or from full load to partial load is another strategy to curtail loads for providing DR services. A device might be turned off for a few minutes up to a few hours in a wastewater treatment plant, depending on its operational constraints (M. Schäfer et al., 2017) and for longer hours in a pumping system (Kiliccote et al., 2016), depending on its system characteristics and water delivery constraints. Operational interruptions are typically done automatically via control systems that enable facilities to monitor and manage operations, which can also be used for load management. In water pumping systems, variable-speed-drive (VSD) pumps are common, and they can be controlled to ramp up and down quickly in response to grid signals. In other words, VSD adjusts the pump to constantly operate at the maximum hydraulic efficiency under load variations (Morabito & Hendrick, 2019). Water treatment facilities are 
+
+6 of 23 
+
+ZOHRABIAN ET AL. 
+
+equipped with central control systems to manage treatment processes and water quality. Advanced energy and water quality management systems (EWQMS) are still in the early phase of adoption. These systems have been implemented in some water utilities to determine an optimal daily plan for operating the water system and comanaging energy and water priorities (Cherchi, Badruzzaman, Oppenheimer, Bros, & Jacangelo, 2015; L. Jentgen et al., 2004). These types of control systems further facilitate operational flexibility at the same time helping mitigate water quality concerns. Although EWQMS alone do not provide DR services, they can be customized to receive signals from the electric grid to advance their role as an energy management tool. However, sensor-driven systems such as EWQMS can still benefit from advancements in sensor sensitivity and operational range to help decrease response times to changes in water quality (Allen et al., 2016; Cloete, Malekian, & Nair, 2016; Suciu, Vintea, Arseni, Butca, & Suciu, 2015; Umberg & Allgeier, 2013; W. Zhang, Tooker, & Mueller, 2020). Thus, services like EWQMS that offer an opportunity to exploit the flexibility of water and wastewater treatment systems while still maintaining water quality as a principal concern need additional research and development. 
+
+3. Utilizing on-site generation resources: An on-site generation unit can decrease electricity purchased from the grid. On-site generation resources can help the facility beyond reducing its energy costs through participation in DR programs by reacting to electric grid conditions for additional revenues. For example, a facility may operate its on-site generation resource according to time-of-use rates to manage its peak load. In addition, this generator may also ramp up to free up some electric load imports in response to emergency events in the electric grid. 
+
+## 3.2 | DR research in water supply systems 
+
+In a water supply system, pumps are typically the largest consumers of electricity (i.e., for raw water transfer, water distribution, and in water treatment plants) (Greenberg, 2011). Pumping electricity needs are approximately proportional to flow and head. Water pumping can be highly energy intensive, so gravity is leveraged to move water wherever possible. In some long-distance water transfer projects, the pumping requirements can be significant. For example, individual pumping stations along the 444-mile long California Aqueduct that carry water from the Sacramento-San Joaquin Delta to Southern California can exceed pumping loads of 200 MW (Eto et al., 2002). The configuration of a pump station and individual pump selection determine the magnitude of pumping loads and energy efficiency (Walski & Creaco, 2016). Given the magnitude of pumping load, a large body of research has dealt with minimizing electricity consumption cost of daily operation of water pumping. Since DR is designed to react to the electric grid's issues and conditions, these studies are not necessarily applicable to DR provisions. However, these studies are worth mentioning for three reasons: 
+
+- They indicate the existing methods and services that can have applications for flexible operation modeling of DR; 
+
+- The results of optimized daily operations reveal operational challenges for operating pumping systems flexibly; and 
+
+- These studies address “permanent load shifting” problems in reaction to time-varying electricity pricing. 
+
+Various optimization models can be found in the literature where the objective function minimizes the cost of energy consumed for the water supply and flowrates and pumping operation mode are among the decision variables (Mala-Jetmarova et al., 2017; Mccormick & Powell, 2004; Zamzam, Dall'Anese, Zhao, Taylor, & Sidiropoulos, 2019; H. Zhang, Xia, & Zhang, 2012). Depending on the type of pumps in the system (i.e., fixed-rate pumping systems that have a fixed operating point or VSD pumping systems that have extended operational range) and other hydraulic system constraints, the optimization model might be linear, nonlinear, or mixed-integer (Kernan et al., 2017; Mala-Jetmarova et al., 2017; Chouab Mkireb, Dembele, Jouglet, & Denoeux, 2018). Genetic algorithms also have vast applications in solving water pumping system optimization problems (Kernan et al., 2017; Luna, Ribau, Figueiredo, & Alves, 2019; Mccormick & Powell, 2004). A large body of research has centered on investigating optimal solutions for distribution water pumping systems targeting efficiency improvements, reducing electricity purchases, as well as flexibility and renewable energy integration considerations for the power grid (Kernan et al., 2017; Ruben Menke, Abraham, Parpas, & Stoianov, 2016; Chouab Mkireb et al., 2018; Oikonomou et al., 2018; van Staden, Zhang, & Xia, 2011; H. Zhang et al., 2012). Kernan et al. used genetic algorithms to optimize two different water supply systems with various objective functions using wholesale electricity prices in the cost minimization model (Kernan et al., 2017). Their results suggest that optimizing pump operation on the basis of the marginal price of electricity supply effectively aligns 
+
+7 of 23 
+
+ZOHRABIAN ET AL. 
+
+electricity consumption with intermittent renewable generation profiles. This outcome is generally true for energy markets where renewable energies, like solar and wind power, are price-taking. 
+
+Some studies have targeted process optimization to minimize energy costs by considering the possibility of participating in DR activities. One study considered two operational modes for a medium-sized fixed-speed water pumping system participating in DR services with a set water level limit (Takahashi, Koibuchi, & Adachi, 2017). The DR functions investigated included a power smoothing operation mode (DR shift) in which the load could shift from high consumption to low consumption periods and a DR shed mode that could earn incentives by shedding load in response to requests from the grid. The study showed that load smoothing efforts could reduce peak daily demand by approximately 16%, and load shedding efforts could eliminate nearly 60% of the load (Takahashi et al., 2017). Another study formulated a mixed-integer optimization method to solve a pump scheduling problem, considering the DR mechanisms available in the United Kingdom (Ruben Menke et al., 2016). Results demonstrated that, in addition to the financial benefits of DR for water system operators, DR services could reduce grid-related greenhouse gas emissions more than competing reserve energy technologies (e.g., internal combustion diesel, gas turbines, and hydro pump storage). The study also highlighted the importance of peak pricing of electricity tariffs to incentivize DR participation by utilities operating water pumping systems (Ruben Menke et al., 2016). 
+
+The risk preferences of the water system operators are often neglected in the DR analysis which is important in estimating the potential for load shedding and cost savings. One study considered different levels of risk tolerance of water system operators in its mixed-integer linear programming optimization model to evaluate the DR capacity of a benchmark water supply system serving 200,000 people in Richmond in the United Kingdom (Y. Liu, Barrows, Macknick, & Mauter, 2020). The risk tolerance was factored in the recovery period over which the pumping operation returns to business-as-usual operation after curtailing the electric load. For example, a risk-averse water system operator prefers a shorter recovery time (in this study it is assumed to be 6 hr) and, as a result, more quickly returns to business-as-usual levels in the water tank. From an economic perspective, the study found that the reduction in electricity costs could be as high as 16.9% if the load shedding was done for 2 hr over a 24-hr period, and the grid compensated $120 per MW for the curtailed load (Y. Liu et al., 2020). 
+
+Another study applied a mixed-integer linear programming to model an existing water treatment plant in South Germany and found that the flexible operation of water treatment plants and drinking water pumping could lead to significant cost savings (Zimmermann et al., 2018). The study also found that extended water storage capacities could enhance the flexibility of the water supply system by allowing to decoupling of water pumping from water treatment processes (Zimmermann et al., 2018). An experimental test was conducted by (Diaz, Ruiz, & Patino, 2017) on a water booster pressure system and showed that the system could shed 27% on average. They also used a modeling approach to illustrate that the system could provide spinning reserve services thanks to the fast recovery of the system after a few minutes (Diaz et al., 2017). 
+
+Some electric utilities may offer DR programs specific to agriculture and pumping (includes irrigation, water supply, and sewer pumping) customers. Southern California Edison for example, during a DR event in 2014 could reduce about 24 MW load (75% load shed compared to total 32 MW reference load) for over 5 hr from 1,120 agriculture and pumping DR program participants (Churchwell, 2015). DR implementation has also been successful at the Eastern Municipal Water District in Southern California. This water utility can curtail about one-third of its load (about 11 MW) during DR events by participating in a few programs including third-party aggregator and utility-managed programs (SCE, 2014). A study in Korea that evaluated a pilot test for a critical peak pricing DR program found that water supply and sewerage systems had weak and moderate responses, respectively (Jang, Eom, Kim, & Rho, 2015). One reason could be the need for preparatory or recovery times before and after a DR event, given the nature of continuous flow production with all-day operations in the water sector. 
+
+## 3.3 | DR research in wastewater systems 
+
+Research studies have tackled the energy management issues of wastewater treatment plants as ways to support “selfsufficient” and in some cases “energy positive” operation. Some strategies include modifying the operation of aeration units (Asadi, Verma, Yang, & Mejabi, 2017; O. Nowak, Keil, & Fimml, 2011), operating the aeration unit intermittently (Giberti, Dereli, Flynn, & Casey, 2020), generating biogas through anaerobic treatment of municipal wastewater (S. Nowak, Kushler, & Witte, 2014), installing combined heat and power (CHP) units for producing the plant's heat and power needs (O. Nowak et al., 2011; Seier & Schebek, 2017), and using organic waste in digesters (i.e., codigestion) to 
+
+8 of 23 
+
+ZOHRABIAN ET AL. 
+
+increase energy cogeneration (S. Nowak et al., 2014; Schwarzenbeck, Bomball, & Pfeiffer, 2008). Other objectives have also been considered such as improving energy efficiency (Di Fraia, Massarotti, & Vanoli, 2018; Henriques & Catarino, 2017), operating wastewater treatment processes on a partial load (M. Schäfer et al., 2017), as well as taking advantage of the design capacity of a wastewater facility, and using oversized tanks to delay some treatment (up to a few days) to boost flexible operation and other DR opportunities (Filipe, Bessa, Reis, Alves, & Póvoa, 2019; Kirchem, Lynch, Bertsch, & Casey, 2018; Olsen, Goli, & Faulkner, 2012; M. Schäfer et al., 2017; M. Schäfer, Gretzschel, Schmitt, & Knerr, 2015). 
+
+Aeration is the most electricity-consuming process in wastewater treatment facilities with secondary treatment, accounting for approximately 45 to 60% of total energy use (Greenberg, 2011; Kirchem et al., 2018). During secondary treatment, air is continuously injected into a reactor to support the growth of microorganisms that decompose organic and nitrogenous matter in wastewater (Aghajanzadeh, McKane, & Wray, 2015). The oxygen level in the reaction tanks is continuously monitored. The amount and duration of aeration depends on the solids retention time and the influent volumetric flowrate and dissolved oxygen concentration, which can vary on a day-to-day basis (Kirchem et al., 2018). Shutting down the operation of aeration units (intermittent operation) (Guoqiang Liu & Wang, 2017) and overoxygenating wastewater (Aghajanzadeh, McKane, & Wray, 2015) offer load shift opportunities in the wastewater treatment plant. In general, aeration units may be better at providing short, but frequent, DR responses (M. Schäfer, 2020). There is evidence that intermittent aeration can be more energy efficient while maintaining the pollutant reduction efficiency (Dai, Xu, Liu, & Yang, 2015; Gu, Yang, & Liu, 2018; Guoqiang Liu & Wang, 2017; Rous, Vymazal, & Hnátková, 2019; Uggetti et al., 2016). For example, the implementation of intermittent aeration in a pilot-scale system showed a significantly improved nutrient removal along with a 10% savings in energy compared to operation with continuous aeration (Guoqiang Liu & Wang, 2017). Another pilot study tested over-oxygenation (during off-peak periods) in the aeration unit of a wastewater treatment plant in California and found that shutting down the aeration during peak periods caused increased turbidity in the effluent (Aghajanzadeh, McKane, & Wray, 2015). Giberti et al. also highlighted the potential negative impacts of aeration shutdown on effluent turbidity (Giberti et al., 2020). 
+
+Storing oxygen is another way to shift the load if oxygen is used instead of air in aeration systems. One study proposed a DR energy management scheme to investigate load shift opportunities using oxygen storage for common industrial applications including wastewater treatment (Ding, Hong, & Li, 2014). This study takes advantage of distributed energy resources and day-ahead hourly electricity prices to optimize the schedule of the operation. 
+
+The electricity required for pumping to and within a wastewater treatment plant can range from 15 to 70% of total electricity use, depending on site location and treatment technology (Kirchem et al., 2018). An essential condition for pausing wastewater pumping during peak periods is the availability of storage capacity. When pumping is turned off, wastewater that continuously flows to a plant has to be kept in storage tanks or in the sewage system. In addition, wastewater treatment plants can potentially store partially treated or treated wastewater during peak periods and process or release it later during off-peak hours (Kirchem et al., 2018). A pilot test study reported that return sludge pumps can handle short and more frequent flexibility calls, whereas raw sludge pumps can handle both short and long interruptions (M. Schäfer, 2020). A recent study used an innovative predictive control approach for operating wastewater variable-frequency drive pumps to minimize electricity consumption in close to real-time, by considering uncertainty forecasts for wastewater intake rate (Filipe et al., 2019). The results from a real case study over a 90-day period showed 16.7% energy savings while achieving 97% energy reduction in the number of alarms related to high tank levels in comparison with a fixed set-point level operation (Filipe et al., 2019). Wastewater treatment plants that have high capacity use factors (Guerrini et al., 2017) are less flexible compared to oversized wastewater treatment plants in terms of the feasibility of storing the wastewater to delay treatment. Influent flow rates may highly fluctuate such that the maximum-to-minimum ratio of influent flow rates can be as high as 4:1 (Hamitlon, Braun, Dare, Koopman, & Svoronos, 2006) (e.g., as demonstrated by the flow rate pattern of the Hyperion wastewater treatment plant located in Los Angeles, CA [Poosti, Lewis, Sereno, Redd, & Abkian, 2002]). 
+
+Three case studies were performed by Lawrence Berkeley National Laboratory in California to study DR at wastewater treatment facilities (Aghajanzadeh, McKane, & Wray, 2015; Aghajanzadeh, Wray, & Mckane, 2015). For these case studies, the major electricity-consuming equipment were submetered, including influent/effluent storage pumps, solids separation centrifuges, and aeration equipment. The case study at the San Luis Rey Wastewater Treatment Plant confirmed significant DR potential across centrifuges, effluent pumps, and aerators; however, reductions in aeration resulted in increased effluent turbidity (Aghajanzadeh, McKane, & Wray, 2015). By contrast, a case study of the Donald Somers Water Pollution Control Plant found that there were no noticeable water quality concerns resulted from modified aeration operations. This was attributed to an existing large pond that provided a natural source of oxygenation to 
+
+9 of 23 
+
+ZOHRABIAN ET AL. 
+
+the secondary effluent as part of the facility's secondary treatment process. This pond also could serve as a form of storage to complement DR shed and shift activities. Additionally, the onsite natural gas and biogas power generation unit at Donald Somers Water Pollution Control facility is sized to generate approximately 150% of the facility's baseload energy needs, and therefore, is another major source of flexibility (Aghajanzadeh, Wray, & Mckane, 2015). The tests showed that the plant could reduce 150 kW load and the treatment processes could be curtailed for four consecutive hours without negative consequences (Aghajanzadeh, Wray, & Mckane, 2015). The third case study at Southeast Water Pollution Control Plant showed that large flexibility opportunities exist by curtailing the load of lift pumps, which is possible because of the large influent storage built into the San Francisco sewer system that can store influent for several days (Aghajanzadeh, Wray, & Mckane, 2015). 
+
+Lawrence Berkeley National Laboratory's comprehensive DR potential study for California's Public Utility Commission (which oversees three investor-owned utilities) estimated that wastewater and agricultural pumping have annual cost-competitive potential of about 1,770 MWh of DR shift, and 240 MW of DR shed, aggregated across California, in the year 2025 considered in (Alstone et al., 2017). Also, the study estimated that DR-capable agriculture water pumps alone could annually offer about 50 MW of cost-competitive fast DR for electric load-following services in the same year. A parametric analysis estimated that in 2018, load shifting potential in U.S. drinking water treatment plants has been between 140 and 610 MW, which varies as a function of the duration of load curtailment, the ratio of the maximum treatment capacity of water treatment plants to the peak-day water demand, and the time of the year (Y. Liu & Mauter, 2020). 
+
+In Germany, a study was conducted to evaluate the load shift in wastewater treatment plants by leveraging both biogas storage and electricity generation potential (Seier & Schebek, 2017). In this study, electricity wholesale prices were used as a signal for load shift in wastewater treatment plants. The results showed that the load shift in wastewater treatment plants could avoid the curtailment of about 120 MW of surplus electric power across the grid. In another pilot study (M. Schäfer, 2020), 30 tests were conducted in three wastewater treatment plants in Germany with shut-down times ranging from 15 to 120 min to evaluate the flexibility of aeration systems, return sludge pumps, and CHP units. During the experiments, the aeration system was shut down five times, with each shutdown followed by a planned regeneration time. After the fourth shutdown, the ammonia concentration exceeded a set value in one of the aeration tanks and the control mechanism interfered to increase the aeration and to reduce the ammonium concentration below the predefined threshold. After that, the aeration system was able to respond to the fifth shutdown (M. Schäfer, 2020). 
+
+## 4 | OTHER DEMAND-SIDE MANAGEMENT OPPORTUNITIES IN THE WATER SECTOR 
+
+## 4.1 | Energy efficiency 
+
+Improving energy efficiency is a common energy management practice in the water industry, intended to lower baseline electricity consumption and permanently reduce peak load. Energy savings can be accomplished through water conservation measures. Water conservation indirectly affects energy use by decreasing the total energy required for water treatment and deliveries (McDonald et al., 2015). For example, Bartos and Chester found that water conservation – policies in Arizona can potentially reduce statewide electricity demand by 0.82 3.1% by 2025 compared to 2010 (Bartos & Chester, 2014). Vilanova and Balestieri reviewed the energy efficiency and conservation alternatives in water systems including leakage management and state-of-the-art real-time optimization techniques (Vilanova & Balestieri, 2014). Promoting water conservation measures can also accelerate advanced equipment adoption, which can have energy cobenefits. For example, the Alliance to Save Energy reported that 10% of energy savings in the water sector have been achieved by adopting water metering and monitoring systems (CEE, 2010). Advanced metering infrastructure data enable the monitoring of diurnal patterns of water and energy usage, and thus, insights regarding the load shape and electricity consumption profiles of water-related activities. Furthermore, the introduction and the adoption of supervisory control and data acquisition systems can improve energy efficiency and can technically support DR in water and wastewater treatment facilities (Todd, Ula, Martinez-Morales, Penchev, & Gomez, 2020). 
+
+Some energy-saving opportunities can reduce the magnitude of curtailable load because they generally reduce the baseline electricity demand (Kiliccote et al., 2016). However, energy efficiency advancements may have a positive impact (for example, installing controllable VSD pumps by continuously adjusting the speed of the motor to water flow rates (R. Menke, Abraham, Parpas, & Stoianov, 2017) or a negative impact (for example, replacing oversized pumps 
+
+10 of 23 
+
+ZOHRABIAN ET AL. 
+
+with smaller ones (Guerrini et al., 2017) on operational flexibility of the system, depending on the measure. DR and energy efficiency goals often align in VSD pumping systems. In 2017, Menke et al. conducted a technical analysis to compare the efficiency of water distribution systems with and without VSD pumps (R. Menke et al., 2017). The study found that VSD pumps helped lower overall operational costs because of their finer performance control. It also found that VSD pumps enable water distribution systems to participate in DR schemes over a wide range of operating conditions, suggesting that VSD pumps can aid in the implementation of both DR and energy efficiency strategies (R. Menke et al., 2017). 
+
+## 4.2 | Energy production 
+
+The electricity generated at water and wastewater facilities can reduce net electricity purchases from the grid and/or provide some flexibility in terms of when a water facility purchases electricity from the grid (ideally when electricity prices are relatively low) or uses its own generators (ideally when electricity prices are relatively high). Thus, utilizing on-site generation resources especially coupled with storage can mimic the benefits of DR programs and help to respond to grid conditions. This section reviews several energy generation opportunities in the water sector. 
+
+## 4.2.1 | Energy production in water supply systems 
+
+Some technologies can help recover energy from pressurized water systems. “In-pipe hydro turbines” offer an interesting technical solution to maintain the pressure balance within pipes (Dariusz, MacIej, Tomasz, & Damian, 2016; Rouholamini, Wang, Miller, & Mohammadian, 2018; Sitzenfrei, Berger, & Rauch, 2018) and show promise in reducing electricity use and improving pumping efficiency (Chae & Kang, 2013; Fecarotta, Ramos, Derakhshan, Del Giudice, & Carravetta, 2018; Gude, 2015; Vilanova & Balestieri, 2014). In-pipe hydro turbines generate electricity by reducing pressure to a set point before delivery to customers. “Pump-as-turbine” is another technology that is used in water supply systems (Corcoran, Coughlan, & McNabola, 2013). The motor/generator of a pump-as-turbine can be equipped with a VSD in order to change from pumping to generating mode, and also to react efficiently to load fluctuation (Mercier, Hardy, Van Tichelen, Olivier, & De Jaeger, 2019). This notion can be exploited to accommodate some of the grid's flexibility needs. A study tested this concept of storing excess renewable energy within a smart grid in a pumped hydro storage microfacility and analyzed the system in terms of operational performance and economics (Morabito & Hendrick, 2019). Pumps-as-turbines have been described in the literature (Barbour, Wilson, Radcliffe, Ding, & Li, 2016; Binama et al., 2017; Capelo et al., 2017), but information about their real-life applications are limited (Morabito & Hendrick, 2019). 
+
+The adoption of other distributed generation resources that can provide load reduction is growing in the water utilities (Muhsen, Ghazali, & Khatib, 2016; Shao et al., 2018). The literature describes many applications that utilize renewable electricity for water pumping systems (Chandel, Nagaraju Naik, & Chandel, 2015; Gopal, Mohanraj, Chandramohan, & Chandrasekar, 2013; Li, Jin, Akram, & Chen, 2017; Muhsen, Khatib, & Nagi, 2017; Poompavai & Kowsalya, 2019). Distributed energy resources such as solar photovoltaics are not considered embedded energy generation resources from water systems (i.e., deriving energy from water streams themselves), although their energy production can reduce the electricity imports of the water system. On-site generation resources can provide flexibility if they are connected to energy storage or battery devices. Irvine Ranch Water District worked with its electric utility, Southern California Edison, to install a 7 MW/34 MWh network of battery arrays at six water treatment, recycling, and pumping facilities, which allow the water utility to buy and store energy during cheap electricity rate periods and use it to power its operations during times when electricity rate are expensive. In addition, the battery storage systems provide a source of stored power for Southern California Edison to rely on during DR events (Bennett et al., 2017). 
+
+## 4.2.2 | Energy production in wastewater systems 
+
+The literature regarding the energy consumption of different wastewater treatment processes is vast and has resulted in different energy performance indicators such as energy intensity, energy production, and net energy use from external sources (Longo et al., 2019; Molinos-Senante & Sala-Garrido, 2018; Silva & Rosa, 2015). Biogas recovered from wastewater within wastewater treatment facilities represents an important opportunity for energy generation, typically via 
+
+11 of 23 
+
+ZOHRABIAN ET AL. 
+
+anaerobic digestion units. Biogas can be burned as a fuel in power generation units, such as internal combustion engines, microturbines, gas combustion turbines, and fuel cells (EPA, 2011; Gude, 2015; Shen, Linville, UrgunDemirtas, Mintz, & Snyder, 2015). Potential electricity generation capacity generally scales with a wastewater treatment plant's capacity (EPA, 2011). Influent flow rates of 5 million gallons per day or greater are typically needed to produce adequate quantities of biogas for power generation to be economically feasible (EPA, 2011). Another energy production potential is in burning biosolids from wastewater sludge (Abus¸o�glu, Özahi, Ihsan[_] Kutlar, & Al-jaf, 2017; Kacprzak et al., 2017). In addition to energy generation from biogas and sludge, a survey-based study found that in California, wastewater treatment plants with flow rates below 5 million gallons per day could generate 30–100% of their total energy demand from solar energy (often as the only source of renewable energy onsite) (Strazzabosco, Kenway, & Lant, 2019). 
+
+With all the energy recovery opportunities from sewage, researchers have attempted to understand the feasibility of operating the wastewater treatment plant as a net-zero energy facility. A theoretical energy-balance model was proposed by (Yan et al., 2017) to evaluate the feasibility of achieving 100% net-zero energy in wastewater treatment plants. The analysis of 20 conventional wastewater treatment plants in China showed that six plants were not able to achieve net-zero energy consumption, eight plants could achieve 100% energy self-sufficiency by adjusting the metabolic material allocation, and the remaining six plants could export excess energy (Yan et al., 2017). Case studies analyzed by (Wang et al., 2016) in four countries of the United States, Germany, China, and South Africa, concluded that 100% energy self-sufficient wastewater treatment plants were feasible by combining energy efficiency solutions and energy recovery from the sewage. A review study detailed various aspects of energy recovery in wastewater treatment plants and highlighted the ongoing research efforts in this space (Ewa & Jacek Makinia, 2018). 
+
+## 4.2.3 | Energy storage 
+
+Conventional pumped hydroelectric storage (PHS) is a mature technology for bulk energy storage. This technology leverages the usage of two water reservoirs, located at different heights. In charging mode, the system pumps water from a lower reservoir to a higher reservoir for storage. In discharging mode, the stored water is discharged from a higher reservoir to the lower reservoir and generates electricity as it flows through turbines. The round-trip efficiency of PHS systems varies between 60 and 80% depending on the head difference between the upper and the lower reservoirs (Matos, Carneiro, & Silva, 2019). In more unconventional applications of pumped storage, the sea has been used as the 
+
+**==> picture [372 x 252] intentionally omitted <==**
+
+FIGURE 5 The concept of aquifer pumped hydroelectric energy storage system (recreated based on figure 1 presented in Khan and Davidson (2017). Copyright Springer Fachmedien Wiesbaden GmbH 2017) 
+
+12 of 23 
+
+ZOHRABIAN ET AL. 
+
+lower reservoir such as in the 30 MW hydroelectric storage plant located at the coast of Okinawa Island, Japan (Rehman, Al-Hadhrami, & Alam, 2015). In addition, new concepts have emerged to use a surface reservoir as the upper reservoir and an underground reservoir or an aquifer, as the lower reservoir (Figure 5). In smaller scale facilities (10 kW to 0.5 MW), excavated geologic rocks or an existing aquifer can be utilized as underground reservoir. For larger scale facilities, engineered cavities or abandoned mines can be used (Binama et al., 2017). The literature is limited on underground pumped hydroelectric energy storage and these concepts remain relatively unexplored; however, many municipalities already have the basic infrastructure in place that could potentially be modified to store energy. Particularly in arid regions, groundwater banking (i.e., actively recharging groundwater with surface water through infiltration basins or injection wells, known as groundwater augmentation) is a widely used method to store water. For example, one study estimated that California's depleted groundwater aquifers can provide about 44 km[3] of water banking capacity (Scanlon, Reedy, Faunt, Pool, & Uhlman, 2016). Despite the potential, some challenges have undermined some previous aquifer storage projects. Bloetscher et al. conducted a survey-based study on 204 active and inactive aquifer storage and recovery sites in the United States and detailed some operational problems associated with inactive projects, that is, issues related to water quality, physical and chemical clogging or biological fouling, as well as inadequate recovery of injected water (Bloetscher, Sham, Danko III, & Ratick, 2014). 
+
+Khan and Davidson in 2017 proposed and evaluated the use of existing infrastructure for the implementation of underground pumped hydroelectric energy storage for South Africa (Khan & Davidson, 2017). In a more recent study, House, Beuhler, Ahinga, Iqbal, and Ta (2018) performed a feasibility study in the Antelope Valley Water Storage System, located in Southern California to evaluate how pumped hydro and underground storage could facilitate more flexible pumping and could enable more DR capabilities. The conceptual design includes a pumped storage system in which the aquifer (the groundwater bank) is used as the lower reservoir. The system could generate electricity up to 5.2 MW with a round-trip efficiency of 73% during average weather years (House et al., 2018). The study concluded that the system could be cost-effective for its ability to participate in DR programs like flexible ramping. The DR potential of the system was evaluated as 27.3 MW, from which 10.1 MW corresponds to the size of the pumps and 17.2 MW corresponds to the capacity associated with extraction wells, which could be curtailed up to 5 hr in a day for a 320 hr per year (House et al., 2018). 
+
+## 5 | DR CHALLENGES AND FUTURE RESEARCH DIRECTIONS 
+
+Although the water industry has been generally successful in improving the energy efficiency of water systems, DR participation has not been widely adopted. This review (summarized in Table 1) helps to identify several technical, operational, and economic barriers that hinder DR participation by water utilities. These barriers to DR adoption in the water sector broadly include: 
+
+- A lack of institutional knowledge in the water sector about DR programs: Compared to other energy management concepts, such as energy efficiency programs, knowledge regarding the potential benefits of DR program participation by water utilities is currently lacking, particularly in terms of the opportunities presented through automated DR programs (EPRI, 2013; Jang et al., 2015; M. Schäfer, 2020; Thompson, Lekov, Mckane, & Piette, 2010). Since DR concepts are still relatively new for water utility operators, coordination between energy and water utilities is still nascent (Jang et al., 2015; Nezamoddini & Wang, 2017; M. Schäfer, 2020; Sparn & Hunsberger, 2015). Enabling integrated water and energy management will require water and energy utilities to come together and learn each other's industry-specific jargon, operational constraints, and priorities to ensure that DR programs are designed with consideration of each industry's interests. 
+
+- Concerns for maintaining water quality: Maintaining a safe and abundant water supply, as well as protecting public health during water remediation are the primary goals of water utilities. Thus, operational modifications of critical equipment might increase the risk for maintaining water quality which remains a major barrier for DR participation by water utilities (Aghajanzadeh, Wray, & Mckane, 2015; Bunn, 2008; Y. Liu et al., 2020; M. Schäfer, 2020). 
+
+- Economic uncertainties of DR program participation: The operation and maintenance costs associated with the flexible operation of system processes and frequent interruptions of process equipment are not well known (Aghajanzadeh & Therkelsen, 2019; Barán, Von Lücken, & Sotelo, 2005; Els, Pelzer, & Schutte, 2015). Given that the costs of enabling DR programs in the water sector can be high (Kiliccote et al., 2016; Shoreh et al., 2016), there is still a lot of uncertainty in regards to the economic returns of DR program participation (M. Schäfer, 2020). 
+
+13 of 23 
+
+ZOHRABIAN ET AL. 
+
+|Resource or<br>Availability and<br>Operational<br>Benefits to water<br>Benefits to the|strategy<br>potential<br>flexibility<br>facility<br>electric grid<br>Decision-making challenges<br>Relevant studies|Energy<br>Large (VSD pumps and<br>Not intended for<br>Generally, reduces<br>Permanent load<br>Cost-effectiveness depends on<br>(Gude, 2015; Guerrini|efficiency<br>energy management<br>flexibility<br>energy consumption<br>reduction impact that<br>investment costs and electricity<br>et al., 2017; Luna|systems can provide<br>(and energy costs)<br>reduces the peak load<br>retail prices, and decision-making<br>et al., 2019; R.|great energy savings)<br>more evenly across<br>as well<br>criteria include life-cycle energy<br>Menke et al., 2017;|time than less<br>cost savings<br>Vilanova &|permanent<br>Balestieri, 2014;|interventions<br>Walski &|Creaco, 2016)|On-site<br>Variable (depends on<br>Variable (depends<br>Reduces electricity<br>Can be used to shed the<br>Some regulatory rules may constrain<br>(Bennett et al., 2017;|generation<br>availability and other<br>on the type of<br>imports from grid and<br>load during DR events,<br>a facility's ability to produce<br>Mercier et al., 2019;|operational<br>generation<br>can operate to respond<br>and/or to shift load to<br>power or to export surplus<br>M. Schäfer|constraints)<br>resource, and fuel<br>to expensive wholesale<br>respond to electricity<br>generation<br>et al., 2017;|or energy storage<br>electricity production<br>costs<br>Strazzabosco|capacity)<br>times<br>et al., 2019)|Emergency<br>Large (generally<br>Limited<br>Reduce risk during<br>Can be used to shed load<br>Installed for energy reliability<br>(Aghajanzadeh,|generators<br>available for short<br>power outages/<br>during DR events but<br>purposes to back up the main<br>McKane, &|operations, only a<br>curtailment, and can<br>typically implemented<br>energy supply (e.g., the grid). Most<br>Wray, 2015; Bennett|few times a year)<br>also be used during<br>to be utilized<br>are natural gas or diesel-fuelled<br>et al., 2017)|DR events<br>infrequently (e.g., a<br>technologies, so emissions|few times a year)<br>controls systems can be cost-|prohibitive depending on|regulations|Biogas storage<br>Small (the capacity<br>High (not a source<br>Typically used for<br>Suitable for supporting<br>Economics depend on the scale of<br>(Aghajanzadeh,|depends on the size<br>of flexibility itself,<br>collecting and storing<br>longer DR events<br>biogas production and<br>McKane, &|of wastewater<br>but it can support<br>biogas to use in on-site<br>utilization. Biogas storage can<br>Wray, 2015; Seier &|treatment plant)<br>flexible electricity<br>generation units to<br>complement the energy<br>Schebek, 2017;|generation)<br>offset grid purchases<br>management of the facility, while<br>Sparn &|DR participation can offset some<br>Hunsberger, 2015)|investment costs|Water<br>Variable (depends on<br>High for VSD<br>Flexible pumping<br>Can provide load shed<br>Additional incentives from DR<br>(Kernan et al., 2017;|pumping<br>the size of pumps,<br>pumps and low<br>operations via VSD<br>and shift for capacity<br>programs such as load curtailment<br>Ruben Menke|system, alignment of<br>for fixed-rate<br>can improve pumping<br>and reliability services<br>and critical peak pricing programs<br>et al., 2016;|pumping stations,<br>pumps<br>efficiency and energy<br>(VSD pumps can<br>can add value for pump retrofits<br>Oikonomou|storage, and<br>cost savings<br>follow load and<br>and VSD adoption. In continuous<br>et al., 2018;|operational<br>provide fast responses<br>processes such as treatment<br>Takahashi|constraints)<br>to frequent and small<br>plants, pumping finished product<br>et al., 2017)|changes in grid<br>typically cannot be curtailed|dynamics)<br>without on-site storage.|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+
+
+AL.. 
+
+14 of 23 
+
+ZOHRABIAN ET AL.. 
+
+|Resource or<br>Availability and<br>Operational<br>Benefits to water<br>Benefits to the|strategy<br>potential<br>flexibility<br>facility<br>electric grid<br>Decision-making challenges<br>Relevant studies|Water storage<br>Large (water storage<br>High (large<br>It can be coordinated<br>Can provide permanent<br>Circulating water through storage<br>(House et al., 2018; Y.|capabilities typically<br>capacities of<br>with pumping to shed<br>load shifting and can<br>facilities to maintain water quality<br>Liu et al., 2020;|exist across all water<br>storage can<br>load during DR events,<br>help shape load, so it<br>can be an issue. Investment<br>Zimmermann|life-cycle stages)<br>support load<br>also for permanent<br>is more aligned with<br>decisions for extending storage<br>et al., 2018)|curtailments and<br>load shifting based on<br>electricity supply costs<br>capacities typically consider water|load scheduling<br>time-varying<br>and resources on a<br>quantity and quantity issues and|in water pumping<br>electricity prices<br>seasonal and day-to-<br>trade-offs. DR participation|and treatment)<br>day basis.<br>incentives can add additional|value on water storage|investments.|Aeration<br>Large (it is the single<br>Low (can be shut<br>Intermittent aeration<br>Can provide short-term<br>Constant monitoring of effluent and<br>(Aghajanzadeh,|largest consumer of<br>down for a short<br>can be more energy<br>DR shed services<br>advanced control systems are<br>McKane, &|electricity in<br>time up to 2 hr)<br>efficient and can<br>necessary to mitigate potential<br>Wray, 2015; Di Fraia|wastewater<br>improve treatment<br>negative impacts on effluent<br>et al., 2018;|treatment plants<br>efficiency<br>quality due to interruptions in<br>Giberti et al., 2020;|with secondary<br>aeration.<br>Rous et al., 2019;|treatment)<br>Uggetti et al., 2016;|Zimmermann|et al., 2018)|Wastewater<br>Variable (magnitude<br>High (if there is<br>Pumping load<br>Can provide DR shed<br>Large capacities of storage and<br>(Filipe et al., 2019;|pumping<br>depends on location,<br>storage capacity<br>curtailment helps<br>services and can<br>automated control systems are<br>Kirchem et al., 2018;|size of the treatment<br>to delay the<br>saving on demand<br>support DR shift based<br>necessary for flexible operation of<br>M. Schäfer, 2020)|plant, etc.)<br>wastewater<br>charges and energy<br>on electricity supply<br>wastewater pumping|treatment)<br>cost<br>costs|Unutilized<br>Large (specific to<br>High (treatment<br>Taking advantage of any<br>Can provide DR shift<br>High-quality weather and influent<br>(Filipe et al., 2019; Liu|capacity of<br>treatment plants<br>processes can<br>unutilized capacity for<br>based on electricity<br>flow forecasts are needed for<br>& Mauter, 2020; M.|treatment<br>with low capacity<br>potentially be<br>scheduling treatment<br>supply costs<br>scheduling treatment processes to<br>Schäfer et al., 2017)|facilities<br>use factors)<br>delayed or<br>load to reduce the load<br>make sure untreated wastewater is|scheduled with<br>during peak hours<br>not discharged.|advanced notice)|EWQMS<br>Variable (mainly<br>High (can promote<br>Improves facility energy<br>Can support permanent<br>System is in its early adoption phase.<br>(Asadi et al., 2017;|applicable to large<br>flexibility features<br>efficiency and<br>load reductions that<br>Installation can be expensive, and<br>Cherchi et al., 2015;|water treatment<br>such as load shift<br>performance; reduces<br>can also reduce peak<br>the system needs to be tailored to<br>Emami et al., 2018;|systems)<br>and load<br>energy costs while<br>load; can also provide<br>site-specific needs and<br>Póvoa et al., 2017)|scheduling)<br>maintaining high<br>DR shift services<br>characteristics. Can be customized|quality of product.<br>for flexible operation to facilitate|DR participation.|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+
+
+15 of 23 
+
+ZOHRABIAN ET AL. 
+
+- Poor decision-making criteria in the water sector: Currently, there is not a lot of guidance for water utilities in terms of how to evaluate the trade-offs of DR participation in the context of other water sector planning priorities. For example, although utilizing storage capacity can potentially create revenues for DR participation, investment decisions for increasing storage capacities across a system typically only consider water quantity and quality constraints, rather than the potential costs and benefits of operating systems flexibly (which might have cobenefits across water and electric utilities) (Zimmermann et al., 2018). Creating frameworks to enable the identification of cross-sector costs and benefits would enable more holistic decision-making that can maximize benefits to both energy and water entities. 
+
+Given the complexities of flexible operation and the necessity to engage the two sectors (i.e., electric utilities and water utilities) for successful energy services, research efforts should work to increase the coordination between the water and electricity sectors so that they can identify mutually beneficial frameworks to solve some of the aforementioned challenges. In this regard, we identify four core research areas to investigate as discussed below. 
+
+## 5.1 | Addressing technical complexities 
+
+Previous research has identified some technical complexities and limitations in implementing DR measures and has called for more pilot studies and experimental tests. Factors such as identifying the safe duration of time for switching off water treatment equipment (M. Schäfer et al., 2017), the recovery times needed to retain normal operation after a DR event (Jang et al., 2015), and understanding the sensitivity of effluent quality to process interruptions (Kirchem et al., 2018; M. Schäfer, 2020) are of particular interest to eliminate the water quality concerns associated with operational flexibility in treatment plants. In regard to aeration units, advanced modeling studies are needed to mimic the inherent complexity of aeration systems to be able to dynamically predict energy consumption and dissolved oxygen profiles to prevent any unintentional impacts on effluent quality (Amaral et al., 2017; Amerlinck, De Keyser, Urchegui, & Nopens, 2016; Rous et al., 2019). Studies that couple aeration operation and power consumption models (e.g., Aymerich, Rieger, Sobhani, Rosso, & Corominas, 2015; Emami, Sobhani, & Rosso, 2018; Póvoa, Oehmen, Inocêncio, Matos, & Fraz~ao, 2017) can support operational decision-making that considers both effluent quality and energy requirements. 
+
+Another high priority is to better understand the trade-offs of flexible pumping and storage operations that better align with electric grid conditions. For example, better methods should be developed to predict available storage capacity based on high-quality weather forecasts (Anele, Hamam, Abu-Mahfouz, & Todini, 2017; Larry Jentgen, Kidder, Hill, & Conrad, 2007) to avoid situations when the water system might be overstressed or be forced to discharge untreated wastewater (Kirchem et al., 2018; M. Schäfer et al., 2017). For example, wet weather conditions narrow buffer capacities for flexible operation of continuous processes such as grit chamber aeration or return-sludge pumps in wastewater treatment plants (M. Schäfer, 2020). Interruptions in the operation of pumps within various pumping network configurations should be understood to identify potential operational restrictions and flow imbalances (Kirby & Kueck, 2003). Although large water storage capacities can offer great potential for flexibility, the challenges related to water aging in water distribution systems (i.e., deterioration of water quality between the water treatment plant and water customer's tap) have to be addressed, especially for longer periods of storage (Bunn, 2008; Gang Liu et al., 2017). Other issues such as pump cavitation, water hammering, and increased maintenance, which might follow changes in system operation, have been raised by site operators (Els et al., 2015). These possible consequences can be identified and addressed using advanced water quality and energy monitoring and control systems like EWQMS. 
+
+## 5.2 | Evaluating the cost-effectiveness of DR in the water sector 
+
+The literature is diverse in its modeling approaches and assumptions regarding the economic trade-offs of DR participation by water utilities. Evaluation of the economic benefits of load shifting has typically been performed based on electricity rate structures (Ruben Menke et al., 2016; Takahashi et al., 2017) and less so based on electricity demand tariffs (van Staden et al., 2011). More holistic methods are necessary to identify optimal operating strategies based on detailed and dynamic energy cost models that consider real-time pricing based on wholesale energy market, capacity market, and ancillary services market prices (Kernan et al., 2017; Kirchem et al., 2020; Oikonomou et al., 2018), as the 
+
+16 of 23 
+
+ZOHRABIAN ET AL. 
+
+responsiveness of water and wastewater facilities' load to time-varying electricity pricing is not well understood (Jang et al., 2015). Quantifying these cost trade-offs is an important factor in designing and evaluating effective DR programs. The initial cost components associated with DR (e.g., advanced control equipment, telemetry, installation costs, and program participation [Jordehi, 2019]) and other opportunity costs related to water production reductions and operational schedule changes should also be evaluated (Shoreh et al., 2016). 
+
+In the literature, insights regarding the costs and benefits of DR in the water sector are difficult to parse out as they are often combined with other commercial and industrial sectors (Gils, 2016; Jang et al., 2015; Paterakis et al., 2017). The costs of DR implementation by specific strategies are yet to be evaluated (Kiliccote et al., 2016). Furthermore, given the fact that DR programs are generally nonuniform across different electricity-balancing authority areas, cost and benefit analyses should be assessed case-by-case and need to be revisited as electric utility programs evolve. Water systems also vary regionally in regard to characteristics such as pumping needs that impact system-wide flexibility potential. Thus, comprehensive case studies are needed to determine the value of DR in different regions and in various energy markets. 
+
+## 5.3 | Creating more holistic strategies to evaluate complementary energy management priorities 
+
+Much more analysis has been done in terms of studying, promoting, and implementing energy efficiency, as compared to DR measures. Improving energy efficiency in water supply systems has led to lower baseline energy consumption, enhanced energy monitoring and control, as well as some infrastructure modernization, much of which is complementary to DR priorities. For example, advanced control systems implemented for energy monitoring can also facilitate reliable DR services and can improve response times to grid needs. Moreover, submetered data, rather than aggregated data, are necessary to enable the optimization of distinct utility processes (Bennett et al., 2017). In addition, seasonal variation of electricity consumption could be informative to optimize the energy services potential. For example, on hot summer days, more DR shed might be needed (e.g., through critical peak pricing programs) when the electric grid experiences high peak demands (which correlate to high electricity prices); and in spring, more DR shift might be needed in electric grids that experience the coupling of large springtime hydropower resources and large variable renewable energy penetrations, like in California when excess solar photovoltaic generation can be subject to curtailment during periods of high renewable energy generation. Since energy efficiency improvement solutions may overlap with the infrastructure needed to participate in DR programs (e.g., installing a VSD pump, or control systems for aeration units), pursuing more holistic multiobjective demand-side management solutions, including DR, could maximize benefits for all parties involved. In other words, the value of DR should not be overlooked in retrofit and energy management planning. As water utilities generally have a limited budget for system upgrades, they often seek electric utility grants and energy provider investments for their energy-saving measures and system upgrades, which can serve multiple priorities that are not yet appreciated (Gude, 2015). Hence, new models and evaluation methods should be developed that can facilitate the assessment of all demand-side options within the constraints and specifications of water and electric systems (Kiliccote et al., 2016; Kirchem et al., 2018). 
+
+## 5.4 | Incorporating DR concepts in water-energy nexus studies 
+
+Water-energy nexus studies seek to increase the economic and environmental sustainability of both water and energy systems by co-optimizing the efficient operation of the two systems (Vakilifard, Anda, Bahri, & Ho, 2018). Previous literature has evaluated energy and water comanagement opportunities (Hamiche, Stambouli, & Flazi, 2016; Lubega & Farid, 2014, 2016; Santhosh, Farid, & Youcef-Toumi, 2014), but they have generally excluded energy services and DR provisions in their scope. The reasons for this lag in coordinating DR strategies in the water sector might be the methodological and problem-solving challenges related to the complexity of integrated water-energy system models that may also include DR simulations (Kirchem et al., 2020). However, there is an urgent need for water-energy nexus methods that can mimic the cross-interactions of energy and water supply systems in a practical way so that the full value of integrative resource planning and management approaches can be identified for the water and energy industries. The importance of energy management becomes even more significant as some regions are forced to tap more energyintensive water supply sources such as water recycling and desalination in the face of water scarcity and climate change 
+
+17 of 23 
+
+ZOHRABIAN ET AL. 
+
+(Zohrabian & Sanders, 2020). Moreover, water utilities, which are typically among the largest municipal electricity consumers, can mitigate greenhouse gas emissions by coordinating operations that result in reduced renewable energy curtailment and increased utilization of carbon-free electricity. Thus, these demand-side management strategies will continue to increase in importance as more electric grids adopt higher percentages of solar and wind energy, particularly as battery storage technologies still remain expensive (Comello & Reichelstein, 2019; Zhou & Solomon, 2020). 
+
+## 6 | CONCLUSION 
+
+Growing penetrations of renewable energy have created a market for more flexible demand-side management resources from end-use sectors such as the water and wastewater sectors that can help maintain reliable grid operation, particularly at a time when battery storage is still expensive. This paper reviewed load flexibility opportunities in the water sector by (a) providing an overview of DR and demand-side management opportunities, (b) summarizing major water-related DR strategies and opportunities in literature, (c) discussing other demand-side management solutions with a focus on synergistic opportunities between DR, energy efficiency, energy production, and storage, (d) identifying barriers for implementing DR in the water sector, and (e) highlighting future research opportunities. The literature suggests that municipal water and wastewater systems are valuable targets for DR programs seeking large load curtailment needs (e.g., load curtailment programs, critical peak pricing, and bidding programs preferably with day advance notices). Large capacities of water storage, controllable pumps, curtailable treatment operations, and on-site generation resources are among the main strategies to provide load flexibility. Historically, reducing energy costs has been the main goal of energy management in the water sector, but those solutions have been limited to energy efficiency improvements and independent from other energy services (i.e., flexibility services via DR) that might be complementary and can increase the value of energy efficiency program investments. Although energy efficiency measures generally lead to the greatest energy and cost savings, DR participation can further extend cost-saving opportunities via payments from utility and third-party aggregator DR programs. Thus, developing cost assessment tools to support decision making that better accounts for all demand-side management resources (e.g., energy efficiency, DR, and distributed generation resources) can maximize water utility cost savings, while serving important priorities to support a more efficient, reliable, and clean electric grid. 
+
+In short, DR participation in the water sector has remained largely underutilized. Technical and economic assessments of DR provisions in the water systems remain challenging from a modeling standpoint. Hence, several future research directions were suggested to address these challenges. More comprehensive integrated modeling tools for water-energy system modeling can unleash the value of flexibility for the water and electricity systems. Developing methods to better estimate the value proposition of DR programs are critical for promoting and informing effective DR programs for the water industry, within the context of rapid shifts in energy generation resources and evolving energy markets. Advanced energy and water quality comanagement systems that can also respond to DR events are necessary to ensure meeting performance criteria and water quality compliance. 
+
+## CONFLICT OF INTEREST 
+
+The authors have declared no conflicts of interest for this article. 
+
+## AUTHOR CONTRIBUTIONS 
+
+Angineh Zohrabian: Conceptualization; formal analysis; investigation; project administration; visualization; writingoriginal draft; writing-review and editing. Sophia Plata: Investigation; writing-review and editing. Dong Min Kim: Formal analysis; investigation; writing-review and editing. Amy Childress: Funding acquisition; writing-review and editing. Kelly T. Sanders: Conceptualization; funding acquisition; supervision; writing-review and editing. 
+
+## ORCID 
+
+Kelly T. Sanders https://orcid.org/0000-0003-4466-0054 
+
+## RELATED WIREs ARTICLES 
+
+Characterization of demand response in the commercial, industrial, and residential sectors in the United States 
+
+18 of 23 
+
+ZOHRABIAN ET AL. 
+
+## REFERENCES 
+
+Abus¸o�glu, A., Özahi, E., Ihsan[_] Kutlar, A., & Al-jaf, H. (2017). Life cycle assessment (LCA) of digested sewage sludge incineration for heat and power production. Journal of Cleaner Production, 142, 1684–1692. https://doi.org/10.1016/j.jclepro.2016.11.121 
+
+Adamowski, J. F. (2008). Peak daily water demand forecast modeling using artificial neural networks. Journal of Water Resources Planning and Management, 134(2), 119–128. https://doi.org/10.1061/(asce)0733-9496(2008)134:2(119 
+
+Aghajanzadeh, A., McKane, A., & Wray, C. (2015). 2006–2015 research summary of demand response potential in California industry, agriculture, and water sectors. Retrieved from https://eta.lbl.gov/publications/2006-2015-research-summary-demand 
+
+Aghajanzadeh, A., & Therkelsen, P. (2019). Agricultural demand response for decarbonizing the electricity grid. Journal of Cleaner Production, 220, 827–835. https://doi.org/10.1016/j.jclepro.2019.02.207 
+
+Aghajanzadeh, A., Wray, C., & Mckane, A. (2015). Opportunities for automated demand response in California wastewater treatment facilities. Retrieved from https://drrc.lbl.gov/sites/default/files/opportunities_for_automated_cvr.pdf 
+
+Alizadeh, M. I., Parsa Moghaddam, M., Amjady, N., Siano, P., & Sheikh-El-Eslami, M. K. (2016). Flexibility in future power systems with high renewable penetration: A review. Renewable and Sustainable Energy Reviews, 57, 1186–1193. https://doi.org/10.1016/J.RSER.2015. 12.200 
+
+Allen, J., Allgeier, S., Cummings, E., Liggett, J., Lindquist, A., Macintosh, C., … Matt, U. (2016). Online source water quality monitoring for water quality surveillance and response systems. Retrieved from https://www.epa.gov/sites/production/files/2016-09/documents/online_ source_water_monitoring_guidance.pdf 
+
+Alstone, P., Potter, J., Piette, M. A., Schwartz, P., Berger, M. A., Dunn, L. N., … Jain, A. (2017). 2025 California demand response potential study—Charting California's demand response future: Final report on phase 2 results. Retrieved from https://buildings.lbl.gov/ publications/2025-california-demand-response 
+
+Amaral, A., Schraa, O., Rieger, L., Gillot, S., Fayolle, Y., Bellandi, G., … Nopens, I. (2017). Towards advanced aeration modelling: From blower to bubbles to bulk. Water Science and Technology, 75(3), 507–517. https://doi.org/10.2166/wst.2016.365 
+
+Amerlinck, Y., De Keyser, W., Urchegui, G., & Nopens, I. (2016). A realistic dynamic blower energy consumption model for wastewater applications. Water Science and Technology, 74(7), 1561–1576. https://doi.org/10.2166/wst.2016.360 
+
+Anele, A., Hamam, Y., Abu-Mahfouz, A., & Todini, E. (2017). Overview, comparative assessment and recommendations of forecasting models for short-term water demand prediction. Water, 9(11), 887. https://doi.org/10.3390/w9110887 
+
+Asadi, A., Verma, A., Yang, K., & Mejabi, B. (2017). Wastewater treatment aeration process optimization: A data mining approach. Journal of Environmental Management, 203, 630–639. https://doi.org/10.1016/j.jenvman.2016.07.047 
+
+Aymerich, I., Rieger, L., Sobhani, R., Rosso, D., & Corominas, L. (2015). The difference between energy consumption and energy cost: Modelling energy tariff structures for water resource recovery facilities. Water Research, 81, 113–123. https://doi.org/10.1016/j.watres.2015. 04.033 
+
+Barán, B., Von Lücken, C., & Sotelo, A. (2005). Multi-objective pump scheduling optimisation using evolutionary strategies. Advances in Engineering Software, 36(1), 39–47. https://doi.org/10.1016/j.advengsoft.2004.03.012 
+
+Barbour, E., Wilson, I. A. G., Radcliffe, J., Ding, Y., & Li, Y. (2016). A review of pumped hydro energy storage development in significant international electricity markets. Renewable and Sustainable Energy Reviews, 61, 421–432. https://doi.org/10.1016/j.rser.2016.04.019 
+
+Bartos, M. D., & Chester, M. V. (2014). The conservation nexus: Valuing interdependent water and energy savings in Arizona. Environmental Science & Technology, 48(4), 2139–2149. https://doi.org/10.1021/es4033343 
+
+Bennett, R., Bonkowski, T., Martinez, M., Pasmore, J., Rivers, D., Park, L., … Crowley, A. (2017). Southern California Edison water-energy pilot with Irvine Ranch Water District Phase 1 report. Retrieved from http://www.waterenergyinnovations.com/wp-content/uploads/ 2017/07/SCE-IRWD-Ph1-20170314.pdf 
+
+Binama, M., Su, W. T., Li, X., Bin, Li, F. C., Wei, X. Z., & An, S. (2017). Investigation on pump as turbine (PAT) technical aspects for micro hydropower schemes: A state-of-the-art review. Renewable and Sustainable Energy Reviews, 79, 148–179. https://doi.org/10.1016/j.rser. 2017.04.071 
+
+Bloetscher, F., Sham, C. H., Danko, J. J., III, & Ratick, S. (2014). Lessons Learned from Aquifer Storage and Recovery (ASR) Systems in the United States. Journal of Water Resource and Protection, 06(17), 1603–1629. https://doi.org/10.4236/jwarp.2014.617146 
+
+Brouwer, A. S., van den Broek, M., Zappa, W., Turkenburg, W. C., & Faaij, A. (2016). Least-cost options for integrating intermittent renewables in low-carbon power systems. Applied Energy, 161, 48–74. https://doi.org/10.1016/J.APENERGY.2015.09.090 
+
+Bunn, S. (2008). Pump scheduling optimization in four US Cities: Case studies. Water Distribution Systems Analysis Symposium, 2006, 1–12. https://doi.org/10.1061/40941(247)78 
+
+Capelo, B., Pérez-Sánchez, M., Fernandes, J. F. P., Ramos, H. M., López-Jiménez, P. A., & Branco, P. J. C. (2017). Electrical behaviour of the pump working as turbine in off grid operation. Applied Energy, 208, 302–311. https://doi.org/10.1016/j.apenergy.2017.10.039 
+
+Carlson, S., & Walburger, A. (2007). Energy index development for benchmarking water and wastewater utilities. Retrieved from http:// scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Energy+index+development+for+benchmarking+water+and+wastewater +utilities#0 
+
+CEE. (2010). CEE national municipal water and wastewater facility initiative. Retrieved from https://library.cee1.org/system/files/library/ 2650/ww-init-des.pdf 
+
+Chae, K. J., & Kang, J. (2013). Estimating the energy independence of a municipal wastewater treatment plant incorporating green energy resources. Energy Conversion and Management, 75, 664–672. https://doi.org/10.1016/j.enconman.2013.08.028 
+
+19 of 23 
+
+ZOHRABIAN ET AL. 
+
+Chandel, S. S., Nagaraju Naik, M., & Chandel, R. (2015). Review of solar photovoltaic water pumping system technology for irrigation and community drinking water supplies. Renewable and Sustainable Energy Reviews, 49, 1084–1099. https://doi.org/10.1016/j.rser.2015. 04.083 
+
+- Cherchi, C., Badruzzaman, M., Oppenheimer, J., Bros, C. M., & Jacangelo, J. G. (2015). Energy and water quality management systems for water utility's operations: A review. Journal of Environmental Management, 153, 108–120. https://doi.org/10.1016/J.JENVMAN.2015. 01.051 
+
+Churchwell, C. A. (2015). Executive summary: 2015–2025 demand response portfolio of Southern California Edison Company. Retrieved from http://www3.sce.com/sscc/law/dis/dbattach5e.nsf/0/0289E414E6BEB33488257E1A007A4EDA/$FILE/R13090112013DROIR-Executive – SummaryReportonSCEs2015 2025DemandResponsePortfolio.pdf 
+
+- Cloete, N. A., Malekian, R., & Nair, L. (2016). Design of smart sensors for real-time water quality monitoring. IEEE Access, 4, 3975–3990. https://doi.org/10.1109/ACCESS.2016.2592958 
+
+- Comello, S., & Reichelstein, S. (2019). The emergence of cost effective battery storage. Nature Communications, 10(1), 1–9. https://doi.org/10. 1038/s41467-019-09988-z 
+
+Copeland, C., & Carter, N. T. (2017). Energy-water nexus: The water sector's energy use. Retrieved from https://fas.org/sgp/crs/misc/ R43200.pdf 
+
+Corcoran, L., Coughlan, P., & McNabola, A. (2013). Energy recovery potential using micro hydropower in water supply networks in the UK and Ireland. Water Science and Technology: Water Supply, 13(2), 552–560. https://doi.org/10.2166/ws.2013.050 
+
+CPUC. (2019). Energy division's evaluation of demand response auction mechanism. Retrieved from https://www.cpuc.ca.gov/WorkArea/ DownloadAsset.aspx?id=6442460092 
+
+- Cutter, E., Haley, B., Williams, J., & Woo, C. K. (2014). Cost-effective water-energy nexus: A California case study. The Electricity Journal, 27(6), 61–68. https://doi.org/10.1016/j.tej.2014.06.009 
+
+Dai, W., Xu, X., Liu, B., & Yang, F. (2015). Toward energy-neutral wastewater treatment: A membrane combined process of anaerobic digestion and nitritation-anammox for biogas recovery and nitrogen removal. Chemical Engineering Journal, 279, 725–734. https://doi.org/10. 1016/j.cej.2015.05.036 Dariusz, B., MacIej, S., Tomasz, W., & Damian, L. (2016, January 27). Electrical energy recovery from network water pressure. 2015 Selected Problems of Electrical Engineering and Electronics, WZEE 2015. https://doi.org/10.1109/WZEE.2015.7394016 Denholm, P., & Hand, M. (2011). Grid flexibility and storage required to achieve very high penetration of variable renewable electricity. Energy Policy, 39(3), 1817–1830. https://doi.org/10.1016/J.ENPOL.2011.01.019 Denholm, P., & Mai, T. (2019). Timescales of energy storage needed for reducing renewable energy curtailment. Renewable Energy, 130, 388–399. https://doi.org/10.1016/j.renene.2018.06.079 
+
+- DeOreo, W. B., Mayer, P., Martien, L., Hayden, M., Funk, A., Kramer-Duffield, M., … Heberger, M. (2011). California single family water use efficiency study. Boulder, CO: Aquacraft, Inc. Water Engineering and Management. Retrieved from. https://cawaterlibrary.net/ document/california-single-family-water-use-efficiency-study/ 
+
+- Di Fraia, S., Massarotti, N., & Vanoli, L. (2018). A novel energy assessment of urban wastewater treatment plants. Energy Conversion and Management, 163, 304–313. https://doi.org/10.1016/J.ENCONMAN.2018.02.058 
+
+- Diaz, C., Ruiz, F., & Patino, D. (2017). Modeling and control of water booster pressure systems as flexible loads for demand response. Applied Energy, 204, 106–116. https://doi.org/10.1016/j.apenergy.2017.06.094 
+
+- Ding, Y. M., Hong, S. H., & Li, X. H. (2014). A demand response energy management scheme for industrial facilities in smart grid. IEEE Transactions on Industrial Informatics, 10(4), 2257–2269. https://doi.org/10.1109/TII.2014.2330995 
+
+- Els, L. A., Pelzer, R., & Schutte, A. J. (2015). Load management on a municipal water treatment plant. Proceedings of the conference on the – 
+
+- industrial and commercial use of energy, ICUE, 2015-September (pp. 187 190). https://doi.org/10.1109/ICUE.2015.7280267 
+
+- Emami, N., Sobhani, R., & Rosso, D. (2018). Diurnal variations of the energy intensity and associated greenhouse gas emissions for activated sludge processes. Water Science and Technology, 77(7), 1838–1850. https://doi.org/10.2166/wst.2018.054 
+
+EPA. (2011). Opportunities for combined heat and power at wastewater treatment facilities: Market analysis and lessons from the field. Retrieved from www.epa.gov/chp. 
+
+- EPRI. (2013). Electricity use and management in the municipal water supply and wastewater industries. Retrieved from http://www.epri.com/ search/Pages/results.aspx?k=3002001433 
+
+- Eto, J. et al., (2002). Innovative developments in load as a reliability resource. 2002 IEEE Power Engineering Society Winter Meeting. Confer– 
+
+- ence Proceedings (Cat. No.02CH37309), (Vol.2, pp. 1002 1004). New York, NY, USA. https://doi.org/10.1109/pesw.2002.985158 
+
+- Ewa, M. M., & Jacek Makinia, Z. (2018). Achieving energy neutrality in wastewater treatment plants through energy savings and enhancing renewable energy production. Reviews in Environmental Science and Biotechnology, 17, 655–689. https://doi.org/10.1007/s11157-0189478-x 
+
+- Fecarotta, O., Ramos, H. M., Derakhshan, S., Del Giudice, G., & Carravetta, A. (2018). Fine tuning a PAT hydropower plant in a water supply network to improve system effectiveness. Journal of Water Resources Planning and Management, 144(8), 04018038. https://doi.org/10. 1061/(asce)wr.1943-5452.0000961 
+
+- FERC. (2018). Reports on demand response and advanced metering. Federal Energy Regulatory Commission. Retrieved from https://www. ferc.gov/industries/electric/indus-act/demand-response/dem-res-adv-metering.asp 
+
+- Filipe, J., Bessa, R. J., Reis, M., Alves, R., & Póvoa, P. (2019). Data-driven predictive energy optimization in a wastewater pumping station. Applied Energy, 252, 113423. https://doi.org/10.1016/j.apenergy.2019.113423 
+
+20 of 23 
+
+ZOHRABIAN ET AL. 
+
+GEI Consultants/Navigant Consulting. (2010). Embedded energy in water studies-Study 2: Water agency and function component study and embedded energy-water load profiles. Sacramento, CA: California Public Utilities Commission. 
+
+- Giberti, M., Dereli, R. K., Flynn, D., & Casey, E. (2020). Predicting wastewater treatment plant performance during aeration demand shifting with a dual-layer reaction settling model. Water Science and Technology, 81(7), 1365–1374. https://doi.org/10.2166/wst.2019.262 
+
+- Gils, H. C. (2016). Economic potential for future demand response in Germany—Modeling approach and case study. Applied Energy, 162, 401–415. https://doi.org/10.1016/j.apenergy.2015.10.083 
+
+- Gopal, C., Mohanraj, M., Chandramohan, P., & Chandrasekar, P. (2013). Renewable energy source water pumping systems—A literature review. Renewable and Sustainable Energy Reviews, 25, 351–370. https://doi.org/10.1016/J.RSER.2013.04.012 
+
+- Greenberg, E. (2011). Energy audits for water and wastewater treatment plants and pump stations. Retrieved from https://www. cedengineering.com/userfiles/Energy%20Audits%20for%20Water%20&%20Wastewater.pdf 
+
+- Gu, J., Yang, Q., & Liu, Y. (2018). Mainstream anammox in a novel A-2B process for energy-efficient municipal wastewater treatment with minimized sludge production. Water Research, 138, 1–6. https://doi.org/10.1016/j.watres.2018.02.051 
+
+- Gude, V. G. (2015). Energy and water autarky of wastewater treatment and power generation systems. Renewable and Sustainable Energy Reviews, 45, 52–68. https://doi.org/10.1016/j.rser.2015.01.055 
+
+- Guerrini, A., Romano, G., & Indipendenza, A. (2017). Energy efficiency drivers in wastewater treatment plants: A double bootstrap DEA analysis. Sustainability, 9(7), 1126. https://doi.org/10.3390/su9071126 
+
+- Hamiche, A. M., Stambouli, A. B., & Flazi, S. (2016). A review of the water-energy nexus. Renewable and Sustainable Energy Reviews, 65, 319–331. https://doi.org/10.1016/J.RSER.2016.07.020 
+
+- Hamitlon, R., Braun, B., Dare, R., Koopman, B., & Svoronos, S. A. (2006). Control issues and challenges in wastewater treatment plants. IEEE Control Systems Magazine, 26(4), 63–69. https://ieeexplore.ieee.org/document/1657877 
+
+- Henriques, J., & Catarino, J. (2017). Sustainable value—An energy efficiency indicator in wastewater treatment plants. Journal of Cleaner Production, 142, 323–330. https://doi.org/10.1016/j.jclepro.2016.03.173 
+
+- House, L. W. (2006). Water supply related electricity demand in California. Retrieved from https://www.energy.ca.gov/2007publications/CEC500-2007-114/CEC-500-2007-114.PDF 
+
+- House, L. W., Beuhler, M., Ahinga, Z., Iqbal, N., & Ta, T. (2018). Energy storage at groundwater banks. Journal - American Water Works Association, 110(8), E17–E26. https://doi.org/10.1002/awwa.1072 
+
+- Jang, D., Eom, J., Kim, M. G., & Rho, J. J. (2015). Demand responses of Korean commercial and industrial businesses to critical peak pricing of electricity. Journal of Cleaner Production, 90, 275–290. https://doi.org/10.1016/j.jclepro.2014.11.052 
+
+- Janzen, A., Achari, G., Dore, M. H. I., & Langford, C. H. (2017). Projecting financial capability in small Canadian drinking water treatment systems. Journal - American Water Works Association, 109(10), E440–E451. https://doi.org/10.5942/jawwa.2017.109.0113 
+
+- Jentgen, L., Conrad, S., Riddle, R., Von Sacken, E., Stone, K., Grayman, W., & Ranade, S. (2004). Implementing a prototype energy and water quality management system. London, England: IWA. Retrieved from https://books.google.com/books/about/Implementing_a_Prototype_ Energy_and_Wate.html?id=rN9PHVOh5qcC 
+
+- Jentgen, L., Kidder, H., Hill, R., & Conrad, S. (2007). Energy management strategies use short-term water consumption forecasting to minimize cost of pumping operations. Journal - American Water Works Association, 99(6), 86–94. https://doi.org/10.1002/j.1551-8833.2007. tb07957.x 
+
+- Jordehi, A. R. (2019). Optimisation of demand response in electric power systems, a review. Renewable and Sustainable Energy Reviews, 103, 308–319. https://doi.org/10.1016/j.rser.2018.12.054 
+
+- Kacprzak, M., Neczaj, E., Fijałkowski, K., Grobelak, A., Grosser, A., Worwag, M., … Singh, B. R. (2017). Sewage sludge disposal strategies for sustainable development. Environmental Research, 156, 39–46. https://doi.org/10.1016/j.envres.2017.03.010 
+
+- Kernan, R., Liu, X., McLoone, S., & Fox, B. (2017). Demand side management of an urban water supply using wholesale electricity price. Applied Energy, 189, 395–402. https://doi.org/10.1016/J.APENERGY.2016.12.082 
+
+- Khan, S. Y., & Davidson, I. E. (2017). Underground pumped hydroelectric energy storage in South Africa using aquifers and existing infrastructure. In: D. Schulz (eds) NEIS Conference 2016, (pp. 119–122). Springer Vieweg, Wiesbaden. https://doi.org/10.1007/978-3-65815029-7_19 
+
+- Kiliccote, S., Olsen, D., Sohn, M. D., & Piette, M. A. (2016). Characterization of demand response in the commercial, industrial, and residential sectors in the United States. WIREs Energy and Environment, 5(3), 288–304. https://doi.org/10.1002/wene.176 
+
+- Kirby, B., & Kueck, J. D. (2003). Spinning reserve from pump load: A technical findings report to the California department of water resourcesjCERTS. Retrieved from https://certs.lbl.gov/publications/spinning-reserve-pump-load-technical 
+
+- Kirchem, D., Lynch, M., Bertsch, V., & Casey, E. (2018). Market effects of industrial demand response and flexibility potential from wastewater treatment facilities. International Conference on the European Energy Market, EEM, 2018-June. https://doi.org/10.1109/EEM.2018. 8469974 
+
+- Kirchem, D., Lynch, M., Bertsch, V., & Casey, E. (2020). Modelling demand response with process models and energy systems models: Potential applications for wastewater treatment within the energy-water nexus. Applied Energy, 260, 114321. https://doi.org/10.1016/j. apenergy.2019.114321 
+
+- Kondziella, H., & Bruckner, T. (2016). Flexibility requirements of renewable energy based electricity systems—A review of research results and methodologies. Renewable and Sustainable Energy Reviews, 53, 10–22. https://doi.org/10.1016/J.RSER.2015.07.199 
+
+- “ ” 
+
+- Lazar, J. (2014). Teaching the Duck to fly. Retrieved from http://www.raponline.org/wp-content/uploads/2016/05/rap-lazarteachingducktofly-2014-jan.pdf 
+
+21 of 23 
+
+ZOHRABIAN ET AL. 
+
+- Li, G., Jin, Y., Akram, M. W., & Chen, X. (2017). Research and current status of the solar photovoltaic water pumping system—A review. Renewable and Sustainable Energy Reviews, 79, 440–458. https://doi.org/10.1016/j.rser.2017.05.055 
+
+- Liu, G., Zhang, Y., Knibbe, W. J., Feng, C., Liu, W., Medema, G., & van der Meer, W. (2017). Potential impacts of changing supplywater quality on drinking water distribution: A review. Water Research, 116, 135–148. https://doi.org/10.1016/j.watres.2017. 03.031 
+
+- Liu, G., & Wang, J. (2017). Enhanced removal of total nitrogen and total phosphorus by applying intermittent aeration to the Modified Ludzack-Ettinger (MLE) process. Journal of Cleaner Production, 166, 163–171. https://doi.org/10.1016/j.jclepro.2017.08.017 
+
+- Liu, Y., Barrows, C., Macknick, J., & Mauter, M. (2020). Optimization framework to assess the demand response capacity of a water distribution system. https://doi.org/10.1061/(ASCE)WR.1943-5452.0001258 
+
+- Liu, Y., & Mauter, M. S. (2020). Assessing the demand response capacity of U.S. drinking water treatment plants. Applied Energy, 267, 114899. https://doi.org/10.1016/j.apenergy.2020.114899 
+
+- Longo, S., Mauricio-Iglesias, M., Soares, A., Campo, P., Fatone, F., Eusebi, A. L., … Hospido, A. (2019). ENERWATER—A standard method for assessing and improving the energy efficiency of wastewater treatment plants. Applied Energy, 242, 897–910. https://doi.org/10.1016/ j.apenergy.2019.03.130 
+
+- Lubega, W. N., & Farid, A. M. (2014). An engineering systems model for the quantitative analysis of the energy-water nexus. In: M. Aiguier, – 
+
+- F. Boulanger, D. Krob & C. Marchal (eds) Complex systems design & management, (pp. 219 231). Cham: Springer International. https:// doi.org/10.1007/978-3-319-02812-5_16 
+
+- Lubega, W. N., & Farid, A. M. (2016). A reference system architecture for the energy–water nexus. IEEE Systems Journal, 10(1), 106–116. https://doi.org/10.1109/JSYST.2014.2302031 
+
+- Luna, T., Ribau, J., Figueiredo, D., & Alves, R. (2019). Improving energy efficiency in water supply systems with pump scheduling optimization. Journal of Cleaner Production, 213, 342–356. https://doi.org/10.1016/j.jclepro.2018.12.190 
+
+Mala-Jetmarova, H., Sultanova, N., & Savic, D. (2017). Lost in optimisation of water distribution systems? A literature review of system operation. Environmental Modelling & Software, 93, 209–254. https://doi.org/10.1016/J.ENVSOFT.2017.02.009 
+
+- Matos, C. R., Carneiro, J. F., & Silva, P. P. (2019). Overview of large-scale underground energy storage technologies for integration of renewable energies and criteria for reservoir identification. Journal of Energy Storage, 21, 241–258. https://doi.org/10.1016/j.est.2018.11.023 
+
+- Mccormick, G., & Powell, R. S. (2004). Derivation of near-optimal pump schedules for water distribution by simulated annealing. Journal of the Operational Research Society, 55(7), 728–736. https://doi.org/10.1057/palgrave.jors.2601718 
+
+- McDonald, C., Sathe, A., Zarumba, R., Landry, K., Porter, L., Merkt, E., … Ramirez, I. (2015). Water/energy cost—Effectiveness analysis: Revised final report (Issue April). Retrieved from https://www.cpuc.ca.gov/WorkArea/DownloadAsset.aspx?id=5356 
+
+- Menke, R., Abraham, E., Parpas, P., & Stoianov, I. (2017). Extending the envelope of demand response provision though variable speed pumps. Procedia Engineering, 186, 584–591. https://doi.org/10.1016/j.proeng.2017.03.274 
+
+- Menke, R., Abraham, E., Parpas, P., & Stoianov, I. (2016). Demonstrating demand response from water distribution system through pump scheduling. Applied Energy, 170, 377–387. https://doi.org/10.1016/j.apenergy.2016.02.136 
+
+- Mercier, T., Hardy, C., Van Tichelen, P., Olivier, M., & De Jaeger, E. (2019). Control of variable-speed pumps used as turbines for flexible grid-connected power generation. Electric Power Systems Research, 176, 105962. https://doi.org/10.1016/j.epsr.2019.105962 
+
+Mkireb, Chouab, Dembele, A., Jouglet, A., & Denoeux, T. (2018). A linear programming approach to optimize demand response for water systems under water demand uncertainties. 2018 International conference on smart grid and clean energy technologies, ICSGCE 2018 – (pp. 206 211). https://doi.org/10.1109/ICSGCE.2018.8556696 
+
+- Mkireb, C., Dembélé, A., Jouglet, A., & Denoeux, T. (2019). Robust optimization of demand response power bids for drinking water systems. Applied Energy, 238(2018), 1036–1047. https://doi.org/10.1016/j.apenergy.2019.01.124 
+
+Molinos-Senante, M., & Sala-Garrido, R. (2017). Energy intensity of treating drinking water: Understanding the influence of factors. Applied Energy, 202, 275–281. https://doi.org/10.1016/J.APENERGY.2017.05.100 
+
+Molinos-Senante, M., & Sala-Garrido, R. (2018). Evaluation of energy performance of drinking water treatment plants: Use of energy intensity and energy efficiency metrics. Applied Energy, 229, 1095–1102. https://doi.org/10.1016/J.APENERGY.2018.08.102 
+
+- Morabito, A., & Hendrick, P. (2019). Pump as turbine applied to micro energy storage and smart water grids: A case study. Applied Energy, 241, 567–579. https://doi.org/10.1016/j.apenergy.2019.03.018 
+
+- Muhsen, D. H., Ghazali, A. B., & Khatib, T. (2016). Multiobjective differential evolution algorithm-based sizing of a standalone photovoltaic water pumping system. Energy Conversion and Management, 118, 32–43. https://doi.org/10.1016/j.enconman.2016.03.074 
+
+Muhsen, D. H., Khatib, T., & Nagi, F. (2017). A review of photovoltaic water pumping system designing methods, control strategies and field performance. Renewable and Sustainable Energy Reviews, 68, 70–86. https://doi.org/10.1016/j.rser.2016.09.129 
+
+MWRD. (n.d.). Metropolitan water reclamation district of Greater Chicago. Retrieved from https://mwrd.org/tunnel-and-reservoir-plan-tarp Nezamoddini, N., & Wang, Y. (2017). Real-time electricity pricing for industrial customers: Survey and case studies in the United States. Applied Energy, 195, 1023–1037. https://doi.org/10.1016/j.apenergy.2017.03.102 
+
+- Nowak, O., Keil, S., & Fimml, C. (2011). Examples of energy self-sufficient municipal nutrient removal plants. Water Science and Technology, 64(1), 1–6. https://doi.org/10.2166/wst.2011.625 
+
+- Nowak, S., Kushler, M., & Witte, P. (2014). Successful practices in combined gas and electric utility energy efficiency programs. Retrieved from https://aceee.org/sites/default/files/publications/researchreports/u1406.pdf 
+
+- Oikonomou, K., Parvania, M., & Khatami, R. (2018). Optimal demand response scheduling for water distribution systems. IEEE Transactions on Industrial Informatics, 14, 1–1, 5122. https://doi.org/10.1109/TII.2018.2801334 
+
+22 of 23 
+
+ZOHRABIAN ET AL. 
+
+Olsen, D., Goli, S., & Faulkner, D. (2012). Opportunities for automated demand response in wastewater treatment facilities in California— Southeast Water Pollution Control Plant Case Study. Retrieved from https://drrc.lbl.gov/sites/default/files/LBNL-6056E.pdf 
+
+Paterakis, N. G., Erdinç, O., & Catal~ao, J. P. S. (2017). An overview of demand response: Key-elements and international experience. Renewable and Sustainable Energy Reviews, 69, 871–891. https://doi.org/10.1016/J.RSER.2016.11.167 
+
+Plappally, A. K., & Lienhard, J. H., V. (2012). Energy requirements for water production, treatment, end use, reclamation, and disposal. Renewable and Sustainable Energy Reviews, 16(7), 4818–4848. https://doi.org/10.1016/J.RSER.2012.05.022 
+
+Poompavai, T., & Kowsalya, M. (2019). Control and energy management strategies applied for solar photovoltaic and wind energy fed water pumping system: A review. Renewable and Sustainable Energy Reviews, 107, 108–122. https://doi.org/10.1016/j.rser.2019.02.023 
+
+Poosti, A., Lewis, F. M., Sereno, D., Redd, K., & Abkian, V. (2002). Pump replacement at the hyperion intermediate pump station analysis of Archimedes screw vs vertical turbine pumps. Proceedings of the Water Environment Federation, 2002(14), 463–479. https://doi.org/10. 2175/193864702784247954 
+
+Porse, E., Mika, K. B., Escriva-Bou, A., Fournier, E. D., Sanders, K. T., Spang, E., … Pincetl, S. (2020). Energy use for urban water management by utilities and households in Los Angeles. Environmental Research Communications, 2(1), 015003. https://doi.org/10.1088/25157620/ab5e20 
+
+- Póvoa, P., Oehmen, A., Inocêncio, P., Matos, J. S., & Fraz~ao, A. (2017). Modelling energy costs for different operational strategies of a large water resource recovery facility. Water Science and Technology, 75(9), 2139–2148. https://doi.org/10.2166/wst.2017.098 
+
+- Rehman, S., Al-Hadhrami, L. M., & Alam, M. M. (2015). Pumped hydro energy storage system: A technological review. Renewable and Sustainable Energy Reviews, 44, 586–598. https://doi.org/10.1016/j.rser.2014.12.040 
+
+Rouholamini, M., Wang, C., Miller, C. J., & Mohammadian, M. (2018). A review of water/energy co-management opportunities. IEEE power and energy society general meeting, 2018-August. https://doi.org/10.1109/PESGM.2018.8586013 
+
+- Rous, V., Vymazal, J., & Hnátková, T. (2019). Treatment wetlands aeration efficiency: A review. Ecological Engineering, 136, 62–67. https:// doi.org/10.1016/j.ecoleng.2019.06.006 
+
+- Sanders, K. T., & Webber, M. E. (2012). Evaluating the energy consumed for water use in the United States. Environmental Research Letters, 7(3), 034034. https://doi.org/10.1088/1748-9326/7/3/034034 
+
+- Santhosh, A., Farid, A. M., & Youcef-Toumi, K. (2014). Real-time economic dispatch for the supply side of the energy-water nexus. Applied Energy, 122, 42–52. https://doi.org/10.1016/J.APENERGY.2014.01.062 
+
+- Scanlon, B. R., Reedy, R. C., Faunt, C. C., Pool, D., & Uhlman, K. (2016). Enhancing drought resilience with conjunctive use and managed aquifer recharge in California and Arizona. Environmental Research Letters, 11(3), 035013. https://doi.org/10.1088/1748-9326/11/3/ 035013 
+
+- SCE. (2014). Energy management success story: Eastern municipal water district. Retrieved from https://www.sce.com/sites/default/files/ inline-files/EWMD%2BCase%2BStudy%2Br3_3%2BWCAG_K.pdf 
+
+- SCE. (2019). Automated demand response control incentives. Retrieved from https://www.sce.com/sites/default/files/inline-files/AutoDRProgram Handbook 0919_1.pdf 
+
+- Schäfer, M. (2020). Short-term flexibility for energy grids provided by wastewater treatment plants with anaerobic sludge digestion. Water Science and Technology, 81(7), 1388–1397. https://doi.org/10.2166/wst.2019.365 
+
+- Schäfer, M., Hobus, I., & Schmitt, T. G. (2017). Energetic flexibility on wastewater treatment plants. Water Science and Technology, 76(5), 1225–1233. https://doi.org/10.2166/wst.2017.308 
+
+- Schäfer, M., Gretzschel, O., Schmitt, T. G., & Knerr, H. (2015). Wastewater treatment plants as system service provider for renewable energy storage and control energy in virtual power plants—A potential analysis. Energy Procedia, 73, 87–93. https://doi.org/10.1016/j.egypro. 2015.07.566 
+
+- Schwarzenbeck, N., Bomball, E., & Pfeiffer, W. (2008). Can a wastewater treatment plant be a powerplant? A case study. Water Science and Technology, 57(10), 1555–1561. https://doi.org/10.2166/wst.2008.215 
+
+- Seier, M., & Schebek, L. (2017). Model-based investigation of residual load smoothing through dynamic electricity purchase: The case of wastewater treatment plants in Germany. Applied Energy, 205, 210–224. https://doi.org/10.1016/J.APENERGY.2017.07.116 
+
+- Shao, W., Liu, J., Zhu, M., Weng, B., Wang, N., Huang, H., … Jiang, S. (2018). Evaluation of a photovoltaic water-supply scheme for the surface water system in Xiamen, China. Applied Energy, 230, 357–373. https://doi.org/10.1016/j.apenergy.2018.08.067 
+
+- Shen, Y., Linville, J. L., Urgun-Demirtas, M., Mintz, M. M., & Snyder, S. W. (2015). An overview of biogas production and utilization at fullscale wastewater treatment plants (WWTPs) in the United States: Challenges and opportunities towards energy-neutral WWTPs. Renewable and Sustainable Energy Reviews, 50, 346–362. https://doi.org/10.1016/j.rser.2015.04.129 
+
+- Shoreh, M. H., Siano, P., Shafie-khah, M., Loia, V., & Catal~ao, J. P. S. (2016). A survey of industrial applications of demand response. Electric Power Systems Research, 141, 31–49. https://doi.org/10.1016/J.EPSR.2016.07.008 
+
+- Siano, P. (2014). Demand response and smart grids—A survey. Renewable and Sustainable Energy Reviews, 30, 461–478. https://doi.org/10. 1016/J.RSER.2013.10.022 
+
+- Silva, C., & Rosa, M. J. (2015). Energy performance indicators of wastewater treatment: A field study with 17 Portuguese plants. Water Science and Technology, 72(4), 510–519. https://doi.org/10.2166/wst.2015.189 
+
+- Sitzenfrei, R., Berger, D., & Rauch, W. (2018). Design and optimization of small hydropower systems in water distribution networks under consideration of rehabilitation measures. Urban Water Journal, 15(3), 183–191. https://doi.org/10.1080/1573062X.2015.1112410 
+
+- Sparn, B., & Hunsberger, R. (2015). Opportunities and challenges for water and wastewater industries to provide exchangeable services. Retrieved from https://www.nrel.gov/docs/fy16osti/63931.pdf 
+
+23 of 23 
+
+ZOHRABIAN ET AL. 
+
+Strazzabosco, A., Kenway, S. J., & Lant, P. A. (2019). Solar PV adoption in wastewater treatment plants: A review of practice in California. Journal of Environmental Management, 248, 109337. https://doi.org/10.1016/J.JENVMAN.2019.109337 
+
+- Suciu, G., Vintea, A., Arseni, S. C., Butca, C., & Suciu, V. (2015). Challenges and solutions for advanced sensing of water infrastructures in urban environments. 2015 IEEE 21st international symposium for design and technology in electronic packaging, SIITME 2015 – 
+
+- (pp. 349 352). https://doi.org/10.1109/SIITME.2015.7342351 
+
+- Takahashi, S., Koibuchi, H., & Adachi, S. (2017). Water supply operation and scheduling system with electric power demand response function. Procedia Engineering, 186, 327–332. https://doi.org/10.1016/j.proeng.2017.03.257 
+
+Thompson, L., Lekov, A., Mckane, A., & Piette, M. A. (2010). Opportunities for open automated demand response in wastewater treatment facilities in California. Phase II Report: San Luis Rey wastewater treatment plant case study. Ernest Orlando Lawrence Berkeley National Laboratory. 
+
+- Thompson, L., Song, K., Lekov, A., & Mckane, A. (2008). Automated demand response opportunities in wastewater treatment facilities. Retrieved from https://eta-publications.lbl.gov/sites/default/files/lbnl-1244e.pdf 
+
+- Tiwari, M. K., & Adamowski, J. F. (2015). Medium-term urban water demand forecasting with limited data using an ensemble wavelet– bootstrap machine-learning approach. Journal of Water Resources Planning and Management, 141(2), 04014053. https://doi.org/10.1061/( asce)wr.1943-5452.0000454 
+
+- Todd, M., Ula, S., Martinez-Morales, A., Penchev, M., & Gomez, H. (2020). Water sector energy efficiency through an integrated energy management system. Retrieved from https://ww2.energy.ca.gov/2020publications/CEC-500-2020-003/CEC-500-2020-003.pdf 
+
+- Uggetti, E., Hughes-Riley, T., Morris, R. H., Newton, M. I., Trabi, C. L., Hawes, P., … García, J. (2016). Intermittent aeration to improve wastewater treatment efficiency in pilot-scale constructed wetland. Science of the Total Environment, 559, 212–217. https://doi.org/10. 1016/j.scitotenv.2016.03.195 
+
+Umberg, K., & Allgeier, S. (2013). Water quality event detection system challenge: Methodology and findings. Retrieved from https://www.epa. gov/sites/production/files/2015-07/documents/water_quality_event_detection_system_challenge_methodology_and_findings.pdf 
+
+Vakilifard, N., Anda, M., Bahri, P. A., & Ho, G. (2018). The role of water-energy nexus in optimising water supply systems—Review of techniques and approaches. Renewable and Sustainable Energy Reviews, 82, 1424–1432. https://doi.org/10.1016/J.RSER.2017.05.125 
+
+van Staden, A. J., Zhang, J., & Xia, X. (2011). A model predictive control strategy for load shifting in a water pumping scheme with maximum demand charges. Applied Energy, 88(12), 4785–4794. https://doi.org/10.1016/J.APENERGY.2011.06.054 
+
+Vilanova, M. R. N., & Balestieri, J. A. P. (2014). Energy and hydraulic efficiency in conventional water supply systems. Renewable and Sustainable Energy Reviews, 30, 701–714. Retrieved from https://ac.els-cdn.com/S1364032113007739/1-s2.0-S1364032113007739-main.pdf? _tid=3269aff9-8d3a-43d1-822b-5edccdda6e1c&acdnat=1543258605_5824d062d0bdf63bcd30c213ec10a708 
+
+Wakeel, M., Chen, B., Hayat, T., Alsaedi, A., & Ahmad, B. (2016). Energy consumption for water use cycles in different countries: A review. Applied Energy, 178, 868–885. https://doi.org/10.1016/J.APENERGY.2016.06.114 
+
+Walski, T., & Creaco, E. (2016). Selection of pumping configuration for closed water distribution systems. Journal of Water Resources Planning and Management, 142(6), 04016009. https://doi.org/10.1061/(asce)wr.1943-5452.0000635 
+
+Wang, H., Yang, Y., Keller, A. A., Li, X., Feng, S., Dong, Y. n., & Li, F. (2016). Comparative analysis of energy intensity and carbon emissions in wastewater treatment in USA, Germany, China and South Africa. Applied Energy, 184, 873–881. https://doi.org/10.1016/j.apenergy. 2016.07.061 
+
+Yan, P., Qin, R. C., Guo, J. S., Yu, Q., Li, Z., Chen, Y. P., … Fang, F. (2017). Net-zero-energy model for sustainable wastewater treatment. Environmental Science and Technology, 51(2), 1017–1023. https://doi.org/10.1021/acs.est.6b04735 
+
+Zamzam, A. S., Dall'Anese, E., Zhao, C., Taylor, J. A., & Sidiropoulos, N. D. (2019). Optimal water-power flow-problem: Formulation and distributed optimal solution. IEEE Transactions on Control of Network Systems, 6(1), 37–47. https://doi.org/10.1109/TCNS.2018.2792699 
+
+- Zhang, H., Xia, X., & Zhang, J. (2012). Optimal sizing and operation of pumping systems to achieve energy efficiency and load shifting. Electric Power Systems Research, 86, 41–50. https://doi.org/10.1016/j.epsr.2011.12.002 
+
+- Zhang, W., Tooker, N. B., & Mueller, A. V. (2020). Enabling wastewater treatment process automation: Leveraging innovations in real-time sensing, data analysis, and online controls. Environmental Science: Water Research & Technology, 6(11), 2973–2992. https://doi.org/10. 1039/d0ew00394h 
+
+- Zhou, S., & Solomon, B. D. (2020). Do renewable portfolio standards in the United States stunt renewable electricity development beyond mandatory targets? Energy Policy, 140, 111377. https://doi.org/10.1016/j.enpol.2020.111377 
+
+Zimmermann, B., Gardian, H., & Rohrig, K. (2018). Cost-optimal flexibilization of drinking water pumping and treatment plants. Water, 10(7), 857. https://doi.org/10.3390/w10070857 
+
+Zohrabian, A., & Sanders, K. T. (2020). The energy trade-offs of transitioning to a locally sourced water supply portfolio in the city of Los Angeles. Energies, 13(21), 5589. https://doi.org/10.3390/en13215589 
+
+How to cite this article: Zohrabian A, Plata SL, Kim DM, Childress AE, Sanders KT. Leveraging the waterenergy nexus to derive benefits for the electric grid through demand-side management in the water supply and wastewater sectors. WIREs Water. 2021;8:e1510. https://doi.org/10.1002/wat2.1510 
+

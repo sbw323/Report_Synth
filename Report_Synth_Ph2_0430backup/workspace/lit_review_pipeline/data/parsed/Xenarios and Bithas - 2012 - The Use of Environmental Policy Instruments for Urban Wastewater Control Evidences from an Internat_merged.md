@@ -1,0 +1,394 @@
+Environmental Policy and Governance Env. Pol. Gov. 22, 14–26 (2012) Published online 10 January 2012 in Wiley Online Library (wileyonlinelibrary.com) DOI: 10.1002/eet.596 
+
+## The Use of Environmental Policy Instruments for Urban Wastewater Control: Evidences from an International Survey 
+
+Stefanos Xenarios[1][* ] and Kostas Bithas[2] 
+
+> 1Norwegian Institute for Agricultural and Environmental Research (Bioforsk), Norway 
+
+> 2Panteion University, Economic and Regional Development, Athens, Attiki, Greece 
+
+## ABSTRACT 
+
+The use of environmental policy instruments as an effective approach for wastewater management has been of increasing debate. The relevant literature is mainly directed to the role of these instruments for the mitigation of air emissions, although occasionally policy implications for wastewater are noted. Empirical evidence regarding the performance of environmental instruments in wastewater management is scarce. There is thus often a discrepancy between the design and application stages of an instrument by a failure to attain the pursued targets in wastewater policy. This paper investigates the appropriateness of major applied environmental instruments and of combinatory options for wastewater pollution control. The research is based on an international survey of experienced experts and decision-makers in developed urban wastewater systems. The results suggest a strong preference for taxes and, to a lesser extent, for command-and-control approaches. The country origin of the respondents appears to be a significant factor for the preference of particular instruments. Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment. 
+
+Received 3 June 2010; revised 16 April 2011; accepted 14 October 2011 
+
+Keywords: command-and-control approaches; economic instruments; sustainable wastewater management; wastewater policy; wastewater pollution control 
+
+## Introduction 
+
+HERE IS AN AMPLE SET OF ENVIRONMENTAL POLICY INSTRUMENTS USED TO COMBAT POLLUTING ACTIVITIES. ONE BROAD classification categorizes such instruments between regulatory (command and control), persuasive and economic (IC, 1997; Goulder and Parry, 2008). Regulatory instruments mainly encompass various technology T standards such as the mandatory environmental audit and the introduction of filtering devices. Environmental performance standards are also mirrored in regulatory instruments through the imposition of an upper limit or a ‘ceiling’ in polluting activities (Bennear and Stavins, 2007). Suasive measures are mostly reflected through educational, informative and training aspects while ethical and moral perspectives have also been recently introduced through pressure and negotiating practices (OECD, 2010). Economic instruments consist of taxes and changes, subsidies 
+
+*Correspondence to: Stefanos Xenarios, Norwegian Institute for Agricultural and Environmental Research (Bioforsk), Soil, Water and Environment Division, Section of Water Quatity and Hydrology, Frederik A. Dahls vei 20 N-1432 Ås, Norway. E-mail: Stefanos.Xenarios@bioforsk.no 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+Environmental Policy Instruments and Wastewater 
+
+15 
+
+and tradable permits systems while combinatory options are recently considered as hybrid approaches (Goulder and Parry, 2008). 
+
+The assessment of environmental policy instruments is often conducted through a set of well-established criteria. Initially, the major emphasis is on the criterion of cost-effectiveness, which is interpreted as the cost minimization for a given pollution target (Ecotec, 2001). The efficiency of an instrument to attain the pursued environmental objectives is another major factor to be considered. Also, the administration costs, economic impacts on produce and incentives offered to R&D activities for the polluter are some of the main aspects to be included in an assessment. The distributional concerns and the burden or benefits emanating from an applied instrument to polluters, users and, more broadly, society as a whole are also examined occasionally. 
+
+Several noteworthy attempts were made to assess the appropriateness of environmental policy instruments in different polluting activities through one or more of the aforementioned criteria (Zerbe, 1970; Weitzman, 1974; Baumol and Oates, 1988; Hahn, 1989; Biglaiser and Horowitz, 1995). The increasingly worrying situation of climate change has directed the bulk of the relevant literature to air emissions (Burtraw, 1996; Grubb and Ulph, 2002; Grubb and Neuhoff, 2006; Antes et al., 2008). The theoretical framework of environmental instruments regarding water supply and wastewater management has been poorly investigated (but see Cowan, 1998; Koundouri, 2006; CityNet, 2007). Moreover, there is little empirical evidence on the applicability of the instruments in wastewater management (Pareglio and Sali, 1996; Bailey, 2002; Dijkgraaf and Gradus, 2004). Whether most of the instruments can effectively cope with wastewater pollution issues in real-world cases remains of debate. 
+
+Numerous reasons have been proposed to explain the potential discrepancy between the theoretical and applicative stage of environmental instruments in wastewater pollution control, including the development of ill-designed applications, the applications do not follow theoretical guidelines and real-world characteristics are neglected by theoretical analysis (Pezzey, 2003). 
+
+This paper presents new evidence on an international level concerning the appropriateness of the major economic and command- and-control instruments meant to mitigate urban wastewater residuals. The standards, taxes, freely distributed permits and auctioned permits[1] are assessed while a combination of standards and taxes is also investigated.[2] The research is based on an extensive survey of experts and decision-makers from developed countries on wastewater management issues. 
+
+The next section provides a brief literature review on the evaluation of economic instruments, while the third section describes the methodological framework and data. Some descriptive findings of the survey are then presented and an inferential analysis investigates the reasoning of the preferences to the examined instruments with regard to respondents’ backgrounds. Some policy implications are presented in the final section. 
+
+## Review on Regulatory and Economic Instruments 
+
+The reasoning for the selection of specific regulatory and economic instruments in our analysis is based on the widespread application of these tools in environmental policy and, to a lesser extent but with noteworthy examples, in wastewater management. In particular, the standards (regulatory instruments) in many countries t represent he major compliance measure against polluters (UNEP, 2004; Harrington and Morgenstern, 2004; Bennear and Stavins, 2007). However, the taxes and tradable pollution permits are gradually dominating environmental policy as compared with subsidies (Halkos and Kitsos, 2005; Yandle and Dewees, 2008). A combination of standards and taxation measures are frequently suggested as the most promising response to pollution control (Yandle and Dewees, 2008). 
+
+The initial design of economic instruments, however, was not aimed at environmental protection but rather at the regulation of uneven economic welfare and avoiding high levels of disparity within society (Pigou, 1920). 
+
+> 1In the case of freely distributed permits the initial allocation entails no cost for polluters whereas in auctioned permits the initial allocation of permits is conducted through an auction process. 
+
+> 2In the combinatory case, standards should ensure an environmentally acceptable level of discharges or the maximum treatable level by treatment plants while the remaining discharges are taxed. 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+S. Xenarios and K. Bithas 
+
+16 
+
+However, the need to protect the environment from human-induced pollution has gradually introduced economic instruments to environmental policy (Pearce, 1993). In this regard, regulatory instruments are acknowledged as ‘institutional measures aimed at directly influencing the environmental performance of polluters by regulating processes or products used, by abandoning or limiting the discharge of certain pollutants, and/or by restricting activities to certain times, areas, etc’ (OECD, 1994: 14). In turn, taxes are considered as the extra costs to be requested for the polluting activities and the environmental damage. By contrast, subsidies act as an incentive to improve environmental performance. Lastly, the tradable pollution permits establish a market for an environmental resource by allocating property rights. The distribution of permits is either given freely to the polluter, which is acknowledged as ‘grandfathering’ practice, or it is auctioned in markets created for this purpose (EPA, 2001). 
+
+The general judgment for the performance of economic instruments and standards in environmental policy is eloquently described by Goulder and Parry (2006) in a concise comparative analysis. No single instrument is considered to be superior along all the environmental policy perspectives while the assessment of even a single dimension is highly dependent on various conditions. Due to the high complexity presented in each environmental problem it is advisable to elaborate a hybrid tool which should incorporate elements from different instruments. 
+
+By looking at the major criteria adopted for the performance of each tool, cost-effectiveness appears to be the focus of most of the relevant literature. In this regard, the cost-effective performance of an instrument could vary highly depending on the significance given to distributional factors in each case (Goulder and Parry, 2006). However, in general, the taxes and permits are claimed to entail less aggregate costs for controlling pollution than standards (Weitzman, 1974; Baumol and Oates, 1988; Stavins, 1998). Also, the taxes and tradable permits could provide stronger incentives for the development and application of more advanced cost-effective approaches. On the other hand, standards, in terms of promoting similar incentives, leave much to be desired (Tietenberg, 1985; Montero, 2002). 
+
+Furthermore, the literature is mostly focused on the cost-effective performance of the selected instruments to reduce air emissions. Major attention is given to the design of tradable pollution permits and their potential advantage over other instruments. It is claimed that a free permits system with minimal trading activities could be highly effective in the case of homogeneous polluting firms where almost equal marginal costs are given (Burtraw, 1996). However, arguments also - favour auctioned permits over grandfathering by claiming that a freely distributed permit system would be much less effi cient than standards and taxes (Cramton and Kerr, 2002). In another study, free permits are claimed to be ineffective unless a threshold benefit level is surpassed (Parry and Williams, 1999). Also, a combination of standards and taxes is deemed to be more fruitful than permits if the tax revenues are directed to the reduction of other distortionary taxes (Parry, 1996). 
+
+Research into wastewater applications indicates that tradable permits could be highly effective if point and nonpoint polluting sources can be assessed (Horan et al., 2001). The difficulty, however, of identifying and measuring the discharges of non-point sources in a water body gives little hope for the implementation of such an undertaking. Even more, the effectiveness of permits systems in wastewater management only with point polluting sources is highly doubted due to the high operational and fixed costs (Zylicz, 2003). 
+
+The aspects of administration costs and the economic impacts on produce are claimed to be well assessed based on cost-effectiveness criterion (Stavins, 1996). Although admittedly these costs could be directly accounted in the cost-effective analysis of an instrument, it is noted that this is not always the case (Portney, 1990). However, very few studies have separately examined the required administration costs by mainly referring to the establishment of pollution permits markets (Bithas, 2006). Similarly, the criterion of environmental performance seems to be implicitly covered by cost-effectiveness. In effect, environmental goal-setting is almost taken for granted and the burden is shifted to the lowest cost approach introduced. Only a few studies deal with attaining environmental objectives (Stavins, 1998; Olmstead and Stavins, 2009; Denicolo, 1999; Zylicz, 2003; Gouldson et al., 2008). 
+
+Furthermore, the distribution factor is acknowledged to be crucial for the acceptance of economic instruments by polluters, users and society and also for the spatial (re)-location of polluting activities (Hahn and Noll, 1982; Spulber, 1985; Bathold, 1994; Howe, 1994; Farrow, 1995). In this context, the degree of acceptability in designing an efficient instrument is suggested to be a decisive element (Beder, 1996). The distribution factor is often examined through the revenue-raising potential and the economic welfare attributed by each instrument to the society (Fisher et al., 2003). Several parameters are considered to affect the revenue potential of an instrument, namely the number of polluting firms applying the instrument, the marginal environmental benefits stemming from the application and the incentives provided for innovative initiatives. Broadly speaking, the environmental taxes and auctioned pollution permits are reported to create revenues for authorities while standards cannot (OECD, 2010). 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+Environmental Policy Instruments and Wastewater 
+
+17 
+
+The incentive offered by each instrument towards the adoption of R&D initiatives is closely examined. The marketbase instrument permits are believed to create stronger incentives for the development and adoption of advanced abatement technologies than standards (Tietenberg, 1985; Downing and White, 1986; Milliman and Prince, 1989; Jaffe and Stavins, 1995; Halkos and Kitsos, 2005). In a comparative analysis between permits and taxes, it is claimed that if governments were to adjust the level of taxes and permits when innovation occurs, both instruments could create the same incentives for innovation. Nevertheless, only in a few cases have performance standards been claimed to generate higher incentives towards innovation than market-based instruments (Montero, 2002; Bruneau, 2004). 
+
+## Methodology and Data Description 
+
+The current research attempted to assess the performance of regulatory and economic instruments in wastewater policy through empirical evidence as captured in an extensive survey analysis. The assessment was based on the most widespread criteria applied to for this purpose. The following criteria were investigated: 
+
+- Economic effectiveness of each instrument. 
+
+- Accomplishment of pollution reduction targets by noting the objectives of the Water Framework Directive (WFD, 2000/60/EC) and the incentive for polluters to undertake R&D initiatives. 
+
+- Impact on production and administration costs and competitiveness. 
+
+- Distributional concerns as interpreted through the revenue-raising potential and the acceptability by the polluters. 
+
+Finally, in an attempt to identify the most suitable means or ‘vehicle’ for the application of an instrument, a set of various options are examined. 
+
+The survey was based on a questionnaire designed in a multiple-choice format. The analysis initially attempted to shed light on the composition of the sampling by investigating the country of origin, the organization type and the position of the respondents in the organization employed. Due to the plethora of organizational schemes and the diversity of professional roles, an attempt to classify the two components in a group format was conducted as in Table 1. 
+
+The distinction between the respondents’ positions was frequently blurred. A director in a research institute, for instance, could simultaneously be a researcher in the same institute while similarly the project manager could also be an academic in a university. However, we attempted to maintain the boundaries as much as possible by asking which was the prevalent role in their current professional status. Dividing between the organization types was also difficult because in many instances a research institute could resemble a company profile or a wastewater association could also undertake some research activities. To this end, the distinction was based again on the prevalent activities of the corresponding entity by acknowledging that an overlap may occur. For a better clarification of the organization types and professional positions classified in the two groups, the most predominant cases are presented in Appendix 1. 
+
+The preferences of the respondents towards the proposed instruments are delineated. For a better understanding of the reasoning behind the motivation of the respondents, an ordinal regression analysis is employed. The origin, background and position of respondents are explored as potential drivers for the ranking order of the instruments examined. 
+
+The ordinal model belongs to the wider family of generalized linear models where the predicted cumulative probabilities for the factor to affect the dependent variable are identified (Garson, 2010). The ordinal regression 
+
+|Organization type<br>Research Institute–University<br>Company–Consultancy<br>Association–Organization–Network|Position in the organization<br>Researcher<br>Project Manager<br>Academic<br>Director – Chief Executive Offcer|
+|---|---|
+
+
+
+Table 1. Categorization of organization types and professional duties 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+S. Xenarios and K. Bithas 
+
+18 
+
+consists of an ordinal-dependent variable, and categorical factors with potential continuous covariates. The model adopts a link that is a transformation of the cumulative probabilities, which allows estimation of the model. In practice, the link function specifies what transformation is applied to the dependent variable as below: 
+
+**==> picture [335 x 19] intentionally omitted <==**
+
+where 
+
+link() = is the link function 
+
+- gij = is the cumulative probability of the jth category for the ith case θj = is the threshold for the jth category 
+
+p = is the number of regression coefficients xi1, xi1 . . .. wij are the values of the predictors for the ith case, and b1, b2 . . . br are regression coefficients. 
+
+The ordinal regression model prevalently adopts the logit link function because more interpretable parameter estimates are offered (Norusis, 2009). The model assumes that the effect of the independent variables is the same for each level of the dependent variable. In our case, the ordinal regression could better render the potential effects of the selected factors because of the adopted ranking process. It should be mentioned, however, that due to the very lengthy analysis required for the exploration of all the ranking options in the instruments examined, only the first best option is assessed. In these terms, a potential positive estimate derived by the respondent’s profession towards taxes, for instance, means that the likelihood of higher scores due to the professional background is increased. Inversely, a negative parameter estimate means that there is a greater likelihood of lower values stemming from the specific factor (Williams, 2006). 
+
+The questionnaire was distributed electronically to a stratified random sampling of experienced experts and decisionmakers from developed countries. The sampling selection was deliberately directed to developed countries due to the highly limited use of the instruments examined in developing countries (Leek and Lohman, 1996). The respondents came from wastewater companies, consultancies, research institutes, universities, governmental agencies and water service departments in municipalities. All respondents were asked to evaluate the performance of the instruments based on their experiences from real-world cases. The survey coped with urban wastewater discharges mainly stemming from urban wastewater treatment plants. Focus was given to wastewater systems with developed (secondary or tertiary) – treatment facilities. The survey analysis was conducted during April August 2005. 
+
+Experts were contacted by electronic means and answered the questionnaire online. Of the 600 questionnaires distributed, 482 (80.3%) were completed and returned. A few of the questionnaires that were returned could not be processed because the respondents had left some of the questions unanswered. Consequently, the survey findings are based on 450 completed questionnaires, which yielded a highly satisfactory 75% return rate (City Net, 2007). Unless otherwise noted, the 450 interviewers provide us with information that pertains to the entire set of questions. 
+
+## Data Analysis 
+
+## Descriptive Results 
+
+The country origin of the respondents revealed a large number of German participants in the survey (Figure 1). It should be mentioned, however, that although the distribution was determined though random stratified sampling, the survey included a large research project with quite a few German partners.[3] The questionnaire was also circulated by these partners and hence considerably increased the proportion of German-originated respondents. 
+
+> 3Namely, ‘Cost-effective development of urban wastewater systems for Water Framework Directive compliance’ (CD4WC, www.cd4wc.org). 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+Environmental Policy Instruments and Wastewater 
+
+19 
+
+**==> picture [312 x 145] intentionally omitted <==**
+
+Figure 1. Distribution of respondents by country of origin 
+
+**==> picture [314 x 181] intentionally omitted <==**
+
+Figure 2. Cross-tabulation analysis on the organization type and respondent’s position 
+
+A cross-tabulation analysis on the organization type of the respondents and the professional position revealed a prevalence of project managers in the survey (Figure 2). Much further behind lay the researchers while closely behind follow the academics. The lowest percentage is given by directors and highly executive persons. When looking through the organization type, the prevalence of academics in research institutes is dominant as anticipated by however exhibiting a highly reverse situation in the case of associations-organizations where project managers take the lead. 
+
+The organization groups was dominated by the category of Association–Organization–Network (Figure 3), as expected given the broad types of entities classified in this category. However, participation from the other two categories was sufficient to show their potential influential role in respondents’ preferences. 
+
+Based on the first criterion, the highest cost-effectiveness is attributed to taxes, followed by standards and the combination of standards and taxes (Figure 4). 
+
+Achieving pollution reduction targets set by a general regulatory framework and for the R&D incentive, the combination of taxes and standards is best followed by taxes (Figure 5). When the Water Framework Directive targets are defined as the pursued objectives, an inverse situation occurs where the taxes slightly surpass the combinatory option while the individual case of standards seems also appealing. 
+
+The leading role of taxes continues for the impact in polluting firms based on production and administration costs and competitiveness (Figure 6). Again, the combination of taxes and standards together with the sole option of standards follow closely behind. Of surprise, however, was the distribution criterion where the revenue-raising 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+S. Xenarios and K. Bithas 
+
+20 
+
+Figure 3. Representation of organization types 
+
+**==> picture [336 x 265] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+25% 21% 23% Cost-Effectiveness  21%<br>20%<br>15% 13%<br>11% 11%<br>10%<br>5%<br>0%<br>Standards Taxes Free Permits Auctioned Subsidies Standards and<br>Permits Taxes<br>criterion<br>Pollution Reduction Targets-R&D incentive<br>25%<br>21% 22% 20% 22% 21%<br>20% 17% 18%<br>17% 16% 17%<br>15%<br>10%<br>6%<br>5% 5%<br>0%<br>Gen-Std Gen- Gen-Fr.P Gen- Gen-Sbs. Gen-Std& WFD-Std WFD- WFD- WFD- WFD-Sb. WFD-<br>Taxes Act.P. Taxes Taxes Fr.P. Act.P. Std&<br>Taxes<br>**----- End of picture text -----**<br>
+
+
+Figure 4. Cost-effectiveness criterion 
+
+Figure 5. Attainment of pollution reduction targets and incentives for research and development (Note: Gen = General objective of attaining the pollution reduction targets, Std = Standards, Fr.P. = Freely distributed permits, Act. P. = Auctioned permits, Sbs. = Subsidies, WFD = Water Framework Directive.) 
+
+potential and the acceptability by polluters, users and society is queried. In this case, the subsidies are deemed to be the most appropriate tool. 
+
+Finally, the means to better implement standards and taxes is explored. In the case of standards, the national government (Std-NT.G) is preferred, closely followed by regional authorities (Std-RG.G.) (Figure 7). For taxes, the utility bill is clearly the preferred option. 
+
+## Inferential results 
+
+The ordinal regression analysis reveals some interesting findings regarding the effects of country of origin, organization type and respondents’ professional position to the ranking order of the most preferred instrument (Table 2). 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+Environmental Policy Instruments and Wastewater 
+
+21 
+
+**==> picture [364 x 408] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Impact on production, administration costs, competitiveness - Revenue raising and acceptability<br>25%<br>22%<br>21% 21%<br>19% 19%<br>20% 19%<br>18% 17% 17%<br>15%<br>15%<br>10%<br>7% 6%<br>5%<br>0%<br>Prod-Std Prod-Taxes Prod-Fr.P. Prod-Act.P. Prod-Sbs. Prod- Dst-Std Dst-Taxes Dst-Fr.P. Dst.-Act.P. Dst-Sbs. Dst-<br>Std&Taxes Std&Taxes<br>Impact on production, administration costs, competitiveness (Prod.), revenue-raising and acceptability by polluters and<br>Suitability of Vehicle 49%<br>50%<br>40%<br>30% 28%<br>25%<br>22% 23%<br>20% 19%<br>20%<br>10%<br>6% 6%<br>2%<br>0%<br>Std-B.AT.  Std-WSS. Std- WS. Std-RG. G. Std-FD.G. Std-EU Std-NT.G. Tax-UT.B. Tax -DR. Tax-INC.<br>AT. AT.<br>**----- End of picture text -----**<br>
+
+
+Figure 6. Impact on production, administration costs, competitiveness (Prod.), revenue-raising and acceptability by polluters and users (Dst.) 
+
+(Note: Prod = Criterion related to production, administration and competitiveness impact, Std = Standards, Fr.P. = Freely distributed permits, Act.P. = Auctioned permits, Sbs. = Subsidies, Dst. = Criterion related to the revenue-raising and acceptability by polluters, users and society.) 
+
+Figure 7. Suitability of various vehicles (Note: Std=Standards, B.AT=Basin Authority, WSS. AT. = Water Supply Authority, WS=Wastewater Authority, RG=Regional Government, FD.G. = Federal Government, EU=European Union, NT.G=National Government, UT.B. = Utility Bill, DR. = Direct Tax, INC=Income.) 
+
+The country of origin reveals that Germany and Sweden are the most influential in the ranking order of the first best instruments. To a lesser extent, Australia appears to affect the ordinal scale, and Spain and Greece also provoke a slight effect. Of surprise is that all the above nationalities present the same trends for each instrument with almost the same level of significance. In particular, for the criterion of pollution reduction and R&D incentive, both Greece and Sweden show a lower ranking for combined standards and taxes. The situation is reversed for the same question but with reference to the EU Water Framework Directive, where the Australia, Germany and Sweden show a higher ranking. The criteria of revenue raising and acceptability by polluters and users are highly affected, with a negative trend shown by Spain, Germany and Sweden for the subsidies instrument. Last, the suitability of regional government as an implementation body for standards is commonly agreed by Australian and German respondents. 
+
+Organization type appears to moderately affect the ranking order of the favoured instruments by signifying the opposition of research and universities to subsidies as occurred with the country of origin. However, in the case 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+S. Xenarios and K. Bithas 
+
+22 
+
+|Criteria and vehicles<br>Cost-<br>effectiveness<br>Pollution<br>reduction–R&D<br>incentives<br>Pollution reduction<br>(WFD)–R&D<br>incentives<br>Production, admin.,<br>competitiveness<br>impact<br>Revenue-raising<br>and acceptability<br>Vehicle<br>appropriateness<br>(Regional<br>Government)<br>Vehicle<br>appropriateness<br>(Utility bill)|Instruments<br>Taxes<br>Standards & Taxes<br>Taxes<br>Taxes<br>Subsidies<br>Standards<br>Taxes|Statistics<br>Estim.<br>Sig.<br>Estim.<br>Sig.<br>Estim.<br>Sig.<br>Estim.<br>Sig.<br>Estim.<br>Sig.<br>Estim.<br>Sig.<br>Estim.<br>Sig.<br>Country of origin<br>US = 1<br>�4.737<br>0.075<br>21.942<br>19.550<br>0.101<br>Canada<br>1.805<br>0.452<br>0.747<br>0.763<br>�2.854<br>0.239<br>�4.656<br>0.096<br>3.099<br>0.202<br>20.937<br>Australia<br>�4.843<br>0.078<br>8.192<br>0.006<br>�1.252<br>0.616<br>�3.918<br>0.066<br>3.763<br>0.034<br>2.199<br>Greece<br>�4.742<br>0.028<br>2.113<br>0.299<br>�3.657<br>0.054<br>0.000<br>1.000<br>1.398<br>0.355<br>0.758<br>0.180<br>Spain<br>52.176<br>0.973 �0.537<br>0.840<br>�3.158<br>0.143<br>�6.366<br>0.007<br>2.533<br>0.175<br>21.334<br>0.610<br>Italy<br>�3.929<br>0.119<br>�0.132<br>0.956<br>�17.876<br>0.998<br>Germany<br>26.088<br>0.988 �1.967<br>0.199<br>4.675<br>0.007<br>�3.432<br>0.025<br>�6.108<br>0.001<br>2.950<br>0.013<br>1.750<br>France<br>1.725<br>0.449<br>�0.553<br>0.107<br>Sweden<br>40.548<br>0.984 �4.413<br>0.044<br>6.916<br>0.005<br>�3.167<br>0.108<br>�7.378<br>0.001<br>2.506<br>0.128<br>�2.690<br>0.801<br>UK<br>0a<br>0a<br>0a<br>0a<br>0a<br>0a<br>0a<br>0.144<br>Organization type<br>Research Institute–University 26.088<br>0.980 �1.093<br>0.507<br>1.703<br>0.187<br>�0.765<br>0.504<br>�3.220<br>0.032<br>1.857<br>0.121<br>�2.590<br>.<br>Company–Consultancy<br>0a<br>4.125<br>0.008 �1.740<br>0.176<br>0.155<br>0.883<br>�0.352<br>0.707 �0.170<br>0.858<br>�2.784<br>0.068<br>Association–Organization–<br>Network<br>0a<br>0a<br>0a<br>0a<br>0a<br>0a<br>0a<br>0.028<br>Position<br>Academic<br>�52.176<br>0.974<br>6.654<br>0.014 �1.575<br>0.367<br>0.989<br>0.528<br>�2.071<br>0.238<br>0.499<br>0.743<br>2.665<br>.<br>Project Manager<br>11.628<br>0.991<br>5.569<br>0.005<br>0.219<br>0.883<br>1.360<br>0.321<br>0.081<br>0.945<br>1.374<br>0.257<br>1.387<br>0.118<br>Researcher<br>�26.088<br>0.980<br>5.113<br>0.013 �2.289<br>0.142<br>1.180<br>0.400<br>1.063<br>0.417<br>�0.072<br>0.954<br>2.705<br>0.245<br>Director<br>0a<br>0a<br>0a<br>0a<br>0a<br>0a<br>0a<br>0.052|Table 2. Ordinal regression analysis for the examined criteria and the most favoured instruments and vehicles<br>Note: The bold number signify the cases where a statistical signifcance occurs.<br>aThis parameter is set to zero because it is redundant.|
+|---|---|---|---|
+
+
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+Environmental Policy Instruments and Wastewater 
+
+23 
+
+of pollution reduction and R&D incentives the companies-consultancies favour the combination of standards and taxes as the most suitable instrument, in contrast to the nationality component. The same view towards the appropriateness of standards and taxes appears to be unanimously shared by academics, project managers and researchers. However, the professional position provides no insight regarding the ranking of any other criterion and vehicle suitability. 
+
+## Policy Implications and Concluding Remarks 
+
+The theoretical elegance of the instruments examined has received only a cursory evaluation by empirical studies in wastewater management. This decreases the potential for effective application of these instruments in wastewater pollution control. In this context, the present paper offers an empirical evaluation in the specific context of efficient urban wastewater treatment. Experts affiliated with wastewater systems in developed countries were asked to evaluate amongst economic instruments through a number of criteria and applicative means which reflect important aspects of wastewater policy. 
+
+The descriptive analysis showed that European respondents dominated the sampling group although the contribution of North American and Australian respondents was noteworthy. Also, the prevalence of projects managers and researchers indicates that many respondents were familiar with the application of the examined instruments in real-word cases. This is not to say that the academics or directors are lacking an empirical background, but underlines that more often the researchers or project managers are in the forefront of application measures. Furthermore, the diffused profile of organization types prevented any potential biases emerging from the predominance of one specific business status. 
+
+The instruments of taxes, standards and a combinatory option of the two instruments appear to be favoured by the majority of the respondents. Of surprise was the preference for subsidies as a revenue-raising instrument, although respondents from countries with strong experience in environmental policy instruments appeared to be opposed to this view. The findings of the ordinal regression show that except for the case of pollution reduction and R&D criterion all the three factors (country of origin, organization type and respondent’s position) take a common stance towards the prioritization of one instrument. 
+
+From a methodological perspective, the present study highlighted elements of the ongoing scientific debate between market (taxes, subsidies, tradable permits) and command and control (standards) instruments (Feitelson, 1992; Stavins, 1998; Harrington and Morgenstern, 2004). The results of the survey do not offer a complete empirical resolution on the theoretical ongoing debate. Certain methodological assumptions inhibit a detailed empirical analysis. Initially, we do not deal with the vital issue of firms’ homogeneity or heterogeneity within a pollution sector, which could strongly affect cost-effective aspects and to a certain extent other criteria (EPA, 1999; OECD, 2006). Furthermore, the survey did not consider positive or negative externalities that may be raised with the implementation of an instrument (Montero, 1997). For instance, the adoption of technological innovations in a firm could contribute to the mitigation of climate change but also improve health standards and the natural environment in proximity to the firm, although this was not the purpose of the technological adoption. In a similar manner, the increased toxicity from a polluter in a river estuary may harm water quality and through the use of an instrument the polluter could be penalized for this action. However, harmful effects in the surrounding fauna and flora may be largely ignored due to the difficulty of measuring the direct effects in the short term. 
+
+Nevertheless, the survey findings attribute an integrated performance of the major instruments applied in wastewater policy through the introduction of well-established criteria. In this context, it appears that taxes performs well on the majority of the criteria. Standards remain of appeal, especially when the instrument is combined with some form of taxes imposed on the remaining, standard-exceeding pollution. Although a certain preference for taxes instrument is revealed, we have seen that the economic instruments perform differently under certain policy criteria. This indicates that under real-world conditions the instruments could be designed on the basis of the specific criteria which best reflect each case study’s priorities. 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+S. Xenarios and K. Bithas 
+
+24 
+
+## Acknowledgements 
+
+To a great extent, the present research was conducted in the context of the CD4WC Project on Cost-effective Development of Urban Wastewater Systems for Compliance with the Water Framework Directive (Contract No. EVK-CT-2002-00118). We gratefully acknowledge the support of the European Union Commission. 
+
+## References 
+
+Antes R, Hansjürgens B, Lethmate, P. (eds), 2008. Emissions Trading - Institutional Design, Decision Making and Corporate Strategies. Springer: Heidelberg/Berlin. 
+
+Bailey I. 2002. European environmental taxes and charges: economic theory and policy practice. Applied Geography 22: 235–251. 
+
+Bathold TA. 1994. Issues in the Design of Environmental Excise Taxes. Journal of Economic Perspectives 8: 133–151. 
+
+Beder S. 1996. Charging the Earth: the promotion of price-based measures for pollution control. Ecological Economics 16: 51–63. Bennear LS, Stavins R. 2007. Second-best theory and the use of multiple instruments. Environmental and Resource Economics 37: 111–129. Biglaiser G, Horowitz JK. 1995. Pollution regulation and incentives for pollution-control research. Journal of Economics and Management Strategy – 3(4): 663 684. 
+
+Bithas K. 2006. The necessity for environmental taxes for the avoidance of environmental thievery: a note on the paper ‘Environmental responsibility versus taxation’. Ecological Economics 56: 159–161. 
+
+Baumol WJ, Oates WE. 1988. The Theory of Environmental Policy. Cambridge University Press: Cambridge. 
+
+– Bruneau JF. 2004. A note on permits, standards, and technological innovation. Journal of Environmental Economics and Management 48: 1192 1199. Burtraw D. 1996. The SO2 emissions trading program: cost savings without allowance trades. Contemporary Economic Policy 14: 79–94. CityNet 2007. The network of European Research Projects on Integrated Urban Water Management. Supported by the European Commission under the Fifth Framework Programme and contributing to the implementation of the Key Action ‘Sustainable Management and Quality of Water’ within the Energy, Environment and Sustainable Development. http://citynet. unife.it/ [accessed 1 June 2010]. 
+
+Cowan S. 1998. Water pollution and abstraction and economic instruments. Oxford Review of Economic Policy 14: 40–49. Cramton P, Kerr S. 2002. Tradeable carbon permit auctions – How and why to auction not grandfather. Energy Policy 30: 333–345. Denicolo V. 1999. Pollution-reducing innovations under taxes or permits. Oxford Economic Papers 51: 184–199. 
+
+Dijkgraaf E, Gradus RHJM. 2004. Cost savings in unit-based pricing of household waste. Resource and Energy Economics 26: 353–371. Downing PB, White LJ. 1986. Innovation in pollution control. Journal of Environmental Economics and Management 13: 18–29. 
+
+Ecotec 2001. Study on the environmental and economic implications of the Environmental taxes and charges in European Union and the Member States. C1654/PtB/DH/MM, Ecotec: London, UK. 
+
+Environmental Protection Agency, Office of Water 1999. Consolidated water rates: Issues and Practices in Single-Tariff Pricing. A Joint Publication of the U.S. Environmental Protection Agency and the National Association of Regulatory Utility Commissioners. 
+
+Environmental Protection Agency, Office of Water 2001. The National Costs of the Total Maximum Daily Load Program, EPA 841-D-01-003. Farrow S. 1995. The dual political economy of taxes and tradable permits. Economic Letters 49: 217–220. 
+
+Feitelson E. 1992. An alternative role for economic instruments: sustainable finance for environmental management. Environmental Management 16: 299–307. 
+
+Hahn RW, Noll RG. 1982. Barriers to implementing tradable air pollution permits: problems of regulatory interactions. Yale Journal of Regulation 1: – 63 91. 
+
+Hahn RW. 1989. Economic prescriptions for environmental problems: how the patient followed the doctor’s orders. Journal of Economic Perspectives 3: 95–114. 
+
+Halkos G, Kitsos C. 2005. Optimal pollution level: a theoretical identification. Applied Economics 37: 1475–1483. 
+
+Harrington W, Morgenstern RD. 2004. Economic Incentives Versus Command and Control; What’s the best approach for solving environmental problems? Resources for the Future, www.rff.org 
+
+Horan D, Shortle JS, Abler DG, Ribaudo M. 2001. The Design and Comparative Economic Performance of Alternative Second-Best Point/Nonpoint Trading Markets. Staff Paper #2001-16 May 2001, Department of Agricultural Economics, Michigan State University: East Lansing, MI. 
+
+Howe C. 1994. Taxes versus tradable discharge permits. Environmental and Resource Economics: 4: 151–169. 
+
+IC (Industry Commission). 1997. Role of Economic Instruments in Managing the Environment. Staff Research Paper, Industry Commission: Melbourne. Fischer C, Parry IWH, et al. 2003. Instrument choice for environmental protection when technological innovation is endogenous. Journal of Environmental Economics and Management 45: 523–545. 
+
+Garson GD. 2010. Ordinal Regression. http://faculty.chass.ncsu.edu/garson/ [accessed 11 December 2010]. 
+
+Goulder HL, Parry WH. 2008. Instrument Choice in Environmental Policy, Resources for the Future, RFF DP 08–07. Resources for the Future: Washington, DC, USA. 
+
+Gouldson A, Lopez-Gunn E, Alstine J, Rees Y, Davies M, Krishnarayan V. 2008. New alternative and complementary environmental policy instruments and the implementation of the Water Framework Directive. European Environment 18: 359–370. 
+
+Grubb M, Ulph D. 2002. Energy, environment, and innovation. Oxford Review of Economic Policy 18: 92–106. 
+
+Grubb M, Neuhoff, K. 2006. “Allocation and competitiveness in the EU emissions trading scheme: policy,” overview, Cambridge Working Papers in Economics 0645, Faculty of Economics, University of Cambridge. 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+Environmental Policy Instruments and Wastewater 
+
+25 
+
+Jaffe AB, Stavins RN. 1995. Dynamic incentives of environmental regulations: the effects of alternative policy instruments on technology diffusion. Journal of Environmental Economics and Management 29: 43–63. 
+
+Koundouri P (ed.) 2006. Coping with Water Deficiency: From Research to Policy Making. Springer: Berlin. 
+
+Leek F, Lohman S. 1996. Charges in water quality management in EU. European Environment 6: 33–39. 
+
+Milliman SR, Prince R. 1989. Finn incentives to promote technological change in pollution control. Journal of Environmental Economics and Management 17: 247–265. 
+
+Montero J. 1997. Marketable pollution permits with uncertainty and transaction costs. Resource and Energy Economics 20: 27–50. Montero J. 2002, Permits, standards, and technology innovation. Journal of Environmental Economics and Management 44: 23–44. Norusis, M. 2009, PASW Statistics 18 Advanced Statistical Procedures Inc., SPSS Inc., New York. 
+
+OECD (Organization for Economic Cooperation and Development), EEA (European Environment Agency) in cooperation with European Commission. 2010. Database on instruments used for environmental policy and natural resources management, http://www2.oecd.org/ecoinst/queries/index. htm [accessed 31 May 2010]. 
+
+OECD (Organisation for Economic Cooperation and Development). 1994. Managing the Environment: the Role of Economic Instruments. OECD: Paris. OECD (Organization for Economic Cooperation and Development). 2006. Economic Instruments for Environmental Protection. OECD: Paris. Olmstead SM, Stavins RN. 2009. Compring prices and non-prices to urban water conservation, Water Resources Research, Vol. 45, W04301, 10 pp. doi: 10.1029/2008WR007227 
+
+Pareglio S, Sali G. 1996. Controlling pollution in rural areas by economic instruments. Environmental Monitoring and Assessment 41: 137–157. Parry I. 1996. Environmental taxes and quotas in the presence of distorting taxes in factor markets. Resource and Energy Economics 19: 203–220 Parry I, Williams C. 1999. A second-best evaluation of eight policy instruments to reduce carbon emissions. Resource and Energy Economics 21: 347–373. 
+
+Pearce D. 1993. Economic Values and the Natural World. MIT Press: Boston. 
+
+Pezzey J. 2003. Emission taxes and tradeable permits: a comparison of views on long run efficiency. Environmental and Resource Economics 26: 329–342. Pigou AC. 1920. The economics of welfare. Macmillan and Co.: London. 
+
+Portney P. 1990. Public Policy for Environmental Protection. Resources for the Future Press: Washington, DC. 
+
+Spulber DF. 1985. Effluent regulation and long-run optimality. Journal of Environmental Economics and Management 12: 103–116. Stavins R. 1989. Harnessing market forces to protect the environment. Environment 31: 28–35. 
+
+Stavins R. 1996. Correlated uncertainty and policy instrument choice. Journal of Environmental Economics and Management 30: 218–232. Stavins R. 1998. Market-Based Environmental Policies, Discussion Paper 98–26. Resources for the Future, www.rff.org Tietenberg T. 1985. Emission trading, an exercise in reforming pollution control. Resources for the Future: Washington, DC. United Nations Environment Programme (UNEP). 2004. The use of economic instruments in environmental policy: opportunities and challenges, UNEP/ETB/2003/9, UN Publications, ISBN:92-807-2391-X. 
+
+Yandle T, Dewees C. 2008. Consolidation in an individual transferable quota regime: lessons from New Zealand, 1986–1999. Environmental Management 41: 915–928. 
+
+Weitzman ML. 1974. Prices vs. quantities. Review of Economic Studies, 41: 477–491. 
+
+Zerbe RO. 1970. Theoretical efficiency in pollution control. Western Economic Journal 8: 364–376. Zylicz T. 2003. Instruments for water management at the drainage basin scale. Ecological Economics 47: 43–51. Water Framework Directive (WFD). 2007. The Information Exchange Platform, http://ec.europa.eu/environment/water/water-framework/ information.html Williams R. 2006. Generalized ordered logit/ partial proportional odds models for ordinal dependent variables. The Stata Journal 6: 58–82. 
+
+## Appendix A. Classification of organization types and professional position. 
+
+## Organization type 
+
+|Organization–Association–Network<br>Research Institute–University<br>Company–Consultancy|Non-Governmental Organization (Association)<br>Non-Governmental Organization (Network)<br>Research Association<br>University<br>Public Research Institute<br>Private Research Agency<br>Research and Consulting services with focus on research<br>Consultancy<br>Regional Department|
+|---|---|
+
+
+
+continues 
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+
+S. Xenarios and K. Bithas 
+
+26 
+
+continued 
+
+|Director<br>Researcher<br>Manager<br>Academic<br>Organization|type|Organization type<br>Municipality Department<br>Public Utility Company<br>Private Utility Company<br>Shareholder Utility Company<br>Professional position<br>Executive Director<br>Deputy Director<br>Senior Researcher<br>Principal Researcher<br>Junior Researcher<br>Research Fellow<br>Assistant Research Offcer<br>Senior Manager<br>Project Manager<br>Assistant Project Manager<br>Team Leader<br>Advisor<br>Professor<br>Assistant Professor<br>Associate Professor<br>Lecturer<br>Contract Lecturer|
+|---|---|---|
+
+
+
+Env. Pol. Gov. 22, 14–26 (2012) DOI: 10.1002/eet 
+
+Copyright © 2012 John Wiley & Sons, Ltd and ERP Environment 
+

@@ -1,0 +1,136 @@
+{
+  "plan_id": "variable_aeration_experiment_design_v1",
+  "title": "Time-Series Simulation Design for a Variable-Aeration Parametric Study under BSM1",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "section_id": "introduction",
+      "title": "Introduction, Motivation, and Steady-State Limitations",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Frame the study as a parametric data-generation campaign for evaluating the impact of variable aeration on activated-sludge wastewater treatment plant effluent under the IWA Task Group BSM1 framework. State why this work is needed: a prior steady-state approach treats every aeration reduction as if applied indefinitely, allowing the ODE system to reach full equilibrium including the slow die-off of autotrophic biomass, which mismatches realistic intermittent or short-duration reductions where biology never reaches that equilibrium. Explain the biological-timescale argument: the nitrifier sludge age in the default BSM1 plant is roughly 10-15 days, so a 1-3 day aeration reduction barely scratches the surface of what a steady-state solve predicts. Define the scope of this report: the rationale for time-series simulation, the parametric design space, the four-phase experimental workflow, the evaluation criteria, and how the design conforms to the BSM1 protocol and IWA Good Modelling Practice guidelines. State what is out of scope: full plant-wide control strategy redesign, alternative biological models beyond ASM1, and field validation of the simulated results.",
+      "source_queries": [
+        "BSM1 steady state stabilization sludge age",
+        "autotrophic biomass nitrifier washout aeration",
+        "intermittent aeration wastewater dynamic simulation"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "parametric_design_space",
+      "title": "Parametric Design Space",
+      "parent_id": null,
+      "section_type": "evidence_table",
+      "description": "Construct a structured comparison table defining the four-axis parametric space swept in this study. Each row represents one parametric axis. Columns should include axis name, range or values, units, rationale for the chosen range, and the corpus source supporting the choice. The four axes are: (1) aeration reduction magnitude expressed as percent reduction in KLa across aerobic tanks 3, 4, and 5, with a 5 to 50 percent range; (2) reduction duration in hours or days per week, motivated by the duration-dependent biological memory effect that steady-state cannot capture; (3) reduction timing or schedule pattern, controlled by a ReductionDays parameter selecting which days of the week and hours of the day the reduction is active, where the interaction with diurnal influent patterns drives experimental scatter; (4) influent loading scenarios sampled by Latin Hypercube Sampling over BSM1 dry, rain, and storm weather files at 15-minute resolution, each containing 14 days of influent data. Emphasize that the BSM1 model is designed so that effluent quality does not always meet criteria even under default control, so the margin for additional degradation is duration-sensitive and limited.",
+      "source_queries": [
+        "BSM1 KLa aeration reduction parametric",
+        "dry rain storm influent weather file",
+        "Latin Hypercube Sampling influent IQI"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "parametric_design_space",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "experimental_workflow",
+      "title": "Four-Phase Experimental Workflow",
+      "parent_id": null,
+      "section_type": "methodology_description",
+      "description": "Describe the four-phase per-experiment workflow that produces one row of the master results dataset. Phase 1 (constant-influent stabilization, days 0 to 150): run the five-reactor plus settler system under constant influent at nominal aeration to bring the biology to a converged equilibrium that becomes the shared starting point for every parametric variant. Phase 2 (dynamic warm-up, days 150 to 164): apply 14 days of dynamic dry-weather influent at nominal aeration starting from the Phase 1 final state to transition the plant from constant-influent equilibrium into a dynamic periodic steady state, saving the day-164 state as the dynamic initial condition. Phase 3 (experiment, days 164 to 178): starting from the dynamic initial condition, apply the next 14 days of dynamic influent with the aeration reduction active on the specified days and hours per the parametric design, evaluating effluent quality over days 171 to 178 using flow-weighted averages at 15-minute resolution per the BSM1 rectangular integration convention. Phase 4 (metrics computation): compute the per-experiment metrics defined by the evaluation criteria, write the row to master_results.csv, and reset to the dynamic initial condition for the next experiment. Emphasize that this two-phase initialization (Phase 1 plus Phase 2) is the standard BSM1 approach and that sharing the same biological starting point across experiments isolates the aeration reduction effect from initialization artifacts.",
+      "source_queries": [
+        "BSM1 stabilization period constant influent",
+        "dynamic dry weather warm-up periodic steady state",
+        "flow-weighted average effluent rectangular integration"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "experimental_workflow",
+          "target_section_id": "parametric_design_space",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "convergence_and_solver",
+      "title": "Stabilization, Convergence, and Solver Configuration",
+      "parent_id": "experimental_workflow",
+      "section_type": "methodology_description",
+      "description": "Provide a technical description of the convergence procedure invoked during Phase 1 of the workflow and the ODE solver configuration applied across all phases. State the convergence criterion explicitly: in Phase 1, verify that all reactor state variables, particularly autotrophic biomass concentration X_BA and ammonia S_NH, have flatlined by comparing the final two sludge-age windows, requiring relative change below a threshold on the order of 0.1 percent. Explain why this is critical for an aeration-reduction parametric study: reduced KLa values change the effective sludge age of the nitrifier population, so the BSM1 protocol's requirement that the stabilization period be adjusted whenever sludge age is influenced by control strategy applies directly. Describe the solver: MATLAB ode15s as the standard stiff solver for the ASM system, justified by the timescale span between autotrophic growth on the order of days and oxygen transfer on the order of minutes. Include relevant equations or formal expressions where applicable for the convergence threshold and for the timescale separation argument. Emphasize the tolerance requirement: solver tolerances must be tight enough to capture the fast dissolved-oxygen dynamics that couple to ammonia oxidation, because loose tolerances allow the solver to step over rapid DO transients during aeration switching and yield artificially smooth effluent profiles that mask the very signal the study is designed to measure.",
+      "source_queries": [
+        "ode15s stiff solver ASM activated sludge",
+        "X_BA autotrophic biomass convergence threshold",
+        "BSM1 sludge age stabilization control strategy"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "convergence_and_solver",
+          "target_section_id": "experimental_workflow",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "evaluation_criteria",
+      "title": "Evaluation Criteria and Performance Metrics",
+      "parent_id": null,
+      "section_type": "evidence_table",
+      "description": "Construct a structured comparison table of the per-experiment evaluation metrics computed during Phase 4 of the workflow. Each row represents one metric. Columns should include metric name, definition or formula, units, BSM1 threshold or interpretation rule, and the BSM1 protocol level (local control loop assessment versus plant-wide assessment). The metrics to include are: normalized NH4 damage as currently computed in the prior steady-state study; the Effluent Quality Index (EQI), which weights all pollutants rather than only ammonia; aeration energy (AE), capturing the savings achieved by the reduction; the percentage of time the BSM1 effluent limits are violated, applied to the 4 mg/L NH4 and 100 mg/L COD thresholds; and the number of distinct limit crossings, since a single long excursion is operationally different from many short ones. Note that the BSM1 protocol assesses performance at two levels: local control loops via IAE, ISE, maximal deviation from set points, and error variance, and plant-wide performance via EQI, AE, and effluent limit violations. The report should reflect both levels.",
+      "source_queries": [
+        "EQI Effluent Quality Index aeration energy",
+        "IAE ISE control loop performance BSM1",
+        "effluent limit violation NH4 COD threshold"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "evaluation_criteria",
+          "target_section_id": "parametric_design_space",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "gmp_alignment_and_synthesis",
+      "title": "Alignment with Good Modelling Practice and Design Justification",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "Synthesize how the parametric design space, the four-phase workflow, the convergence and solver configuration, and the evaluation criteria together satisfy the IWA Task Group BSM1 protocol and the IWA Good Modelling Practice guidelines published as Scientific and Technical Report No. 22 (Rieger et al. 2013). Identify the specific GMP principles that apply: goal-oriented application of activated sludge models, defined quality levels for simulation results, structured procedures for simulation studies, and documented convergence assurance. Highlight where this design exceeds the steady-state baseline it replaces: capturing the duration-dependent biological memory effect, separating the influent-driven scatter from the aeration-reduction signal through shared initial conditions, and reporting both control-loop-level and plant-wide metrics rather than a single summary. State the design's residual limitations and the open methodological questions, including the sensitivity of results to the convergence threshold value and the representativeness of the Latin Hypercube sample. The synthesis should bookend the report by echoing the introduction's motivation while demonstrating that each downstream design choice is traceable to a recognized standard.",
+      "source_queries": [
+        "IWA Good Modelling Practice STR 22",
+        "BSM1 protocol simulation evaluation framework",
+        "activated sludge model goal-oriented application"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "gmp_alignment_and_synthesis",
+          "target_section_id": "evaluation_criteria",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "gmp_alignment_and_synthesis",
+          "target_section_id": "experimental_workflow",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "gmp_alignment_and_synthesis",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "wastewater_treatment_simulation",
+    "target_audience": "process control researchers and demand-response analysts",
+    "primary_source": "IWA Task Group BSM1 technical report (Alex et al.); supporting corpus includes Rieger et al. (2013) IWA STR No. 22"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "section_id": "equilibrium_analysis",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "marginal abatement cost permit price equilibrium",
+    "three-part policy tax permit subsidy",
+    "BSM aeration energy KLa formula",
+    "EQI piecewise linear fine decomposition"
+  ],
+  "chunk_count": 23,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 34,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}

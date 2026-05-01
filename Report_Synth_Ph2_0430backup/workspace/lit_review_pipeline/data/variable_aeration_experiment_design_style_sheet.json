@@ -1,0 +1,46 @@
+{
+  "citation_pattern": "\\([^)]*(?:19|20)\\d{2}[^)]*\\)",
+  "tone_register": "technical_report",
+  "per_level_constraints": {
+    "0": {
+      "min_words": 200,
+      "max_words": 1200,
+      "heading_format": "##"
+    },
+    "1": {
+      "min_words": 150,
+      "max_words": 800,
+      "heading_format": "###"
+    }
+  },
+  "per_type_overrides": {
+    "evidence_table": {
+      "min_words": 100,
+      "max_words": 800
+    },
+    "methodology_description": {
+      "min_words": 250,
+      "max_words": 1000
+    },
+    "cross_reference": {
+      "min_words": 200,
+      "max_words": 1000
+    }
+  },
+  "forbidden_phrases": [
+    "it is important to note",
+    "it should be noted",
+    "in conclusion",
+    "as we can see",
+    "as mentioned earlier",
+    "as discussed above",
+    "it goes without saying",
+    "needless to say",
+    "obviously",
+    "basically"
+  ],
+  "equation_delimiters": {
+    "inline": "$",
+    "display": "$$"
+  }
+}

@@ -1,0 +1,24 @@
+### Pollutant-Specific Penalty Parameters
+
+The penalization frameworks reviewed in preceding sections differ not only in structural form but also in the numerical parameters assigned to individual pollutant species. This section consolidates pollutant-specific penalty parameters reported across the Benchmark Simulation Model (BSM) effluent quality index, EU Council Directive 91/271/EEC, the piecewise-linear fine model of Stare et al. (2007), and the Flanders regional contribution formula. Table 1 catalogues each pollutant drawn from the set {TSS, COD, BOD₅, TKN, S.NO, S.NH, TN, TP} against the column dimensions defined below.
+
+The BSM effluent quality index aggregates pollutant concentrations into a single weighted sum expressed in pollution units per day, where each weighting factor $b_i$ is dimensionless and calibrated to the Flanders regional fine formula (Vanrolleghem and Gillot, 2002; Gernaey et al., 2014). Because these weights are fixed and the aggregation is linear, the marginal penalty attributed to any incremental gram of a given pollutant remains constant within a simulation period (Machado et al., 2020). In contrast, the piecewise-linear model introduced by Stare et al. (2007) distinguishes two regimes for each pollutant $j$: the below-limit slope $\Delta\alpha_j$ applies when the effluent concentration $C^{\mathrm{EFF}}_j \leq C_{L,j}$, and the steeper above-limit slope $\Delta\beta_j$ applies when $C^{\mathrm{EFF}}_j > C_{L,j}$, with the transition governed by a Heaviside step function. The discharge limits $C_{L,j}$ are themselves informed by EU Directive 91/271/EEC thresholds for sensitive areas (EEC Council, 1991). Machado et al. (2020) adopted the Stare et al. parameterisation for ammonium ($\mathrm{S.NH}$) and total nitrogen ($\mathrm{TN}$), while phosphate ($\mathrm{TP}$) parameters were assumed equal to the ammonium parameters except for the discharge limit, which was taken from Gernaey and Jørgensen (2004).
+
+The Flanders contribution formula underpinning the BSM weights classifies pollutants into an organic contribution category (TSS, COD, BOD₅) and a nutrient contribution category (TKN, S.NO) (Vanrolleghem and Gillot, 2002). The broader penalty category column indicates whether the parameter participates in a dimensionless index (BSM), a piecewise-linear fine in €/g·d (Stare et al., 2007), or both. Where specific numerical values were not reported in the reviewed corpus, the entry is marked '—'.
+
+Several observations emerge from the tabulated data. First, the BSM weighting factors span roughly an order of magnitude, reflecting the differential environmental severity assigned to nutrient versus carbonaceous species. Second, the Stare et al. slopes exhibit a ratio $\Delta\beta_j / \Delta\alpha_j$ substantially greater than unity for the pollutants where both slopes are reported, producing the discontinuous marginal-cost jump at the regulatory threshold identified in the upstream analysis. Third, EU Directive 91/271/EEC limits for COD and BOD₅ (125 mg/L and 25 mg/L, respectively) are well-defined for populations exceeding 10,000 p.e., whereas limits for TN and TP depend on the sensitivity classification of the receiving water body (EEC Council, 1991). Fourth, the absence of reported Stare et al. parameters for TSS, COD, and BOD₅ reflects the original model's focus on nitrogen-cycle species and phosphate, leaving carbonaceous penalty quantification to the dimensionless BSM index alone.
+
+These pollutant-level distinctions have direct consequences for control strategy evaluation. As Stare et al. (2007) demonstrated, the optimal operating costs and percentage improvement achievable by advanced controllers depend strongly on the established effluent fines, specifically the selected values of $\Delta\alpha$, $\Delta\beta$, and the discharge limit. The table therefore serves as a reference for interpreting differences in penalty-driven optimisation outcomes across the reviewed studies.
+
+**Table 1. Pollutant-Specific Penalty Parameters Across Reviewed Frameworks**
+
+| Pollutant | BSM Weighting Factor $b_i$ (dimensionless) | BSM Discharge Limit (mg/L) | EU Directive 91/271/EEC Limit (mg/L) | Stare et al. Below-Limit Slope $\Delta\alpha$ (€/g·d) | Stare et al. Above-Limit Slope $\Delta\beta$ (€/g·d) | Flanders Contribution Category | Broader Penalty Category |
+|---|---|---|---|---|---|---|---|
+| TSS | 2.00 | 30 | 35 | — | — | Organic | Dimensionless index |
+| COD | 1.00 | 100 | 125 | — | — | Organic | Dimensionless index |
+| BOD₅ | 2.00 | 10 | 25 | — | — | Organic | Dimensionless index |
+| TKN | 30.00 | 10 | — | — | — | Nutrient | Dimensionless index |
+| S.NO | 10.00 | 10 | — | — | — | Nutrient | Dimensionless index |
+| S.NH | 2.00 | 4 | — | Reported | Reported | — | Dimensionless index; piecewise-linear fine |
+| TN | — | — | 10–15 | Reported | Reported | — | Piecewise-linear fine |
+| TP | — | — | 1–2 | Reported | Reported | — | Piecewise-linear fine |

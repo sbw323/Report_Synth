@@ -1,0 +1,426 @@
+{
+  "section_id": "equilibrium_analysis",
+  "version": 1,
+  "claims": [
+    {
+      "claim_id": "claim_0",
+      "claim_text": "The methodological architecture rests on three interlinked components: (i) a time-weighted effluent quality index that aggregates pollution loads, (ii) an aeration energy cost model proportional to oxygen transfer intensity and reactor geometry, and (iii) a piecewise-linear fine function that converts effluent quality deviations into pollutant-specific monetary penalties.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 263,
+        "end": 644
+      }
+    },
+    {
+      "claim_id": "claim_1",
+      "claim_text": "The Benchmark Simulation Model framework employs a dimensionless Effluent Quality Index (EQI) that integrates the weighted concentrations of multiple pollutants over a specified evaluation window.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 909,
+        "end": 1085
+      }
+    },
+    {
+      "claim_id": "claim_2",
+      "claim_text": "The weighting factors, historically calibrated to the Flanders regional tariff, assign relative monetary weights to total suspended solids, chemical oxygen demand, biological oxygen demand, total Kjeldahl nitrogen, and nitrate-nitrogen.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_80"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 1434,
+        "end": 1679
+      }
+    },
+    {
+      "claim_id": "claim_3",
+      "claim_text": "Because the weights are fixed and the aggregation is linear, the marginal cost attributed to any incremental gram of a given pollutant remains constant within each simulation period, a property that is computationally convenient but insensitive to the nonlinear cost escalation real regulatory regimes impose once discharge limits are breached.",
+      "source_chunk_ids": [
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81",
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 1679,
+        "end": 2024
+      }
+    },
+    {
+      "claim_id": "claim_4",
+      "claim_text": "Aeration constitutes the dominant electricity cost in activated sludge facilities, accounting for 45\u201360% of total energy consumption.",
+      "source_chunk_ids": [
+        "Zohrabian et al. - 2021 - Leveraging the water-energy nexus to derive benefits for the electric grid through demand-side manag_K E Y W O R D S_1_30"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2067,
+        "end": 2201
+      }
+    },
+    {
+      "claim_id": "claim_5",
+      "claim_text": "The BSM energy model expresses aeration energy AE as a function of the volumetric oxygen transfer coefficient and reactor volume.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2201,
+        "end": 2375
+      }
+    },
+    {
+      "claim_id": "claim_6",
+      "claim_text": "V_ref is a reference volume (typically 1333 m\u00b3 in the standard BSM1 layout).",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2541,
+        "end": 2627
+      }
+    },
+    {
+      "claim_id": "claim_7",
+      "claim_text": "Any DR intervention that reduces K_La,i during a curtailment window directly reduces AE, yielding quantifiable energy savings proportional to both the intensity and the duration of aeration reduction.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 2628,
+        "end": 2858
+      }
+    },
+    {
+      "claim_id": "claim_8",
+      "claim_text": "The piecewise-linear effluent fine model introduced by Stare et al. (2007) decomposes the EQI back into pollutant-specific monetary penalties.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2913,
+        "end": 3076
+      }
+    },
+    {
+      "claim_id": "claim_9",
+      "claim_text": "The dual-slope Heaviside structure produces a discontinuous jump in marginal cost at the regulatory threshold, creating a strong economic incentive for the plant to remain compliant while still penalizing residual pollution below the limit.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 3552,
+        "end": 3803
+      }
+    },
+    {
+      "claim_id": "claim_10",
+      "claim_text": "The total effluent fine is EF = sum of EF_j, typically summing contributions from ammonium, total nitrogen, and phosphate.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3804,
+        "end": 3937
+      }
+    },
+    {
+      "claim_id": "claim_11",
+      "claim_text": "The economic equilibrium governing the optimal DR operating point maps onto the classical permit-market clearing condition whereby the marginal abatement cost equals the permit price.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 3996,
+        "end": 4203
+      }
+    },
+    {
+      "claim_id": "claim_12",
+      "claim_text": "In the DR context, the marginal energy savings from an additional unit of aeration reduction must equal the marginal increase in effluent fines at the optimal operating point.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 4204,
+        "end": 4472
+      }
+    },
+    {
+      "claim_id": "claim_13",
+      "claim_text": "The equilibrium condition mirrors the result of Jin et al. (2014), where the firm's marginal abatement cost c_i'(a_i) = p at equilibrium, with p the permit price.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4647,
+        "end": 4829
+      }
+    },
+    {
+      "claim_id": "claim_14",
+      "claim_text": "In the DR application, the shadow price of effluent quality \u2014 the implicit price the facility pays for each additional pollution unit discharged \u2014 plays the role of the permit price.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 4830,
+        "end": 5019
+      }
+    },
+    {
+      "claim_id": "claim_15",
+      "claim_text": "As Garibay-Rodriguez et al. (2017) demonstrated through sensitivity analysis of the enforcement multiplier \u03c6, deviations from this equilibrium either waste resources on excessive treatment or incur disproportionate fines.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Sensitivity analysis with respect to parameter /_0_64"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 5020,
+        "end": 5235
+      }
+    },
+    {
+      "claim_id": "claim_16",
+      "claim_text": "The shadow price of effluent quality can be bounded using a three-part policy structure analogous to the Roberts\u2013Spence hybrid instrument described in the environmental economics literature.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5",
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Introduction_0_4"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5276,
+        "end": 5503
+      }
+    },
+    {
+      "claim_id": "claim_17",
+      "claim_text": "Under the three-part policy design, a tax ceiling caps the maximum marginal cost the facility faces for additional discharge, while a subsidy floor establishes a minimum reward for emission reductions beyond the permit allocation, and within the interior band, the shadow price floats at the market-clearing level.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5504,
+        "end": 5850
+      }
+    },
+    {
+      "claim_id": "claim_18",
+      "claim_text": "This banding structure hedges against the regulator's uncertainty about true abatement costs and provides upper and lower bounds on the operating cost trajectory across a range of DR intensities.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 5851,
+        "end": 6054
+      }
+    },
+    {
+      "claim_id": "claim_19",
+      "claim_text": "In the wastewater DR setting, the tax ceiling corresponds to the steeper fine slope \u0394\u03b2_j triggered upon limit exceedance, while the subsidy floor can be interpreted as the baseline energy cost savings rate attainable under non-DR operation.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 6055,
+        "end": 6309
+      }
+    },
+    {
+      "claim_id": "claim_20",
+      "claim_text": "The aeration reduction design space is spanned by four parameters: (1) the start time of the DR curtailment event within the diurnal cycle, (2) the duration of aeration reduction, (3) the intensity of K_La reduction relative to the baseline setpoint, and (4) the frequency of curtailment events per evaluation period.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6462,
+        "end": 6791
+      }
+    },
+    {
+      "claim_id": "claim_21",
+      "claim_text": "Latin Hypercube Sampling (LHS) provides a space-filling experimental design that efficiently covers the four-dimensional domain, avoiding the combinatorial explosion of full-factorial designs while ensuring adequate coverage of parameter interactions.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "inferred",
+      "section_text_span": {
+        "start": 6792,
+        "end": 7049
+      }
+    },
+    {
+      "claim_id": "claim_22",
+      "claim_text": "No single environmental policy instrument is considered to be superior along all dimensions, and the assessment of even a single dimension is highly dependent on various conditions.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5276,
+        "end": 5850
+      }
+    },
+    {
+      "claim_id": "claim_23",
+      "claim_text": "Taxes and permits are claimed to entail less aggregate costs for controlling pollution than standards.",
+      "source_chunk_ids": [
+        "Xenarios and Bithas - 2012 - The Use of Environmental Policy Instruments for Urban Wastewater Control Evidences from an Internat_Review on Regulatory and Economic Instruments_0_5"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5276,
+        "end": 5503
+      }
+    },
+    {
+      "claim_id": "claim_24",
+      "claim_text": "The optimal social regulatory strategy to achieve the fixed aggregate emissions target is encouraging the firms to be compliant, with the permit price playing a central role in firms' decision-making.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3996,
+        "end": 5235
+      }
+    },
+    {
+      "claim_id": "claim_25",
+      "claim_text": "The firms' optimal decision of production and abatement depends only on permit price, independent of monitoring level and penalty function shape.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 4647,
+        "end": 4829
+      }
+    },
+    {
+      "claim_id": "claim_26",
+      "claim_text": "Effluent fines were calculated considering ammonium, total nitrogen, and phosphate as the main pollutants using a cost function with dual slopes (below and above discharge limits) and a Heaviside step function.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18",
+        "Machado et al. - 2020 - Systematic comparison framework for selecting the best retrofitting alternative for an existing wate_EDITOR'S CHOICE\u2014 RESEARCH ARTICLE_0_81"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2895,
+        "end": 3937
+      }
+    },
+    {
+      "claim_id": "claim_27",
+      "claim_text": "The sensitivity analysis of the enforcement multiplier \u03c6 shows that as \u03c6 decreases below a certain threshold, environmental impact rapidly increases while treatment costs remain practically constant above that threshold.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Sensitivity analysis with respect to parameter /_0_64"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5020,
+        "end": 5235
+      }
+    },
+    {
+      "claim_id": "claim_28",
+      "claim_text": "A well implemented system of economic penalizations is an interesting approach to deal with pollution abatement over water bodies, and with thorough analysis sustainability can be evaluated to design a robust penalization scheme that allows flexibility but does not fall outside environmental goals.",
+      "source_chunk_ids": [
+        "Garibay-Rodriguez et al. - 2017 - Optimal water management in macroscopic systems under economic penalty scenarios_Conclusions_0_67"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 5020,
+        "end": 5235
+      }
+    },
+    {
+      "claim_id": "claim_29",
+      "claim_text": "The resulting paired response surfaces \u2014 energy savings and effluent fines as functions of the four-dimensional aeration parameter vector \u2014 provide the empirical basis for locating the equilibrium operating point where marginal energy savings equal marginal fine increases.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 7199,
+        "end": 7571
+      }
+    },
+    {
+      "claim_id": "claim_30",
+      "claim_text": "Aeration energy is calculated using K_La,i (oxygen transfer rate), V_i (reactor volume), and V_ref (reference volume of 1333 m\u00b3), following the equation suggested in Copp (2002) and improved by including reactor volumes.",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2201,
+        "end": 2627
+      }
+    },
+    {
+      "claim_id": "claim_31",
+      "claim_text": "The cost function for effluent fines uses parameters where costs of discharge increase threefold when discharge limits are exceeded (e.g., \u0394\u03b1_NH = 4 \u20ac/kg below limit, \u0394\u03b2_NH = 12 \u20ac/kg above limit).",
+      "source_chunk_ids": [
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 3076,
+        "end": 3551
+      }
+    },
+    {
+      "claim_id": "claim_32",
+      "claim_text": "The tradeoff surface defined by energy savings and effluent quality degradation enables locating the optimal DR operating point through an equilibrium condition analogous to the permit-market clearing rule.",
+      "source_chunk_ids": [
+        "Jin et al. - 2014 - The Regulatory Strategy in Emissions Trading System under Costly Enforcement_Document_0_0",
+        "Stare et al. - 2007 - Comparison of control strategies for nitrogen removal in an activated sludge process in terms of ope_a b s t r a c t_0_18"
+      ],
+      "confidence_tag": "synthesized",
+      "section_text_span": {
+        "start": 644,
+        "end": 876
+      }
+    },
+    {
+      "claim_id": "claim_33",
+      "claim_text": "Wastewater treatment accounts for 75% of air emission damages from the US water sector for an estimated value of $1.63 billion.",
+      "source_chunk_ids": [
+        "Chapin et al. - 2025 - Load-Shifting Strategies for Cost-Effective Emission Reductions at Wastewater Facilities_Figure 4. continued_0_77"
+      ],
+      "confidence_tag": "directly_stated",
+      "section_text_span": {
+        "start": 2067,
+        "end": 2201
+      }
+    }
+  ],
+  "partial": true,
+  "extraction_attempt": 1
+}

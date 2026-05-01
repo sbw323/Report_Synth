@@ -1,0 +1,155 @@
+{
+  "plan_id": "wwtp_effluent_fines_review_v2",
+  "title": "Effluent Fine Structures and Equilibrium Penalty Frameworks for Demand-Responsive Wastewater Treatment",
+  "version": "2.0.0",
+  "sections": [
+    {
+      "section_id": "introduction",
+      "title": "Introduction and Scope",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Introduce the problem of converting dynamic aeration simulation outputs from Benchmark Simulation Model No. 1 (BSM1) wastewater treatment plants into economically meaningful penalty signals for demand response (DR) decisions. Explain why the Effluent Quality Index (EQI) and Operational Cost Index (OCI) — though standardized — do not directly produce monetary fines, and why the tension between aeration energy savings and effluent quality degradation requires an equilibrium framing. Define the scope of this review: the regulatory origins of EQI weighting factors, the family of monetary fine functions applied to BSM outputs, the demand response literature on aeration flexibility, and the economic equilibrium frameworks that bridge simulation outputs to optimization. Exclude detailed activated sludge biokinetics and exclude pure power-system DR economics that do not engage with effluent quality consequences.",
+      "source_queries": [
+        "BSM1 effluent quality index pollution units",
+        "wastewater demand response aeration flexibility",
+        "operational cost index effluent fine"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "penalization_overview",
+      "title": "Penalization Frameworks for Effluent Discharge",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Synthesize the families of effluent penalization frameworks examined in the literature: the dimensionless BSM1/BSM2 weighted pollution unit system grounded in the Flanders regional fine formula, the Stare et al. piecewise-linear monetary fine model with its dual-slope Heaviside structure, the proportional and fixed alternatives proposed by Garibay-Rodriguez et al., the Catalonia industrial tariff with its peak coefficient and volume saturation mechanisms, and the equilibrium permit market frameworks from Schwartz and Stahn, Jin et al., and the three-part policy of Roberts and Spence. For each framework, describe the penalty structure, the key mechanism by which marginal cost is computed, and the application context in which it has been deployed. Establish a complexity hierarchy from fixed weighted sums through nonlinear piecewise functions to endogenous equilibrium prices that later sections can reference.",
+      "source_queries": [
+        "Flanders fine formula pollution weighting",
+        "piecewise linear effluent fine Heaviside",
+        "permit market equilibrium pollution price",
+        "Catalonia industrial tariff pollutant cost"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "penalization_overview",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "pollutant_parameter_table",
+      "title": "Pollutant-Specific Penalty Parameters",
+      "parent_id": "penalization_overview",
+      "section_type": "evidence_table",
+      "description": "Construct a single structured comparison table cataloguing the pollutant-specific penalty parameters reported across the reviewed frameworks. Each row is exactly one pollutant species drawn from the set {TSS, COD, BOD5, TKN, S.NO, S.NH, TN, TP}. Columns are exactly: pollutant name; BSM1 weighting factor b.i (dimensionless); BSM1 discharge limit (mg/L); EU Directive 91/271/EEC limit (mg/L); Stare et al. below-limit slope Δα (€/g·d); Stare et al. above-limit slope Δβ (€/g·d); Flanders contribution category (organic or nutrient); broader penalty category (dimensionless index, piecewise-linear fine, etc.). Out of scope for this section: framework-level structural characteristics (penalty structure, key mechanism, application context). Those belong to the framework_structural_table section and must not appear here. Use '—' for parameter values not reported in the corpus rather than fabricating values.",
+      "source_queries": [
+        "BSM1 weighting factor TSS COD BOD nitrogen",
+        "EU Urban Wastewater Treatment Directive limits",
+        "effluent fine slope monetary parameter",
+        "Stare phosphate ammonium discharge limit"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "pollutant_parameter_table",
+          "target_section_id": "penalization_overview",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "pollutant_parameter_table",
+          "target_section_id": "introduction",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "framework_structural_table",
+      "title": "Framework-Level Structural Comparison",
+      "parent_id": "penalization_overview",
+      "section_type": "evidence_table",
+      "description": "Construct a single structured comparison table contrasting the structural characteristics of the penalization frameworks reviewed in this report. Each row is exactly one framework drawn from: BSM1/BSM2 EQI; Stare et al. piecewise-linear fines; Garibay-Rodriguez Alternative 1 (proportional); Garibay-Rodriguez Alternative 2 (fixed); Catalan industrial tariff; Schwartz and Stahn / Jin et al. permit market equilibrium; Roberts and Spence three-part policy. Columns are exactly: framework name; primary source citation; penalty structure (one of: dimensionless weighted sum, piecewise-linear, proportional, fixed, tariff with peak coefficient, market-clearing, or banded); key mechanism (the operative formula or rule that determines marginal cost); application context (where it has been deployed in the corpus). Out of scope for this section: pollutant-specific parameter values (b.i weights, discharge limits, Δα and Δβ slopes). Those belong to the pollutant_parameter_table section and must not appear here.",
+      "source_queries": [
+        "penalty framework comparison wastewater",
+        "permit market equilibrium pollution price",
+        "Catalonia industrial tariff peak coefficient",
+        "three-part policy tax permit subsidy"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "framework_structural_table",
+          "target_section_id": "penalization_overview",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "framework_structural_table",
+          "target_section_id": "introduction",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "equilibrium_analysis",
+      "title": "Economic Equilibrium and the DR–Effluent Quality Tradeoff",
+      "parent_id": null,
+      "section_type": "methodology_description",
+      "description": "Describe the formal equilibrium framework for converting DR aeration simulation outputs into a monetized optimization problem. Specify the EQI integral as the time-weighted aggregation of pollution units, the BSM aeration energy formula proportional to KLa and reactor volume, and the piecewise-linear fine function decomposing EQI back into pollutant-specific monetary penalties. Explain how the permit market equilibrium condition (marginal abatement cost equals permit price) maps onto the DR application: the marginal energy savings from additional aeration reduction must equal the marginal increase in effluent fines at the optimal operating point. Include the three-part policy banding (tax ceiling, subsidy floor) as a structure for bounding the shadow price of effluent quality. Identify the four-dimensional aeration parameter space — start time, duration, intensity reduction, frequency — that the LHS-sampled simulation campaign uses to construct response surfaces for both the energy savings function and the effluent fine function.",
+      "source_queries": [
+        "marginal abatement cost permit price equilibrium",
+        "three-part policy tax permit subsidy",
+        "BSM aeration energy KLa formula",
+        "EQI piecewise linear fine decomposition"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "equilibrium_analysis",
+          "target_section_id": "penalization_overview",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "synthesis_findings",
+      "title": "Cross-Cutting Findings and Implications for DR Simulation",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "Compare and connect findings from the penalization framework overview, the pollutant parameter table, the framework structural table, and the equilibrium analysis. Identify the dominant cross-cutting result: nitrogen species (TKN, S.NH, S.NO) carry 10–20× higher marginal penalties than organic parameters across every framework, so even small nitrification deteriorations from aeration reductions will dominate the DR penalty function. Highlight the consequences of the Heaviside discontinuity at the discharge limit for optimization smoothness and solver choice, the relevance of the Catalonia peak coefficient to intermittent aeration where pollutant variability (not just level) is penalized, and the insight from equilibrium frameworks that the correct marginal penalty is endogenous rather than fixed. Name the open questions: safe equipment shutdown durations, recovery times after DR events, and effluent quality sensitivity to process interruptions identified by Zohrabian et al. as research gaps that the LHS-sampled BSM1 campaign is positioned to address.",
+      "source_queries": [
+        "nitrogen aeration reduction effluent quality",
+        "demand response wastewater research gaps",
+        "intermittent aeration nutrient removal recovery"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "synthesis_findings",
+          "target_section_id": "equilibrium_analysis",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "synthesis_findings",
+          "target_section_id": "pollutant_parameter_table",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "synthesis_findings",
+          "target_section_id": "framework_structural_table",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "synthesis_findings",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "wastewater_treatment_economics",
+    "target_audience": "process control engineers and water-energy nexus researchers",
+    "primary_source": "Vanrolleghem et al. (1996); Stare et al. (2007); Machado et al. (2020); Garibay-Rodriguez et al. (2017); Verdaguer et al. (2012); Zohrabian et al. (2021)"
+  }
+}

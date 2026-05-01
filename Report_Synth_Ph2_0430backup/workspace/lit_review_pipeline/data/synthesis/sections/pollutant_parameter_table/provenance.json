@@ -1,0 +1,18 @@
+{
+  "section_id": "pollutant_parameter_table",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "BSM1 weighting factor TSS COD BOD nitrogen",
+    "EU Urban Wastewater Treatment Directive limits",
+    "effluent fine slope monetary parameter",
+    "Stare phosphate ammonium discharge limit"
+  ],
+  "chunk_count": 24,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 26,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}

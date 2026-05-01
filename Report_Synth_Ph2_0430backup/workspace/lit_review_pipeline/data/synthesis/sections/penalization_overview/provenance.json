@@ -1,0 +1,18 @@
+{
+  "section_id": "penalization_overview",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "Flanders fine formula pollution weighting",
+    "piecewise linear effluent fine Heaviside",
+    "permit market equilibrium pollution price",
+    "Catalonia industrial tariff pollutant cost"
+  ],
+  "chunk_count": 20,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 28,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}

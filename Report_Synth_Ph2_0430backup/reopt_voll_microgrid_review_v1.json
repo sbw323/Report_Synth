@@ -1,0 +1,119 @@
+{
+  "plan_id": "reopt_voll_microgrid_review_v1",
+  "title": "Value of Lost Load in REopt.jl: From Penalty Estimation to Optimal Microgrid Sizing for Process-Critical Facilities",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "section_id": "introduction",
+      "title": "Introduction: VoLL as the Bridge Between Process Risk and Microgrid Economics",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Define the Value of Lost Load (VoLL) as the monetary penalty per kWh of electrical load unserved during a grid outage or deliberate curtailment event. Explain why VoLL is the critical coupling parameter between external process simulation models, which quantify the physical and regulatory consequences of load shedding, and techno-economic optimization platforms like REopt, which size distributed energy resources to minimize life cycle cost. Establish the scope of this review: the REopt platform's VoLL mechanism, the range of VoLL estimates reported across sectors, and the sensitivity of microgrid sizing decisions to VoLL magnitude. This review does not cover ISO demand response revenue, capacity market payments, or ancillary service economics.",
+      "source_queries": [
+        "value of lost load unserved energy cost",
+        "REopt microgrid sizing critical load resilience"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "reopt_formulation",
+      "title": "The REopt MILP Formulation and Outage Cost Mechanism",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Describe the REopt platform's mixed-integer linear programming formulation as documented by Anderson et al. (2017) and implemented in the open-source REopt.jl Julia package. Detail the stochastic outage model: how outage_start_time_steps, outage_durations, and outage_probabilities define the scenario space; how the dvUnservedLoad decision variable represents the gap between critical load and on-site DER production at each timestep; and how ExpectedOutageCost is computed as the probability-weighted minimax of VoLL multiplied by unserved load across all scenarios. Explain how this cost term enters the life cycle cost objective function alongside CAPEX, O&M, and energy procurement costs, and describe the role of the critical_load_fraction and microgrid_upgrade_cost_fraction parameters in shaping the feasible region. Do not describe demand response tariff structures or grid export revenue mechanisms.",
+      "source_queries": [
+        "REopt MILP life cycle cost optimization DER",
+        "stochastic outage simulation unserved load penalty",
+        "microgrid upgrade cost critical load fraction"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "reopt_formulation",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "voll_estimation",
+      "title": "VoLL Estimation Methods and Reported Ranges",
+      "parent_id": "reopt_formulation",
+      "section_type": "evidence_table",
+      "description": "Construct a structured comparison table of VoLL values reported in the literature. Column dimensions: source citation, sector or application context (residential, commercial, industrial, military, critical infrastructure), estimation method (survey-based willingness-to-pay, macroeconomic production-function, revealed preference, simulation-derived process penalty), VoLL value or range in dollars per kWh, assumed outage duration, and whether the value was used as a direct input to REopt or a comparable MILP optimizer. Each row represents one distinct VoLL estimate or range from a single study. Highlight the three-order-of-magnitude spread from less than one dollar per kWh to more than four hundred dollars per kWh noted by Murphy et al. (2024) and the tiered resilience hub values reported by Farthing (2021). Do not include values derived from demand response program participation payments.",
+      "source_queries": [
+        "value of lost load estimates residential commercial industrial",
+        "VoLL unserved energy cost outage duration sector",
+        "resilience value cost unmet load kWh"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "voll_estimation",
+          "target_section_id": "reopt_formulation",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "voll_estimation",
+          "target_section_id": "introduction",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "sizing_sensitivity",
+      "title": "Microgrid Sizing Sensitivity to VoLL",
+      "parent_id": null,
+      "section_type": "methodology_description",
+      "description": "Analyze how REopt's optimal DER sizing for battery energy storage power and energy capacity, backup generator capacity, and solar PV capacity responds to changes in VoLL magnitude. Describe the decision boundary: at low VoLL the optimizer accepts unserved load and recommends no DER investment, while above a threshold VoLL the optimizer sizes DERs to fully cover critical loads during outage scenarios. Discuss how the critical_load_fraction parameter interacts with VoLL to create a hybrid optimization approach where a hard floor on minimum load service combines with a penalty-based tradeoff above that floor. Report computational considerations including solver selection between HiGHS and commercial solvers, problem size scaling with the number of outage scenarios and start time candidates, and practical time limits for convergence. Do not discuss tariff structure impacts or coincident peak demand charges.",
+      "source_queries": [
+        "battery storage sizing sensitivity outage cost penalty",
+        "REopt optimal DER capacity VoLL threshold",
+        "MILP microgrid design outage probability duration"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "sizing_sensitivity",
+          "target_section_id": "reopt_formulation",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "application_patterns",
+      "title": "Application Patterns and Lessons for Process-Critical Facilities",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "Compare and connect findings from the REopt formulation review, the VoLL estimation table, and the sizing sensitivity analysis to extract lessons for applying VoLL-driven REopt analysis to process-critical facilities such as wastewater treatment plants, manufacturing sites, and hospitals. Identify the key lesson: that VoLL must be derived from the specific process penalty function rather than from generic sector-average estimates to produce meaningful microgrid sizing recommendations. Discuss how simulation-derived VoLL, computed from the ratio of a process-specific fine to the energy deficit that caused it, differs structurally from survey-based or macroeconomic VoLL estimates in its temporal resolution and sensitivity to operating conditions. Highlight the gap in the peer-reviewed literature for wastewater and continuous-process-industry applications of REopt. Name the open methodological questions: incremental versus absolute VoLL computation, time-varying hourly VoLL profiles, and the interaction between VoLL magnitude and outage scenario design parameters.",
+      "source_queries": [
+        "process industry microgrid penalty cost simulation",
+        "critical infrastructure resilience microgrid sizing"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "application_patterns",
+          "target_section_id": "sizing_sensitivity",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "application_patterns",
+          "target_section_id": "voll_estimation",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "application_patterns",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "microgrid_technoeconomics",
+    "target_audience": "Researchers applying REopt.jl to size microgrids for process-critical facilities using simulation-derived VoLL penalties",
+    "primary_source": "Anderson et al. (2017) NREL/TP-5400-70022; Murphy et al. (2024) Risk Analysis 45(1); Reich & Sanchez (2023) Naval Research Logistics 70(7); REopt.jl v0.57 source code"
+  }
+}

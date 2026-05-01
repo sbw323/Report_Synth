@@ -1,0 +1,9 @@
+{
+  "claim_table_completeness": 0.0,
+  "dependency_completeness": 0.8220338983050848,
+  "evidence_claim_agreement": 0.9352941176470588,
+  "revision_churn": 1.0,
+  "structural_compliance_rate": 1.0,
+  "style_compliance_rate": 1.0,
+  "unsupported_claim_rate": 0.0
+}

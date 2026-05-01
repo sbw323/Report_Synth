@@ -1,0 +1,48 @@
+{
+  "citation_pattern": "\\([^)]*(?:19|20)\\d{2}[^)]*\\)",
+  "tone_register": "formal_academic",
+  "per_level_constraints": {
+    "0": {
+      "min_words": 250,
+      "max_words": 1100,
+      "heading_format": "##"
+    },
+    "1": {
+      "min_words": 200,
+      "max_words": 900,
+      "heading_format": "###"
+    }
+  },
+  "per_type_overrides": {
+    "evidence_table": {
+      "min_words": 250,
+      "max_words": 800
+    },
+    "methodology_description": {
+      "min_words": 300,
+      "max_words": 1300
+    },
+    "cross_reference": {
+      "min_words": 300,
+      "max_words": 1200
+    }
+  },
+  "forbidden_phrases": [
+    "it is important to note",
+    "in conclusion",
+    "as we can see",
+    "it goes without saying",
+    "needless to say",
+    "obviously",
+    "basically",
+    "in summary",
+    "at the end of the day",
+    "it should be mentioned",
+    "as previously mentioned",
+    "it is well established"
+  ],
+  "equation_delimiters": {
+    "inline": "$",
+    "display": "$$"
+  }
+}

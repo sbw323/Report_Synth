@@ -1,0 +1,46 @@
+{
+  "citation_pattern": "\\([^)]*\\d{4}[^)]*\\)",
+  "tone_register": "technical_implementation",
+  "per_level_constraints": {
+    "0": {
+      "min_words": 150,
+      "max_words": 2200,
+      "heading_format": "##"
+    },
+    "1": {
+      "min_words": 100,
+      "max_words": 1800,
+      "heading_format": "###"
+    }
+  },
+  "per_type_overrides": {
+    "narrative_synthesis": {
+      "min_words": 150,
+      "max_words": 2200
+    },
+    "evidence_table": {
+      "min_words": 100,
+      "max_words": 3000
+    },
+    "methodology_description": {
+      "min_words": 200,
+      "max_words": 2800
+    },
+    "cross_reference": {
+      "min_words": 200,
+      "max_words": 3000
+    }
+  },
+  "forbidden_phrases": [
+    "it is important to note",
+    "as we can see",
+    "it goes without saying",
+    "needless to say",
+    "it should be noted that",
+    "it is worth mentioning"
+  ],
+  "equation_delimiters": {
+    "inline": "$",
+    "display": "$$"
+  }
+}

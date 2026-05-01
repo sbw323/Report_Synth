@@ -1,0 +1,290 @@
+Hindawi Publishing Corporation Mathematical Problems in Engineering Volume 2014, Article ID 487912, 10 pages http://dx.doi.org/10.1155/2014/487912 
+
+**==> picture [76 x 15] intentionally omitted <==**
+
+**==> picture [42 x 41] intentionally omitted <==**
+
+## _Research Article_ **The Regulatory Strategy in Emissions Trading System under Costly Enforcement** 
+
+## **Shuai Jin,[1,2] Yanlin Zhang,[1] and Zhaohan Sheng[2]** 
+
+_1 School of Management, Jiangsu University, Zhenjiang 212013, China_ 
+
+_2 Computational Experiment Center for Social Science, Nanjing University, Nanjing 210093, China_ 
+
+Correspondence should be addressed to Shuai Jin; sjin@ujs.edu.cn 
+
+Received 6 June 2014; Accepted 27 July 2014; Published 25 September 2014 
+
+Academic Editor: Jianguo Du 
+
+Copyright © 2014 Shuai Jin et al. This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. 
+
+In a two-stage dynamic game of regulator and polluting firms, the optimal regulatory strategy to achieve a fixed aggregate emissions target cost-effectively in emissions trading system was studied under the context of costly monitoring and sanctioning, including the monitoring level, the aggregate supply of permits, and the penalty shape for noncompliance. Based on gaming analysis, a heterogeneous agent-based experiment platform for regional emissions trading system was established using computational experiment. Then further analyses were done from perspectives of dynamic and bounded rationality. The results show that the optimal strategy to achieve target is to induce full compliance. This is not simply setting severe punishment, but seeking tradeoff between the level of monitoring and punishment. Finally, integrating the permit price directly into the penalty shape allows the policy objective to be achieved more cost-effective. 
+
+## **1. Introduction** 
+
+For nowadays, more and more environmental problems are regulated through economic instruments. As an important instrument, emissions trading has been practiced and evolved into an important approach to reduce pollution costeffectively over the world. In order to mitigate the sharply growing contradictions between economic development and environmental protection, China has put it on important agenda as early as late 1980’s. In particular, since the “11th five-year plan,” along with the strategic changing of economic growth and environmental management, and the promoting of total quantity control, energy conservation, and emissions reduction strategies, the emissions trading program has received high attentions from each level of Chinese government and has been launched in many areas and industries, such as Taihu Basin and Pearl River Delta. At the same time, lots of environmental property rights exchanges have set up subsequently in Beijing, Tianjin, Shanghai, and so on. However, the pilot programs have failed to bring remarkable success in emissions control for the moment and the development of emissions trading program in China has 
+
+been seriously hindered by costly enforcement and significant noncompliance, which could be directly derived from the constrains of budget and capability making the regulators do not have sufficient resources to achieve full compliance [1]. Therefore, it is most anxious to set up the regulatory strategy adapting to the Chinese national conditions to guarantee effective enforcement. 
+
+In the environmental regulation research, Downing and Watson Jr. (1974) first proposed the theoretical model of the enforcement of environmental policy [2]. Harford (1978) mainly analyzed the firms’ behavior under imperfectly enforceable emission standards and taxes [3]. With emissions trading gradually popularized, many scholars started to devote themselves to the research of the firms’ behavior and optimal enforcement under this policy. However, lots of theoretical literatures focus on the outcome of emissions trading system under full compliance [4, 5]; several literatures mainly assume that full compliance cannot be achieved [6–9]. Regarding the fact that the insufficient enforcement resources became an important limitation in practice, some scholars examine the optimal enforcement strategy of a budget-constrained regulator who does not have sufficient 
+
+Mathematical Problems in Engineering 
+
+2 
+
+resources to induce full compliance [10]. Stranlund (2007) further addresses whether emissions trading systems should be designed and implemented to achieve full compliance in order to achieve a fixed aggregate emissions target costeffectively [11]. However, the existing theoretical literature on optimal enforcement and regulatory of emissions trading system often makes particular assumptions on the penalty function, while the empirical studies confirm the use of both gravity and nongravity components in the structure of penalty [12]. Meanwhile, the pollution level is usually treated as an exogenous variable. Actually, once the permit is endowed with negotiability, it will be bound to the property and production factors of firms along with labor and raw materials, and many links of firms operation will be obviously affected. So it is necessary to consider firms production, abatement, and permits trading together from the individual level. In addition, simply analyzing from individual level is not enough, the chronicity of ecosystem restoration has ordained the emissions trading programs which usually requires a long process of implementation; thus, it is also very necessary to reexamine the effectiveness and efficiency of regulatory strategy from the long-time dynamical evolution perspective. 
+
+According to above analysis and literature review, a two-stage dynamic game of regulator and polluting firms is built to research on the optimal regulatory strategy to achieve the fixed aggregate emissions target cost-effectively in emissions trading system from three aspects: the aggregate supply of permits for initial allocation, monitoring level, and penalty shape. Then, an agent-based experiment platform is established using computational experiment method for a further discussion on the feasibility and efficiency of the regulatory strategy from the dynamic evolution perspective. 
+
+## **2. The Model and the Game Analysis** 
+
+This work moves from the paper by Stranlund (2007) [11] and makes some adjustments, involving a regulatory model in which the regulator chooses the optimal strategy to which the firms react. Throughout consider a regulator and a fixed set of 𝑁 heterogeneous risk-neutral firms emitting the same uniformly mixed pollutant in an emissions trading system without any forms of banking and borrowing. 
+
+Under the current environmental monitoring system, the regulator cannot get complete information of firms’ actual emissions, and therefore, the profit-driven nature and the environmental externalities make firms’ operation decisionmaking is based on the cost-benefit analysis of various schemes. The firm 𝑖 generates pollution as the result of its production activity. The pollution level emitted in the absence of any regulation is denoted by 𝑒𝑖. Further assume 𝑒𝑖 = 𝑘𝑖𝑞𝑖, where 𝑞𝑖 and 𝑘𝑖, respectively, denote the firm’s output and pollution generation coefficient. More formally, define the revenue function to be the following: 𝑏𝑖(𝑒𝑖) = 𝜃𝑖𝑞𝑖 −𝑑𝑖(𝑞𝑖), where 𝜃𝑖 denotes the market price of the product, 𝑑𝑖(𝑞𝑖) denotes the production cost, 𝑏𝑖[󸀠][>][0][,][ 𝑏] 𝑖[󸀠󸀠] < 0. The pollution can be abated at a cost 𝑐𝑖(𝑎𝑖), where 𝑎𝑖 is the firm’s abatement, with the usual assumptions 𝑐𝑖[󸀠][>][0][,][𝑐] 𝑖[󸀠󸀠] > 0, 𝑎𝑖 ≥0. Each 
+
+permit confers the legal right to release one unit of emissions. Let 𝑙𝑖[0][be][the][number][of][permits][that][are][initially][allocated] to firm 𝑖 and let 𝑙𝑖 be the number of permits that it chooses to hold after trade. In permit market equilibrium, all trades take place at a single market price 𝑝. If the firm is compliant, in order to achieve total quantity control objectives, 𝑒𝑖 ≤ 𝑎𝑖 + 𝑙𝑖 and the violation V𝑖 = 0; otherwise, its pollution emitted would exceed the number of permits holding and the violation V𝑖 = 𝑒𝑖 −𝑎𝑖 −𝑙𝑖 > 0. Assume that permits cannot be banked or borrowed, thus the firm’s rational action is 𝑒𝑖 = 𝑙𝑖 + V𝑖 + 𝑎𝑖. When 𝑙𝑖[0][>][𝑙] 𝑖[, the firm will sell the surplus] permits; conversely, it will buy from the market. Moreover, let 𝐸, 𝐴, and 𝑉 denote the aggregate pollutions generated, abatements, and violations of all firms, respectively. 
+
+The regulator can readily observe 𝑙𝑖[0][and][ 𝑙] 𝑖[for each firm] 𝑖, but cannot observe the firm’s actual emissions emitted without a costly and perfectly accurate monitoring activity. Assume the firm is inspected with probability 𝜋𝑖 ∈[0, 1], namely, the monitoring level on firm 𝑖. Suppose the monitoring cost per inspection is 𝜇> 0. Without loss of generality, assume the violation is penalized according to a penalty function 𝐹(V𝑖) = 𝐹0 + 𝑓(V𝑖) once the firm is inspected, where 𝐹0 is fixed penalties, 𝑓(V𝑖) is variable penalties, 𝑓[󸀠] ≥0, 𝐹(0) = 0, 𝑓(0) = 0. However, the sanctioning is costly too. Let 𝛽> 0 be the per-unit cost of collecting penalties from noncompliant firms. Hence, the total expected enforcement costs are: TE( **𝜋** , k) = ∑[𝑁] 𝑖=1[𝜋] 𝑖[[𝛽𝐹(][V] 𝑖[)][+][𝜇]][,][where] **[𝜋]** = (𝜋1, 𝜋2, . . . , 𝜋𝑁), k = (V1, V2, . . . , V𝑁). In order to holding aggregate emissions to a pre-specified target 𝐸, the regulator has various strategic choices. If there exists noncompliance in region, the regulator can adjust the aggregate supply of permits 𝐿 ≤ 𝐸−𝑉, or induce the noncompliant firms to decrease their violations by increasing 𝜋𝑖 or 𝐹(V𝑖). However, the regulation will inevitably affect the region’s economic output, social abatement costs, enforcement costs, and so forth. Let 𝐶( **a** , 𝐿) and 𝐵( **e** , 𝐿) represent the aggregate abatement costs and the social economic output, respectively, when the aggregate supply of permits is 𝐿, where 𝐶( **a** , 𝐿) = ∑[𝑁] 𝑖=1[𝑐] 𝑖[(𝑎] 𝑖[)][,][𝐵(] **[e]**[, 𝐿)][=][∑][𝑁] 𝑖=1[𝑏] 𝑖[(𝑒] 𝑖[)][,] **[a]**[=][(𝑎] 1[, 𝑎] 2[, . . . , 𝑎] 𝑁[)][,] **[e]**[=] (𝑒1, 𝑒2, . . . , 𝑒𝑁). Throughout assume the regulator’s objective is to maximize the social welfare. 
+
+As shown above, the relationship between regulator and polluting firms is a dynamic gaming process. Firstly, the regulator selects the regulatory strategy including 𝐿, **𝜋** , and 𝐹(V) to achieve the fixed aggregate emissions target costeffectively; then firms make optimal decisions to maximize net profit under given 𝜋𝑖 and 𝐹(V). The regulatory choice could be modelled as a two-stage game with complete information as the following: 
+
+**==> picture [228 x 65] intentionally omitted <==**
+
+where **e** ≥0, **a** ≥0, k ≥0, **e** − **a** − k ≥0, 𝐿+ 𝑉≤ 𝐸. The problem above is solved by backward induction. 
+
+Mathematical Problems in Engineering 
+
+3 
+
+_2.1. The Behavior of the Firm._ Given 𝜋𝑖 and 𝐹(V𝑖), the firm makes decision in two steps: firstly determines whether compliance is cost-effective or not and then makes the optimal operation decision. 
+
+**Lemma 1.** _Given_ 𝜋𝑖 _,_ 𝐹(V) _, the firm’s optimal decision is_ 𝑐𝑖[󸀠][(𝑎] 𝑖[) =] 𝑝 _,_ 𝑏𝑖[󸀠][(𝑒] 𝑖[) = 𝑝] _[, no matter the firm is compliant or not. But if the] firm is noncompliant, the necessary condition that its violations is cost-effective is_ 𝜋𝑖𝑓[󸀠] (V) = 𝑝 _, the firm’s optimal violation is the following:_ 
+
+**==> picture [168 x 63] intentionally omitted <==**
+
+**==> picture [12 x 10] intentionally omitted <==**
+
+_Proof._ If the firm chooses to reach the standard, then 𝑎𝑖 + 𝑙𝑖 = 𝑒𝑖, V𝑖 = 0, put into formula (2), from its first-order conditions, the firm’s optimal decision meets 𝑏𝑖[󸀠][(𝑒] 𝑖[) = 𝑝][,][ 𝑐] 𝑖[󸀠][(𝑎] 𝑖[) = 𝑝][; If the] firm chooses to be noncompliant, then 𝑎𝑖 + 𝑙𝑖 + V𝑖 = 𝑒𝑖, V𝑖 > 0, so the first-order conditions of formula (2) are as following: 
+
+**==> picture [163 x 34] intentionally omitted <==**
+
+**==> picture [149 x 13] intentionally omitted <==**
+
+Combining formula (4) and formula (5) yields 𝑐𝑖[󸀠][(𝑎] 𝑖[)][=][𝑝][.] Furthermore, when 𝐹0 = 0, 𝜋𝑖 = 𝑝/𝑓[󸀠] (V) implies the firm’s violations is V, then the equilibrium condition for encouraging the firm to be compliant is 𝜋𝑖 = 𝑝/𝑓[󸀠] (0), such that if 𝜋𝑖 ≥𝑝/𝑓[󸀠] (0), compliance will be the optimal decision of the firm; otherwise, the optimal violation will be V𝑖[∗] = 𝜑[−1] (𝑝/𝜋𝑖) > 0, where 𝜑(𝑥) = 𝑓[󸀠] (𝑥). When 𝐹0 > 0, the objective function of the firm is discontinuous at V = 0, then if 𝜋𝑖 = 𝑝/𝑓[󸀠] (V), the firms still have to compare the expected costs of complying and noncomplying. In this case, if 𝑝V ≤𝜋𝑖𝐹(V), then V𝑖[∗][= 0][; otherwise,][ V] 𝑖[∗][=][ V][. This completes] the proof. 
+
+From Lemma 1, (a) the firms’ optimal decision of production and abatement only depends on permit price, independent of 𝜋𝑖 and 𝑓(V); (b) 𝐹0 does not affect the firm’s marginal behavior and just increases its expected costs in the event of noncompliance. So the threshold of monitoring level inducing the firms to comply with regulation is 𝑝/𝑓[󸀠] (0) when 𝐹0 = 0, and it would be less than 𝑝/𝑓[󸀠] (0) while 𝐹0 > 0; (c) no matter what 𝐹0 is, as long as the firm chooses to be noncompliant, the firm’s violation choice depends only on the permit price and enforcement variables, not on its own parametric characteristics, such as production and abatement costs. In particular, since the permit price and enforcement variables do not vary across firms, some academics such as Stranlund have already pointed out that even a budgetconstrained regulator should not use parametric differences among regulated firms to guide its decisions about distributing monitoring and enforcement efforts [10, 11]. 
+
+Consequently, there is a main feature of firm’s behavior under emissions trading system differing from that under command-and-control means. Under the latter, the firms facing high abatement costs or stringent emission standards have greater motivation to be noncompliant, therefore, the exogenous characteristics of firm is the key factor to the design of the optimal monitoring and enforcement of emissions standards [13]. In emissions trading system, the permit price tightly links firms’ decision-making of the production, abatement, and violation together and turns into the important indicator to measure the cost-effectiveness of firms’ operation decisions. Thorough permits trading, permits flow directly from the firms of lower abatement costs to the higher, and the social abatement costs will be reduced; meanwhile, the resources flow to the firms have higher productivity indirectly, and then the resource utilization and social capital will be improved, among which the market price of permits fulfills two important functions in the system: rationing function and allocative function [14]. 
+
+_2.2. The Optimal Regulatory Strategy Analysis._ From above analysis regulator can infer the optimal decision of the firms under given 𝜋 and 𝐹(V) and then can select the optimal strategy to achieve the fixed aggregate emissions target costeffectively. 
+
+**==> picture [241 x 25] intentionally omitted <==**
+
+_Proof._ Using contradiction, assume there exists two equilibrium permit price 𝑝[1] and 𝑝[2] with 𝑝[1] > 𝑝[2] . Under given 𝑝[1] and 𝑝[2] , the pollution, abatement, permits holding, and violation of firm 𝑖 are 𝑒𝑖[1][,][𝑎] 𝑖[1][,][𝑙] 𝑖[1][,][V] 𝑖[1][,][and][𝑒] 𝑖[2][,][𝑎] 𝑖[2][,][𝑙] 𝑖[2][,][V] 𝑖[2][,][then] 𝑒𝑖[1][=][𝑎] 𝑖[1][+][𝑙] 𝑖[1][+][V] 𝑖[1][,][𝑒] 𝑖[2][=][𝑎] 𝑖[2][+][𝑙] 𝑖[2][+][V] 𝑖[2][.][From][Lemma 1][,][it][is] obvious that 𝑏𝑖[󸀠][(𝑒] 𝑖[1][)][=][𝑐] 𝑖[󸀠][(𝑎] 𝑖[1][)][=][𝑝][1][,][𝑏] 𝑖[󸀠][(𝑒] 𝑖[2][)][=][𝑐] 𝑖[󸀠][(𝑎] 𝑖[2][)][=][𝑝][2][.] Because of 𝑏𝑖[󸀠󸀠][(𝑒] 𝑖[)][<][0][,][𝑐] 𝑖[󸀠󸀠][(𝑎] 𝑖[)][>][0][,][𝑒] 𝑖[1][<][𝑒] 𝑖[2][,][𝑎] 𝑖[1] > 𝑎𝑖[2][,][so] 𝑙𝑖[1][+][V] 𝑖[1][<][𝑙] 𝑖[2][+][V] 𝑖[2][,][then][∑][𝑁] 𝑖=1[(𝑙] 𝑖[1][+][V] 𝑖[1][)][<][∑][𝑁] 𝑖=1[(𝑙] 𝑖[2][+][V] 𝑖[2][)][.][The] total amount of permits will not get changed after market redistribution, hence 𝐿[∗] + ∑[𝑁] 𝑖=1[V] 𝑖[1] < 𝐿[∗] + ∑[𝑁] 𝑖=1[V] 𝑖[2][.][From] Lemma 1, under given 𝜋[∗] , V𝑖[1][=][ V] 𝑖[2][=][ V][∗][,][ 𝐿][∗][+𝑁][V][∗][< 𝐿][∗][+𝑁][V][∗] can be obtained, thus the assumption is false. Therefore, when the condition of Lemma 2 is satiated, the only equilibrium price 𝑝[∗] exists. From Lemma 1, the optimal decision 𝑎𝑖[∗][and] 𝑒𝑖[∗][both][are][constants,][so][𝐴][∗][and][𝐸][∗][both][are][defined,][and] 𝐴[∗] = ∑[𝑁] 𝑖=1[𝑎] 𝑖[∗][= 𝐸][∗][−∑] 𝑖=1[𝑁][𝑙] 𝑖[−∑][𝑁] 𝑖=1[V] 𝑖[= 𝐸][∗][−] 𝐸. This completes the proof. 
+
+It can be seen that the regional abatement costs and economic benefits are only related to the environmental capacity and not affected by any alternative regulatory strategies if only the regulator allocates the permits in strict accordance with the aggregate emissions target. Then, the design of socially optimal regulatory strategy is to ensure the enforcement cost-effective. From Lemma 1, although noncompliance is the reaction of the regulatory scheme, the regulator still can regulate it by changing the monitoring level or penalty scheme, and so forth; thus, the violations of firms can be treated as regulators decision variables. Therefore under a 
+
+Mathematical Problems in Engineering 
+
+4 
+
+given punishment scheme, the optimal regulatory strategy can be translated into 
+
+**==> picture [181 x 38] intentionally omitted <==**
+
+Formula (7) shows regulator’s dilemma most adequately. The monitoring costs have positive correlation to 𝜋, lower 𝜋 makes lower monitoring costs, but V will get increased, and then expected sanction costs would increase. So, the regulator has to make tradeoffs between the monitoring costs and the sanction cost. Then, if the cost-effective strategy does not allow any violation, the regulator should keep 𝐿[∗] = 𝐸; otherwise, induce firms to be noncompliance, 𝐿[∗] = 𝐸−𝑁V[∗] , but with the condition V[∗] ≤ 𝐸/𝑁, or the emissions trading would be gradually reduced to the pollution discharge fee system. 
+
+**Proposition 3.** _The sufficient condition of the optimal strategy inducing compliance is:_ (𝜇+ 𝛽𝐹0)𝑓[󸀠󸀠] (0) ≤𝛽𝑓[󸀠2] (0) _,_ 𝜋[∗] = 𝑝/𝑓[󸀠] (0) _; the necessary condition of the optimal strategy inducing noncompliance is_ (𝜇+ 𝛽𝐹0)𝑓[󸀠󸀠] (0) > 𝛽𝑓[󸀠2] (0) _and meets_ 𝜋[∗] = 𝑝/𝑓[󸀠] (V[∗] ) _,_ 𝛽𝑓[󸀠2] (V[∗] ) = (𝜇+ 𝛽𝐹0)𝑓[󸀠󸀠] (V[∗] ) _,_ 𝐿[∗] = 𝐸−𝑁V[∗] _._ 
+
+_Proof._ The Lagrange function of formula (7) is 𝐿= 𝜋[𝜇+ 𝛽𝐹(V)]+𝜆[𝜋𝑓[󸀠] (V)−𝑝]−𝜆2V, then the necessary and sufficient condition of its optimality should meet 
+
+**==> picture [189 x 35] intentionally omitted <==**
+
+**==> picture [151 x 13] intentionally omitted <==**
+
+**==> picture [156 x 10] intentionally omitted <==**
+
+First of all, consider the situation that the optimal regulatory strategy inducing compliance, that is, V = 0. From formula (11), 𝜆2 ≥0. Putting it into formula (8), we get 
+
+**==> picture [163 x 12] intentionally omitted <==**
+
+From formula (9) we get 
+
+**==> picture [163 x 12] intentionally omitted <==**
+
+Put formulae (12) and (13) together, it is obvious that the necessary and sufficient condition of the optimal regulatory strategy that encourage firms to follow the rules is 
+
+**==> picture [176 x 13] intentionally omitted <==**
+
+However, when 𝐹0 > 0, the enforcement costs are discontinuous at V = 0. Even if the conditions above cannot be met, if 𝐹0 is large enough, it still can make a deterrence on firms; thus, formula (14) is not the necessary condition that induces compliance. When 𝛽𝑓[󸀠2] (0) < (𝜇+ 𝛽𝐹0)𝑓[󸀠󸀠] (0), inducing noncompliance is the optimal strategy, but a large enough 𝐹0 still can drive firms to be compliant, 
+
+thus, 𝛽𝑓[󸀠2] (0) < (𝜇+ 𝛽𝐹0)𝑓[󸀠󸀠] (0) is just a necessary condition that induces noncompliance. Only if 𝐹0 = 0, the conditions above are necessary and sufficient. 
+
+When the optimal strategy need regulator induce noncompliance, that is, V > 0, from formula (11), 𝜆2 = 0. Put it into formula (8), it is obvious that 𝛽𝑓[󸀠] (V) + 𝜆𝑓[󸀠󸀠] (V) = 0. Thus, if the regulator needs to induce noncompliance, the optimal strategy should meet 𝛽𝑓[󸀠2] (V) = (𝜇+ 𝛽𝐹0)𝑓[󸀠󸀠] (V) and 𝜋𝑓[󸀠] (V) −𝑝= 0. This completes the proof. 
+
+**Proposition 4.** _If the optimal regulatory strategy is encouraging compliance, then_ 𝑓[󸀠󸀠] (0) = 0 _,_ 𝑓[󸀠] (0) _the bigger the better; otherwise,_ 𝑓[󸀠] (0) = 0 _,_ 𝑓[󸀠󸀠] (0) _the bigger the better. But in any case,_ 𝐹0 = 0 _._ 
+
+_Proof._ If the optimal regulatory is encouraging compliance, then the sanctions costs will be 0. Thus, the pursuing of social welfare maximization turns into minimizing the monitoring costs. From Lemma 1, when 𝐹0 = 0, the optimal regulatory level 𝜋 is in inverse proportion to 𝑓[󸀠] (0), so that the greater 𝑓[󸀠] (0) the greater social welfare; when 𝐹0 > 0, the increasing 𝐹0 will lead to the threshold of firms violation increased, the optimal regulatory level 𝜋< 𝑝/𝑓[󸀠] (0). At this time, seem like the bigger 𝐹0 the better, but the precondition is to ensure 𝐹0 is able to drive the firms to be compliant, otherwise, the optimal violations is only related to the marginal penalty; thus, the intervention of 𝐹0 will bring greater risk of violations. Proposition 3 still shows that, the bigger 𝑓[󸀠] (0), the smaller 𝐹0 and 𝑓[󸀠󸀠] (0), the sufficient condition of the optimal strategy encouraging compliance is easier to meet. 
+
+If inducing noncompliance is the optimal strategy, there will be costs of sanctions. From the proof of Proposition 3, 𝐹0 does not affect the optimal condition, but it will increase the sanctions costs, thus social welfare will be better when 𝐹0 = 0. Use Taylor Series Expansion to approximately 𝑓(V), then 𝐹(V) = 𝑓[󸀠] (0)V + 𝑓[󸀠󸀠] (0)V[2] /2. It is obvious that, when 2𝑑𝑓[󸀠] (0) + V𝑑𝑓[󸀠󸀠] (0) = 0, the fines collected are the same under all penalty schemes that optimal violations induced equals to V. Differentiating the lagrange function in Proposition 3, we obtain 
+
+**==> picture [223 x 71] intentionally omitted <==**
+
+From formula (9), 𝜆< 0, 𝑑𝐿/𝑑𝑓[󸀠] (0) > 0. Thus, when the fines are given, the rising of 𝑓[󸀠] (0) will increase enforcement costs, and reduce social welfare. Due to 𝑑𝑓[󸀠󸀠] (0)/𝑑𝑓[󸀠] (0) = −2/V, the smaller 𝑓[󸀠] (0) makes the bigger 𝑓[󸀠󸀠] (0). Thus, if the optimal strategy is inducing firms to break the rules, than the social welfare will be superior when 𝑓[󸀠] (0) = 0. This completes the proof. 
+
+However, aggregate supply of permits and optimal monitoring level depend on whether the regulator chooses to induce compliance or noncompliance. Thus, the regulator still has to make a choice between the two strategies. 
+
+Mathematical Problems in Engineering 
+
+5 
+
+**Proposition 5.** _The social optimal regulatory strategy to achieve the fixed aggregate emissions target is encouraging the firms to be compliant, and meets:_ 𝐿= 𝐸 _,_ 𝜋[∗] = 𝑝/𝑓[󸀠] (0) _,_ 𝐹(V) = 𝑓[󸀠] (0)V _, and_ 𝑓[󸀠] (0) > 𝑝 _._ 
+
+_Proof._ Assume that the strategy of encouraging compliance and the strategy of inducing noncompliance are implemented in the same region with the same ̂𝜋. Using subscript 0 and V to distinguish the two strategies, then the monitoring costs under the two strategies is 𝑁𝜇̂𝜋. When the regulator encouraging compliance, 𝑓0[󸀠][(0)][=][𝑝/̂𝜋][, expected fine is zero,] TE0 = 𝑁𝜇̂𝜋; when inducing noncompliance, 𝑓V[󸀠][(0)+𝑓] V[󸀠󸀠][(0)][V][ =] 𝑝/̂𝜋, V > 0, the expected fine is higher than zero, TEV > 𝑁𝜇̂𝜋. So, it is obvious that TE0 ≤ TEV. Moreover, the optimal design of regulatory strategy encouraging compliance is independent of the regulator’s costs function, and only related to the permit price. In addition, put Proposition 4 into Proposition 3, we can conclude that the necessary condition to encourage compliance is 𝛽𝑓[󸀠2] (0) ≥0, it means this strategy will play a role only if 𝛽≥0; and the optimal strategy design to induce noncompliance is 𝛽V[∗2] 𝑓[󸀠󸀠] (0) = 𝜇, because V[∗] ≤ 𝐸/𝑁, 𝛽𝐸 ~~2~~ 𝑓󸀠󸀠(0) ≥𝜇𝑁2, so under this case need 𝛽≥𝜇𝑁[2] /[𝐸 ~~2~~ 𝑓󸀠󸀠(0)] > 0. Therefore, in contrast, the strategy encouraging compliance has a wider range of application space than that inducing noncompliance. This completes the proof. 
+
+It is worthwhile to note that the proposition above holds only if 𝛽> 0; that is, sanctioning is likely to be costly, including the administrative costs of collecting evidences, imposing penalties, and so on. But if the regulator can gain benefits from the administrative sanctions, the seeking for the cost-effectiveness of the regulator will lead to the absence of regulation. This is worth considering in China’s environmental regulation. 
+
+## **3. Further Analyses Based on Computational Experiment** 
+
+Using a game analysis, the optimal regulatory strategy in emissions trading system is analyzed from the static equilibrium perspective. However, there implies an important assumption implied; that is, the regulator and the firms have rational expectation of permit price. In reality, the emissions trading system is a complex system that is composed of numerous autonomic and adaptive agents. The incompleteness of information, the nonlinear correlation between elements, and the framing effect driven by experience and the behavioral bias make the evolution of the system unstable and have polymorphic equilibrium. The regulator cannot predict the system state effectively and choose the optimal strategy consequently. Meanwhile, the regulation and other external disturbance would aggravate the uncertainty of system evolution. Thus, based on the game analysis, an experimental model for emissions trading system is established using computational experiment method to further analyze the regulatory strategy closer to the reality from the perspective of dynamic and bounded rationality and give the argument of 
+
+the feasibility and economic rationality of different regulatory choices. 
+
+_3.1. Computational Experiment Modeling._ The summary of computational experiment model in this study is shown in Figure 1. Use multi-agent technology to realize the modeling of the heterogeneity of agents, according to the game analysis, set the corresponding process and decision rules, and entrust the abilities of independent decision-making, memory, and self-learning to the agents as follows. 
+
+_(a) Sample Structure_ . For firm 𝑖, 𝑑𝑖[󸀠][(𝑞)][=][𝑑] 𝑖[𝐹][+ 𝑑] 𝑖[𝑉][𝑞][,][ 𝑑] 𝑖[󸀠][(𝑞)][=] 𝑑𝑖[𝐹][+ 𝑑] 𝑖[𝑉][𝑞][, and let][ 𝑑] 𝑖[𝑉][,][ 𝑐] 𝑖[𝑉][be variable cost, effected mainly by] the price of raw material, fuel and power. Then the firm’s net income under given 𝑞𝑖 can be calculated by ∏𝑖 = 𝜃𝑖𝑘𝑖𝑞𝑖 − 𝑘𝑖(𝑑𝑖[𝐹][𝑞] 𝑖[−𝑐] 𝑖[𝐹][𝑎] 𝑖[)][−𝑘] 𝑖[2][(𝑑] 𝑖[𝑉][𝑞] 𝑖[2][−𝑐] 𝑖[𝑉][𝑎] 𝑖[2][)][+][𝜉][,][where][𝜉][denotes] fixed-income. As 𝜉 does not affect the marginal behavior of firms, set 𝜉= 0. In consideration of there has visible difference between 𝑘𝑖, 𝜃𝑖, 𝑑𝑖[𝑉][, and][ 𝑐] 𝑖[𝑉][in the real, use multiagent] technology to generate heterogeneous samples and assume the same specific attribute among firms approximately follow a lognormal distribution. 
+
+_(b) Initial Allocation_ . From the Coase Theorem, it can be known that if transaction costs are zero, the optimal distribution of permits can be achieved by permits trading among firms, no matter how the permits are initial allocated. Therefore, assume that the government adopts uniform proportion reduction method to allocate permits. The reduction rate is 𝑅= 1 − 𝐸/𝐸. Then permits that firm 𝑖 is allocated can be calculated by 𝑙𝑖[0][= 𝑅⋅𝑒] 𝑖[.] 
+
+_(c) Firm’s Behavior_ . When each trading period begins, the firms predict the permit price 𝜌𝑖[𝑡][based on specific decision-] making mechanism and then make its operation decisions; see Lemma 1. If the permits are more than needed, the surplus will be sold at the price not less than 𝜌𝑖[𝑡][; otherwise, buy from] the market, but the purchasing price of permits should no higher than 𝑐𝑖[󸀠][(𝑒] 𝑖[−𝑙] 𝑖[0][)][.][That][is,][the][demander][who][has][a] lower 𝜌𝑖[𝑡][also][can][buy][𝑡] 𝑖[permits][at][market][price][to][lower] the marginal abatement cost in current period 𝑐𝑖[󸀠][(𝑒] 𝑖[−𝑙] 𝑖[0][−] 𝑡𝑖) = 𝑝[𝑡] > 𝜌𝑖[𝑡][,][in][order][to][make][up][for][the][loss][from] predicting falloff as much as possible. After each period, the demanders who have not purchased enough permits would keep on abating emissions in order to fulfill responsibility of emissions control. Meanwhile, the suppliers who have not sold out surplus permits would adjust its abatement plan to fit the permits holding; and then the firms get in to the learning process to improve the accuracy of future predictions. 
+
+_(d) Permits Trading Market_ . After suppliers and demanders anonymously submit the quantity of supply and demand and reserve prices, the model will run into permits price formation process. The model does not describe the market trading mechanisms commonly practiced detailedly, such as sealed auction, but adopts a trading mechanism as a Walrasian auction of permits simulating the dynamic process of market trading [15]. The government similar to the Walrasina 
+
+Mathematical Problems in Engineering 
+
+6 
+
+**==> picture [420 x 232] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Raw materials market Product market Environment Regulatory allocationInitial  Trading market<br>Historical  Monitoring  Total emission  Spot price<br>Self-learning information  level control  formation<br>Input Penalty  Allocation Matching of<br>shape of permits  supply and demand<br>Production<br>decision  Output<br>Initial holding Trading volume<br>Pollution<br>Violation Permits holding after trading<br>firmThe Treatment decision Emissions Expected permits holding Equal? Yes End<br>No<br>Abatement<br>Adjustment of the decision<br>Expected trading volume<br>Permits trading decision<br>Expected permit price<br>**----- End of picture text -----**<br>
+
+
+Figure 1: Sequence of events in a typical period. 
+
+auctioneer, who has information on supply and demand of permits as well as the reserve prices of firms, takes use of the computer to match the suppliers and the demanders so that the permit in the market would realize the optimal allocation, and further obtains the spot price at every trading period. In other words, the auction consists of two stages: a search stage, in which the auctioneer searches for the equilibrium price that meets to be no less than the reserve price of seller and no higher than the maximum purchasing price of demanders; and a second stage, in which transactions are effectuated at market equilibrium prices. 
+
+_3.2. Experiment Design and Result Analysis._ From the game analysis, it is found that the optimal strategy to achieve the fixed emissions target is 𝐿= 𝐸, 𝑓[󸀠] (0) = 𝑝/𝜋, encouraging compliance. However, there exists deviation between the equilibrium and the prediction of permit price value in reality. Thus, introduce the notion of the level of punishment to describe the rate of the actual marginal penalty and theoretical marginal penalty. Then, we can fix the level of monitoring and specifically examine the regulatory strategy under incomplete information conditions from the level of punishment. The experimental procedure is as follows: first of all, generate the experimental sample, simulate the evolution of the system under given punishment level. Each simulation runs 80 periods. Besides, regarding the fact that the firms’ decision-making is not irreversible and pate dependent, and affected by other random factors, each experiment result only is a path of system evolution. Therefore, for the analysis, the above experiment runs for 500 times to eliminate these interference factors. Above is a group of experiments. Set the level of punishment from 0.025 to 1.5, respectively, and 60 groups of experiments are taken. In each group 
+
+of experiments, in order to ensure the homogeneity of the experimental samples, the model adopts the pseudo-random number generator to initialize the same set of firm agents for each simulation. 
+
+Initial parameters setting: 𝑁= 100, 𝜋= 0.5, 𝛽= 0, 𝜇= 0, 𝐸(𝑘𝑖) = 1, 𝐷(𝑘𝑖) = 0.2, 𝐸= 𝐿= 50000 ton, 𝐷(𝑑𝑖[𝑉][)][=] 𝐷(𝑐𝑖[𝑉][)][=][0.5][ RMB][/][kg,][ 𝐸(𝑑] 𝑖[𝑉][)][=][𝐸(𝑐] 𝑖[𝑉][)][=][2][ RMB][/][kg,][ 𝐸(𝜃] 𝑖[)][=] 6 RMB/kg, 𝐷(𝜃𝑖) = 2 RMB/kg. 
+
+Through the data processing of the final state of system evolution under different scenarios, the influence of punishment level on system evolution is obtained, as shown in Figure 2. From Figure 2, when the punishment level is higher than the theoretical value, that is, 1, the system can evolve close to equilibrium state eventually, and higher punishment level bring any change. However, the permit price declines rapidly with the punishment level bring down from 1; when the punishment level is lower than 0.45, the permits are almost worthless. Meanwhile, the standard deviation of the permit price increase than decrease, it indicate that when the punishment level is lower than 1, the market price would gradually lose the functions of rationing and allocative, particularly when the punishment level is lower than 0.6, the price variance is even higher than the mean value, the system almost runs in chaos. Furthermore, the aggregate abatements and permits trading volume decrease with the decline of punishment level; although the social economic output is growing, the situation of sharp cutoff of social welfare becomes blindingly obvious. Thus, the inharmony between the level of punishment and monitoring will have negative effects on the permit price, which would react on the decision-making of firms, and result in the lower efficiency. Moreover, the decrease of punishment level would make the aggregate abatement costs decreasing, but the costs seemingly disappear has passed to the firms in the form of penalties, 
+
+Mathematical Problems in Engineering 
+
+7 
+
+**==> picture [462 x 336] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+3 3<br>Maximum amount of emissions produced<br>Equilibrium price<br>2 2<br>1 1 Optimal emissions produced<br>Optimal abatement<br>Optimal transaction volume<br>00.0 0.5 1.0 1.5 00.0 0.5 1.0 1.5<br>Level of punishment Level of punishment<br>Average Emissions produced Violation<br>Standard deviation Abatement Transaction volume<br>(a) (b)<br>6<br>4<br>Optimal social welfare<br>2<br>Optimal abatement costs<br>0<br>0.0 0.5 1.0 1.5<br>Level of punishment<br>Total economic output Social costs<br>Total abatement costs Social welfare<br>Total penalty amount<br>(c)<br>5 T)10<br>Permit price<br>Amount (<br>8 RMB)10<br>Money (<br>**----- End of picture text -----**<br>
+
+
+Figure 2: Evolution results under difference punishment. 
+
+and make the pressure of firms not decrease but increase; Besides, if 𝛽> 0, the regulator would bear the greater pressure of enforcement costs. Thus, it can be seen that reasonable matching between the level of punishment and monitoring is the key factor to the efficiency of the system and a hard nut to crack in reality. 
+
+To deeply understand how the punishment level affects the system evolution, through the data processing of the evolution process, the tendency of permit price, aggregate violations, and social welfare in the first 30 cycle under different scenarios are sorted out, as shown in Figure 3. It is easy to find that a reasonable punishment level also has an important impact on the effective running of system. The higher punishment level makes the more stable order of permit price, tending to equilibrium. When punishment level is improper, the market price will be in fluctuating, and the amplitude decrease with the increasing of punishment level; meanwhile, violations and social welfare both are stay in nonoptimal levels. The deeply analysis of Figure 3(b) makes us maintain vigilance of pursuing the reasonable regulatory strategy. On one hand, a little inappropriate punishment level may serious damage the environment, for example, when punishment level is 0.75, the violations are already exceed the environment capacity, even if the regulator do not allocate permits, the environmental quality will still 
+
+deteriorate. On the other hand, at any punishment level, the effect of the regulatory is obviously hysteretic. The regulator cannot judge from the price that whether the level setting is proper. Moreover, the noncompliance cannot be completely eradicated at initial stage. Even if the punishment level is 1, there exist high violations, although the violations would gradually disappear with the system running. Furthermore, the openness of emissions trading system has ordained that it would be inevitably influenced by external environmental. Based on the previous experimental setting for the base year, adopt the Producer Price Index (PPI) from 1985 to 2008 to reflect the fluctuant trend of the products prices, and use the Purchasing Price Index of raw material, fuel, and power in the same period to reflect the fluctuant trend of the costs of firms’ production and abatement. By experiment, we get the fluctuant trend of the equilibrium price of permits under dynamic economy, showed in Figure 4. Figure 4 indicates that the permit price changes from 2.6 RMB/kg in the base year to 11 RMB/kg as time goes on, nearing a fourfold increase. Thus, the variability of permit price under dynamic economy must be a big obstacle to the effective enforcement. 
+
+It can be seen that, the hysteretic of regulatory effect and the variability of permit price make the static regulatory strategy under which the regulator decide the punishment 
+
+Mathematical Problems in Engineering 
+
+8 
+
+**==> picture [454 x 343] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+1.0<br>4<br>0.5<br>2 Environment capacity<br>0 0.0<br>0 10 20 30 0 10 20 30<br>Time (tick) Time (tick)<br>PL = 1.5 PL = 0.5 PL = 1.5 PL = 0.5<br>PL = 1.0 Dynamic punishment PL = 1.0 Dynamic punishment<br>PL = 0.75 PL = 0.75<br>(a) (b)<br>2.5<br>2.0<br>1.5<br>0 10 20 30<br>Time (tick)<br>PL = 1.5 PL = 0.75<br>PL = 1.0 Dynamic punishment<br>PL = 0.9<br>(c)<br>5 T)10<br>Permit price (RMB/kg) Total violations (<br>8 RMB)10<br>Social welfare (<br>**----- End of picture text -----**<br>
+
+
+Figure 3: Evolution processes under different punishment. 
+
+schemas prior to the firm cannot ensure the cost-effectiveness of enforcement. Although checking and ratifying the permit price need the complete information of firms’ abatement costs, under incomplete information condition, only if the market price of permits can fully reflect its scarcity, then the optimal design of regulatory strategy will only related to the price, this is another obvious characteristic that emissions trading different from the traditional regulation. In view of this, a dynamic regulatory strategy integrating the market price of permits is introduced by Stranlund (2007) [11]: the regulator preannounces to the firms that the marginal penalty for violations would be 𝑇 times of market price of permits 𝑝, that is 𝑓[󸀠] (0) = 𝑇𝑝, 𝑇> 1. From Proposition 5, full compliance can be realized when 𝜋[∗] = 1/𝑇. Sense firms make decision before the trading and punishment, this strategy actually endows the regulator with the initiative in the game and internalizes compliance into the decisionmaking of firms. Based on the previous experiment setting, another group of experiments are carried out under this strategy; for comparing with the static regulatory strategy, the results are shown in Figure 3. Experimental results show that dynamic regulatory strategy is superior to the static strategy. Under dynamic strategy, the noncompliance could be more effectively controlled than that under static regulation with 
+
+punishment level is 1, and the maximum violations is even lower than the violations when punishment level is 1.5. Furthermore, the implement of dynamic regulatory strategy will lead to a better tendency of permit price. Although the social welfare shows a little lower than that under high punishment level, but brings a significant increase than that under theoretical punishment level. Thus, the dynamic regulatory strategy can be is a better choice to achieve the aggregate emissions target cost effectively. 
+
+## **4. Conclusions** 
+
+It can be included that the regulatory strategy would influence on the cost-effectiveness of emissions trading system significantly. The inharmony between the level of punishment and monitoring has negative effects on the price formation of permits, which would react on the firms’ decision-making and result in the suboptimal emissions control efficiency and social welfare at the macro level. It has certain enlightenment on understanding that the existing pilot programs in China in general are lack of effect. Besides the restrictions of resources, legislation, and so on, the existing regulatory strategies are illadapted with reality. In particular, the penalty for noncompliance has been imposed many restrictions including the 
+
+Mathematical Problems in Engineering 
+
+9 
+
+**==> picture [228 x 314] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+11<br>8<br>5<br>2<br>1985 1990 1995 2000 2005<br>Year<br>Permit price<br>(a)<br>130<br>120<br>110<br>100<br>1985 1990 1995 2000 2005<br>Year<br>Producer price index Permit price index<br>Raw material price index<br>(b)<br>Price<br>Fluctuation rate (%)<br>**----- End of picture text -----**<br>
+
+
+Figure 4: Permit price trend under dynamic economy. 
+
+marginal and the maximum amount, in many administrative documents such as Atmospheric Pollution Prevention Law and Water Pollution Prevention Law and lead the regulators also lack of the enforcement measures facing high costs of monitoring, sanctioning and administration. In many pilot programs, the penalty schemes for noncompliance are made according to pollution discharge fees, which simply cannot fully reflect the social abatement costs and environment values. What is more, some other reasons exist, such as total quantity control does not reach the designated goal and the regulatory mechanisms are too rigid. In a word, the firm behavior and the institutional selection in China are still inertially affected and stimulated by traditional regulations such as pollution discharge fees. 
+
+One of the keys to forge the reasonable regulatory strategy is to identify and grasp the features the emissions trading regulation distinguishes from traditional regulations. The superiority of emissions trading is rooted in the marketization of resource environmental capacity. The results indicate that the strategy of integrating the market prices of permits is the better choice to achieve the aggregate emissions target cost effectively. International experiences also could confirm the necessity of the strategy. Throughout practices related to emissions trading on CO2, SO2, and NO _x_ , it is easy to find that the permit price is uncertain because of the dynamic effect from socio-economic system. Taking Acid Rain Program for an example, the lowest price of SO2 allowance reached 60 
+
+dollars, but the highest price reached 900 dollars during the years from 1990 to 2008. However, Acid Rain Program has apparently achieved a perfect compliance record. It can surely attribute to the continuous emission monitoring system which can achieve the real time monitoring of firms and severe punishment for noncompliance; the penalty scheme dynamically adjusting with the consumer price index equally plays an important role, which well eliminates the impact of price uncertainty. However, the RECLAM program has experienced noncompliant firms from its inception, especially in 2000, the prices for NO _x_ and SO2 rose dramatically. 
+
+What is more, dynamic regulatory strategy stimulated by market to organic bond with administrative regulatory, so that it show better effectiveness and flexibility under the dynamic economy. Dynamic regulation makes compliance internalized into the decision of firms, firms’ expectations and preference of market dynamics can be fully reflected in the market price of permits through spontaneous market transactions between firms. Consequently, the limitation of regulatory capacity is no longer the important obstacle of effective enforcement. As this strategy only depends on the regulatory ability, it not only saves costs of regional environmental value accounting and others, but also helps regulators setting from multifarious affairs, so that regulators can focus on the improvement of market mechanism and regulation of market behavior. We hold the view that the dynamic regulation is a valid try in China. However, existing practices pay too more attention to the construction of the initial allocation market, a reasonable price formation mechanism has not yet established. On the other hand, too many administrative measures restrain the market functions, and make the administrative institutions overburdened. 
+
+## **Conflict of Interests** 
+
+The authors declare that there is no conflict of interests regarding the publication of this paper. 
+
+## **Acknowledgments** 
+
+This work was supported by the National Natural Science Foundation of China under Grants 71201071, 71171099, and 71373105; Humanities and Social Science Research Foundation of Education Ministry of China under Grant 12YJCZH090; Postdoctoral Science Foundation of China under Grant 2013M531293; Jiangsu Planned Projects for Postdoctoral Research Funds under Grant 1102127C. 
+
+## **References** 
+
+- [1] J. Wang, Z. Dong, J. Yang, Y. Li, and G. Yan, “Practices and prospects of emission trading programs in China,” _Ecological Economy_ , no. 10, pp. 31–45, 2008. 
+
+- [2] P. B. Downing and W. D. Watson Jr., “The economics of enforcing air pollution controls,” _Journal of Environmental Economics and Management_ , vol. 1, no. 3, pp. 219–236, 1974. 
+
+- [3] J. D. Harford, “Firm behavior under imperfectly enforceable pollution standards and taxes,” _Journal of Environmental Economics and Management_ , vol. 5, no. 1, pp. 26–43, 1978. 
+
+Mathematical Problems in Engineering 
+
+10 
+
+- [4] C. A. Chavez and J. K. Stranlund, “Enforcing transferable permit systems in the presence of market power,” _Environmental and Resource Economics_ , vol. 25, no. 1, pp. 65–78, 2003. 
+
+- [5] Z. Bing, Y. Qinqin, and B. Jun, “Policy design and performance of emissions trading markets: an adaptive agent-based analysis,” _Environmental Science and Technology_ , vol. 44, no. 15, pp. 5693– 5699, 2010. 
+
+- [6] A. S. Malik, “Markets for pollution control when firms are noncompliant,” _Journal of Environmental Economics and Management_ , vol. 18, no. 2, pp. 97–106, 1990. 
+
+- [7] J. R. Mrozek and A. G. Keeler, “Pooling of uncertainty: enforcing tradable permits regulation when emissions are stochastic,” _Environmental and Resource Economics_ , vol. 29, no. 4, pp. 459– 481, 2004. 
+
+- [8] H. Konishi, “Intergovernmental versus intersource emissions trading when firms are noncompliant,” _Journal of Environmental Economics and Management_ , vol. 49, no. 2, pp. 235–261, 2005. 
+
+- [9] T. N. Cason and L. Gangadharan, “Emissions variability in tradable permit markets with imperfect enforcement and banking,” _Journal of Economic Behavior and Organization_ , vol. 61, no. 2, pp. 199–216, 2006. 
+
+- [10] J. K. Stranlund and K. K. Dhanda, “Endogenous monitoring and enforcement of a transferable emissions permit system,” _Journal of Environmental Economics and Management_ , vol. 38, no. 3, pp. 267–282, 1999. 
+
+- [11] J. K. Stranlund, “The regulatory choice of noncompliance in emissions trading programs,” _Environmental and Resource Economics_ , vol. 38, no. 1, pp. 99–117, 2007. 
+
+- [12] C. Arguedas, “To comply or not to comply? Pollution standard setting under costly monitoring and sanctioning,” _Environmental and Resource Economics_ , vol. 41, no. 2, pp. 155–168, 2008. 
+
+- [13] D. Garvie and A. Keeler, “Incomplete enforcement with endogenous regulatory choice,” _Journal of Public Economics_ , vol. 55, no. 1, pp. 141–162, 1994. 
+
+- [14] S. Weishaar, “CO2 emission allowance allocation mechanisms, allocative efficiency and the environment: a static and dynamic perspective,” _European Journal of Law and Economics_ , vol. 24, no. 1, pp. 29–70, 2007. 
+
+- [15] Y. Ermoliev, M. Michalevich, and A. Nentjes, “Markets for tradeable emission and ambient permits: a dynamic approach,” _Environmental and Resource Economics_ , vol. 15, no. 1, pp. 39–56, 2000. 
+

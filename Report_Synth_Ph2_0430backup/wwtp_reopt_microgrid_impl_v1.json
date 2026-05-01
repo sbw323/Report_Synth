@@ -1,0 +1,120 @@
+{
+  "plan_id": "wwtp_reopt_microgrid_impl_v1",
+  "title": "Implementation Plan Specification: Multi-Term NPV Microgrid Sizing for a Wastewater Treatment Plant Using REopt.jl, Simulation-Derived VoLL, and ISO Demand Response Revenue",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "section_id": "introduction",
+      "title": "Problem Framing: WWTP Microgrid Sizing Under DR Participation and Regulatory Fine Exposure",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Define the engineering-economic problem: a wastewater treatment plant can enroll in an ISO demand response program, receiving capacity payments for load-shed commitments, but incurs Stare-formula effluent fines whenever aeration curtailment causes NH4 or total-nitrogen limit exceedances. The optimization task is to size a behind-the-meter microgrid (battery energy storage, solar PV, backup generator) such that the net present value is maximized, where NPV enrolls all additive components: avoided energy cost, ISO DR capacity revenue, expected fine penalty weighted by the simulation-derived Value of Lost Load, DER capital and O&M cost, and microgrid upgrade cost. The VoLL input is consumed as an 8760-element hourly array produced by compute_voll_for_reopt.m. Scope boundaries: REopt.jl v0.57 native API plus post-processing for DR revenue; excluded are energy arbitrage optimization, voltage support, ancillary service co-optimization, and Pareto-style multi-objective formulations.",
+      "source_queries": [
+        "REopt.jl microgrid NPV behind-the-meter optimization",
+        "value_of_lost_load_per_kwh multiple outage modeling"
+      ],
+      "dependency_edges": [],
+      "depth_level": 0
+    },
+    {
+      "section_id": "scenario_components_overview",
+      "title": "REopt.jl Scenario Schema: Required Blocks and Their Roles",
+      "parent_id": null,
+      "section_type": "narrative_synthesis",
+      "description": "Inventory the REopt.jl scenario JSON blocks that the implementation must populate and the function each plays in the MILP formulation: Site (latitude, longitude, min_resil_time_steps), Financial (value_of_lost_load_per_kwh, analysis_years, offtaker_discount_rate_fraction, microgrid_upgrade_cost_fraction), ElectricLoad (annual_kwh, doe_reference_name or custom 8760 profile, critical_load_fraction, year), ElectricTariff (blended_annual_energy_rate or urdb_label, blended_annual_demand_rate), ElectricUtility (outage_start_time_steps, outage_durations, outage_probabilities for the stochastic multi-outage model), ElectricStorage (min_kw/max_kw/min_kwh/max_kwh bounds), PV, and Generator. Identify which blocks carry the decision-relevant parameters for this study: the Financial.value_of_lost_load_per_kwh field consumes the hourly VoLL array, ElectricUtility.outage_* drives the ExpectedOutageCost term in the objective, and ElectricLoad.critical_load_fraction sets the hard floor for unserved load during outages.",
+      "source_queries": [
+        "REopt Scenario struct input fields",
+        "REopt ElectricUtility outage_start_time_steps outage_durations",
+        "REopt Financial microgrid_upgrade_cost_fraction analysis_years"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "scenario_components_overview",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "modeling_decision_matrix",
+      "title": "Modeling Decisions: REopt.jl Field Choices for WWTP DR Participation",
+      "parent_id": "scenario_components_overview",
+      "section_type": "evidence_table",
+      "description": "Construct a decision matrix enumerating the modeling choices the implementation must resolve before writing Julia code. Columns: Decision, REopt.jl field(s) affected, Options considered, Recommendation with rationale grounded in REopt.jl source and docs, Cross-reference to the technical analysis section. Each row is one atomic decision. Rows to include at minimum: VoLL specification (scalar vs 8760 array, mapped to Financial.value_of_lost_load_per_kwh); outage scenario design (single outage_start_time_step/outage_end_time_step vs stochastic outage_start_time_steps + outage_durations + outage_probabilities); ISO DR revenue modeling path (explicitly adopt post-processing from solved DER capacity, not an ElectricTariff adder, so that dispatch optimization is not distorted); critical load fraction calibration (tied to aeration + process-essential loads); microgrid_upgrade_cost_fraction default; objective-function scope (whether to include emissions costs via include_climate_in_objective); solver choice (HiGHS open-source vs Gurobi/CPLEX) and time_limit configuration; BAU scenario construction (run_reopt with two JuMP.Model instances to obtain NPV against business-as-usual).",
+      "source_queries": [
+        "REopt Financial value_of_lost_load_per_kwh scalar array input",
+        "REopt ElectricLoad critical_load_fraction doe_reference_name",
+        "REopt run_reopt BAU Business-as-usual scenario NPV comparison"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "modeling_decision_matrix",
+          "target_section_id": "scenario_components_overview",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "modeling_decision_matrix",
+          "target_section_id": "introduction",
+          "kind": "source"
+        }
+      ],
+      "depth_level": 1
+    },
+    {
+      "section_id": "objective_and_api",
+      "title": "Multi-Term NPV Objective Function and REopt.jl API Surface",
+      "parent_id": null,
+      "section_type": "methodology_description",
+      "description": "Formalize REopt.jl's life-cycle cost objective as a single scalar with multiple additive terms, clarifying that minimizing LCC and maximizing NPV are algebraically equivalent in this formulation; a true Pareto multi-objective frontier is out of scope. Enumerate the additive cost terms REopt assembles (CAPEX, O&M discounted over analysis_years, grid energy procurement, expected outage cost weighted by value_of_lost_load_per_kwh and outage_probabilities) and identify which benefit terms enter the objective natively (incentives, ITC, MACRS) versus which are computed in post-processing (ISO DR capacity revenue, derived from the solved ElectricStorage.size_kw and Generator.size_kw capacities). Specify the ExpectedOutageCost minimax structure: max taken over outage_start_time_steps, expectation taken over outage_durations weighted by outage_probabilities. Catalog the Julia API calls the .jl files must make: JSON.parsefile plus the recurring JSON.Object to Dict conversion pattern (documented bug fix via recursive to_dict utility), Model(HiGHS.Optimizer) instantiation, set_attribute for solver time limits, run_reopt with single or two-Model signatures (the latter enables automatic BAU comparison and NPV calculation), and the recursive make_serializable pattern required for JuMP.Containers.DenseAxisArray result objects before JSON.print. Document the sensitivity sweep workflow pattern: deepcopy the scenario Dict per iteration, override Financial.value_of_lost_load_per_kwh with a scaled profile, run_reopt, collect results.",
+      "source_queries": [
+        "REopt run_reopt JuMP Model HiGHS Optimizer objective",
+        "REopt lifecycle cost LCC NPV lifecycle_outage_cost",
+        "REopt results Financial npv lcc initial_capital_costs"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "objective_and_api",
+          "target_section_id": "scenario_components_overview",
+          "kind": "content"
+        }
+      ],
+      "depth_level": 0
+    },
+    {
+      "section_id": "implementation_roadmap",
+      "title": "File-by-File Julia Implementation Roadmap",
+      "parent_id": null,
+      "section_type": "cross_reference",
+      "description": "Synthesize the scenario component inventory, the decision matrix, and the objective specification into a concrete set of .jl files the agent must author, with each file's responsibilities, inputs, outputs, and inter-file dependencies stated explicitly. Required files: utils_to_dict.jl (recursive JSON.Object to Dict converter shared via include, plus make_serializable counterpart); scenario_builder.jl (reads reopt_wwtp_scenario.json produced by compute_voll_for_reopt.m, applies programmatic overrides, validates schema against REopt.jl field expectations); dr_revenue_model.jl (post-processing function that computes ISO DR capacity revenue from solved DER capacities using an input capacity-payment rate in dollars per kW-month, returns revenue line items for inclusion in the NPV decomposition report); run_wwdr.jl (primary driver script; instantiates two JuMP.Model instances for BAU comparison, calls run_reopt, applies make_serializable, writes results JSON plus the adjusted NPV that includes DR revenue); run_voll_sweep.jl (parametric sweep over VoLL scalar multipliers from 0.1x to 10x of the marginal VoLL baseline); run_outage_sweep.jl (parametric sweep over outage_durations and outage_probabilities scenarios); postprocess.jl (NPV decomposition into component terms, DER sizing summary, resilience metrics report). Identify open methodological questions the plan should leave as decision points for the author: whether the ISO capacity commitment should enforce a floor on solved ElectricStorage.size_kw as a JuMP constraint (which would depart from pure post-processing), how to handle the asymmetry between the hourly VoLL profile's time-varying magnitude and the coarser outage_durations scenario granularity, and whether seasonal outage probability weighting should replace the default uniform weighting.",
+      "source_queries": [
+        "REopt scenario JSON Dict run_reopt two JuMP Model",
+        "REopt results DenseAxisArray serialize JSON",
+        "REopt ElectricStorage size_kw size_kwh Generator size_kw results output"
+      ],
+      "dependency_edges": [
+        {
+          "source_section_id": "implementation_roadmap",
+          "target_section_id": "objective_and_api",
+          "kind": "content"
+        },
+        {
+          "source_section_id": "implementation_roadmap",
+          "target_section_id": "modeling_decision_matrix",
+          "kind": "reference"
+        },
+        {
+          "source_section_id": "implementation_roadmap",
+          "target_section_id": "introduction",
+          "kind": "thematic"
+        }
+      ],
+      "depth_level": 0
+    }
+  ],
+  "global_metadata": {
+    "domain": "wastewater_microgrid_optimization",
+    "target_audience": "Engineers implementing REopt.jl-based techno-economic optimization for wastewater treatment plant microgrids with simulation-derived VoLL inputs and ISO demand response revenue streams",
+    "primary_source": "REopt.jl v0.57 source and documentation (https://nrel.github.io/REopt.jl/stable/ and https://github.com/NREL/REopt.jl), Anderson et al. (2017) NREL/TP-5400-70022 techno-economic framework, compute_voll_for_reopt.m campaign outputs (reopt_wwtp_scenario.json with 8760 VoLL array)"
+  }
+}

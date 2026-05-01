@@ -1,0 +1,51 @@
+{
+  "citation_pattern": "\\([^)]*\\d{4}[^)]*\\)",
+  "tone_register": "neutral_reporter_voice_public_record",
+  "per_level_constraints": {
+    "0": {
+      "min_words": 300,
+      "max_words": 1800,
+      "heading_format": "##"
+    },
+    "1": {
+      "min_words": 200,
+      "max_words": 1600,
+      "heading_format": "###"
+    }
+  },
+  "per_type_overrides": {
+    "narrative_synthesis": {
+      "min_words": 250,
+      "max_words": 1800
+    },
+    "evidence_table": {
+      "min_words": 300,
+      "max_words": 1200
+    },
+    "cross_reference": {
+      "min_words": 400,
+      "max_words": 2000
+    }
+  },
+  "forbidden_phrases": [
+    "it is important to note",
+    "it should be noted that",
+    "it is worth mentioning",
+    "it goes without saying",
+    "needless to say",
+    "as we can see",
+    "clearly",
+    "obviously",
+    "arguably",
+    "on balance",
+    "suggests that",
+    "it appears that",
+    "one could argue",
+    "in my view",
+    "in our view"
+  ],
+  "equation_delimiters": {
+    "inline": "$",
+    "display": "$$"
+  }
+}

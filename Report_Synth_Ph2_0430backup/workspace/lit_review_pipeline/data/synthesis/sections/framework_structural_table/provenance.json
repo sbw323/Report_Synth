@@ -1,0 +1,18 @@
+{
+  "section_id": "framework_structural_table",
+  "version": 1,
+  "model": "claude-opus-4-6",
+  "state": "finalized",
+  "retrieval_queries": [
+    "penalty framework comparison wastewater",
+    "permit market equilibrium pollution price",
+    "Catalonia industrial tariff peak coefficient",
+    "three-part policy tax permit subsidy"
+  ],
+  "chunk_count": 25,
+  "validation_attempts": 1,
+  "retry_counters": {},
+  "claim_count": 25,
+  "claim_partial": true,
+  "has_summary_abstract": true
+}
